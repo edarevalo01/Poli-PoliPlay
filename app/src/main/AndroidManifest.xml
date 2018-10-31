@@ -23,6 +23,8 @@
         <activity android:name=".JuegoRelacionar" />
         <activity android:name=".JuegoRelacionarSolucion" />
         <activity android:name=".JuegoAhorcado"></activity>
+        <activity android:name=".Ahorcado"></activity>
+        <activity android:name=".JuegoCrucigrama"></activity>
     </application>
 
 </manifest>
