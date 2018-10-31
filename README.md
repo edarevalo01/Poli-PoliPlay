@@ -1,2 +1,0 @@
-# PoliPlay
-Proyecto de Innovación.
