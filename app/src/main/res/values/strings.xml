@@ -47,6 +47,9 @@
     <!-- Temporales -->
     <string name="juego1">Relacionar</string>
     <string name="juego2">Trivia</string>
+    <string name="juego3">Ahorcado</string>
+    <string name="juego4">Crucigrama</string>
+    <string name="juego5">Calculadora</string>
     <string name="title_activity_juego_relacionar2">JuegoRelacionar2</string>
 
     <!-- Juego Relacionar -->

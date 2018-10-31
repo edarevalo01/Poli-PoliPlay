@@ -1,12 +1,5 @@
 package co.edu.poli.gamification.poliplay;
 
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.RequiresApi;
-import android.support.v4.widget.*;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -42,7 +35,7 @@ public class JuegoAhorcado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ahorcado);
+        setContentView(R.layout.activity_juego_ahorcado);
         intentosRes = (TextView) findViewById(R.id.intenRes);
         intentosRestantes = (TextView) findViewById(R.id.intentosRest);
         hideWord = (TextView) findViewById(R.id.hideWord);

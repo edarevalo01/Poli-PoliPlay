@@ -30,7 +30,23 @@ public class Mapa extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void triviaBtn(View view){
-
+    public void ahorcadoBtn(View view){
+        Intent i = new Intent(this, JuegoAhorcado.class);
+        startActivity(i);
     }
+
+    public void triviaBtn(View view){
+        Intent i = new Intent(this, JuegoTrivia.class);
+        startActivity(i);
+    }
+    public void cruciBtn(View view){
+        Intent i = new Intent(this, JuegoTrivia.class);
+        startActivity(i);
+    }
+    public void calculadoraBtn(View view){
+        Intent i = new Intent(this, JuegoCalculadora.class);
+        startActivity(i);
+    }
+
+
 }
