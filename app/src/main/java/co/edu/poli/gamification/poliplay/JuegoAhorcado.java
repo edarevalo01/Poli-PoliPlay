@@ -17,7 +17,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Ahorcado extends AppCompatActivity {
+public class JuegoAhorcado extends AppCompatActivity {
 
     int index = 0;
     int intentos = 7;
