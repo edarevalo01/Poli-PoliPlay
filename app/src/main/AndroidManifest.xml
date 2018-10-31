@@ -22,7 +22,9 @@
         <activity android:name=".Mapa" />
         <activity android:name=".JuegoRelacionar" />
         <activity android:name=".JuegoRelacionarSolucion" />
-        <activity android:name=".JuegoAhorcado"></activity>
+        <activity android:name=".JuegoAhorcado" />
+        <activity android:name=".JuegoTrivia" />
+        <activity android:name=".JuegoCalculadora"></activity>
     </application>
 
 </manifest>
