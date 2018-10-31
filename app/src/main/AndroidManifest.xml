@@ -21,7 +21,8 @@
         <activity android:name=".SeleccionarTransporte" />
         <activity android:name=".Mapa" />
         <activity android:name=".JuegoRelacionar" />
-        <activity android:name=".JuegoRelacionarSolucion"></activity>
+        <activity android:name=".JuegoRelacionarSolucion" />
+        <activity android:name=".Ahorcado"></activity>
     </application>
 
 </manifest>
