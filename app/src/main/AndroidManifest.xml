@@ -24,7 +24,8 @@
         <activity android:name=".JuegoRelacionarSolucion" />
         <activity android:name=".JuegoAhorcado" />
         <activity android:name=".JuegoTrivia" />
-        <activity android:name=".JuegoCalculadora"></activity>
+        <activity android:name=".JuegoCalculadora" />
+        <activity android:name=".JuegoCrucigrama"></activity>
     </application>
 
 </manifest>

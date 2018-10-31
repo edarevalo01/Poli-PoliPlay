@@ -40,7 +40,7 @@ public class Mapa extends AppCompatActivity {
         startActivity(i);
     }
     public void cruciBtn(View view){
-        Intent i = new Intent(this, JuegoTrivia.class);
+        Intent i = new Intent(this, JuegoCrucigrama.class);
         startActivity(i);
     }
     public void calculadoraBtn(View view){

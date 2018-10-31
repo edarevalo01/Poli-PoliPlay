@@ -68,4 +68,7 @@
     <string name="respuesta4">Estrategias</string>
     <string name="respuesta5">Normas</string>
     <string name="respuesta6">Cronogramas</string>
+
+    <!-- Juego Crucigrama -->
+    <string name="space"> </string>
 </resources>
