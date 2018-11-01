@@ -32,6 +32,10 @@ public class Login extends AppCompatActivity {
             Intent i = new Intent(this, SeleccionarCurso.class);
             startActivity(i);
         }
+        else if(varEmail.equals("test")){
+            Intent i = new Intent(this, Mapa.class);
+            startActivity(i);
+        }
         else{
             Toast.makeText(this, "Datos incorrectos, intente nuevamente", Toast.LENGTH_SHORT).show();
         }

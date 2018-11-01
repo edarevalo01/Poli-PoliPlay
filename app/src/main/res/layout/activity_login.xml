@@ -98,13 +98,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
+        android:contentDescription="@string/blankSpace"
         android:onClick="entrar"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline12"
-        app:srcCompat="@drawable/botonentrar"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/botonentrar" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline13"
