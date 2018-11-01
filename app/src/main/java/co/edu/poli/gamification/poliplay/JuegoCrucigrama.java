@@ -40,6 +40,7 @@ public class JuegoCrucigrama extends AppCompatActivity {
     }
 
     public void tocar(View view){
+        pintarCuadricula();
         TextView a = (TextView)view;
         int pos[] = formPalabra.get(a.getId());
         posAct[0] = pos[0]; posAct[1] = pos[1];
@@ -110,28 +111,38 @@ public class JuegoCrucigrama extends AppCompatActivity {
         String palabra = "";
         if(horizontal){
             for(int i = y; i < posValidas[0].length; i++){
-                if(posValidas[x][i] == 1)
+                if(posValidas[x][i] == 1) {
                     palabra = palabra + String.valueOf(resuelto[x][i]);
+                    TextView p = (TextView)findViewById(screenMat[x][i]);
+                    p.setBackground(getResources().getDrawable(R.drawable.rectangulo_letra_sel));
+                }
                 else break;
             }
             for(int i = y-1; i >= 0; i--){
                 if(posValidas[x][i] == 1){
                     String aux = palabra;
                     palabra = String.valueOf(resuelto[x][i]) + aux;
+                    TextView p = (TextView)findViewById(screenMat[x][i]);
+                    p.setBackground(getResources().getDrawable(R.drawable.rectangulo_letra_sel));
                 }
                 else break;
             }
         }
         else if(vertical){
             for(int i = x; i < posValidas.length; i++){
-                if(posValidas[i][y] == 1)
+                if(posValidas[i][y] == 1) {
                     palabra = palabra + String.valueOf(resuelto[i][y]);
+                    TextView p = (TextView)findViewById(screenMat[i][y]);
+                    p.setBackground(getResources().getDrawable(R.drawable.rectangulo_letra_sel));
+                }
                 else break;
             }
             for(int i =x-1; i >= 0; i--){
                 if(posValidas[i][y] == 1){
                     String aux = palabra;
                     palabra = String.valueOf(resuelto[i][y]) + aux;
+                    TextView p = (TextView)findViewById(screenMat[i][y]);
+                    p.setBackground(getResources().getDrawable(R.drawable.rectangulo_letra_sel));
                 }
                 else break;
             }
