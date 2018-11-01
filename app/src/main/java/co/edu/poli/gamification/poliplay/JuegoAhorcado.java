@@ -1,5 +1,7 @@
 package co.edu.poli.gamification.poliplay;
 
+import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,17 +22,19 @@ public class JuegoAhorcado extends AppCompatActivity {
     private TextView showWord;
     private TextView intentosRestantes;
     private TextView showEnum;
-    boolean puedeJugar = true;
     private Random randomWords = new Random();
     private Random randomLetters = new Random();
-    private String [] palabras = {"RETROALIMENTACION", "EMPODERAMIENTO", "LINEA", "DELEGACION","ORGANICA"};
-    private String [] enunciadosPalabras = {"La cantidad de información que recibe un trabajador sobre su desempeño",
+    private String[] palabras = {"RETROALIMENTACION", "EMPODERAMIENTO", "LINEA", "DELEGACION", "ORGANICA"};
+    private String[] enunciadosPalabras = {"La cantidad de información que recibe un trabajador sobre su desempeño",
             "Sensación de motivación intrínseca en la que los trabajadores perciben que su trabajo tiene impacto y significado y ellos se sienten capaces y competentes para actuar con autodeterminación. ",
             "Autoridad de _____ El derecho de mando sobre las personas inmediatamente subordinadas en la cadena de comando",
             "La asignación de autoridad directa y responsabilidad a un subordinado para completar tareas por las que el jefe es responsable normalmente.",
             "Sensación de motivación intrínseca en la que los trabajadores perciben que su trabajo tiene impacto y significado y ellos se sienten capaces y competentes para actuar con autodeterminación"};
     private TextView[] letters = new TextView[21];
     private ImageView animador;
+
+    private Handler waiter = new Handler();
+    private Runnable runner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +77,7 @@ public class JuegoAhorcado extends AppCompatActivity {
 
     }
 
-    public void comprobar(View vista){
+    public void comprobar(View vista) throws Exception {
 
         TextView t = (TextView) vista;
 
@@ -82,19 +86,19 @@ public class JuegoAhorcado extends AppCompatActivity {
         String[] c = unlockWords.split(" +");
         String d = t.getText().toString();
         for (int i = 0; i < partsWord.length(); i++) {
-            if(partsWord.charAt(i) == d.charAt(0)){
+            if (partsWord.charAt(i) == d.charAt(0)) {
                 c[i] = d;
                 cambio = true;
+                t.setEnabled(false);
             }
         }
 
-        char [] e = new char[(c.length*2)-1];
+        char[] e = new char[(c.length * 2) - 1];
         int contador = 0;
         for (int i = 0; i < e.length; i++) {
-            if(i % 2 == 1) {
+            if (i % 2 == 1) {
                 e[i] = ' ';
-            }
-            else if(i % 2 == 0){
+            } else if (i % 2 == 0) {
                 e[i] = c[contador].charAt(0);
                 contador++;
             }
@@ -103,7 +107,7 @@ public class JuegoAhorcado extends AppCompatActivity {
         String f = String.valueOf(e).trim();
         hideWord.setText(f);
 
-        if(!cambio){
+        if (!cambio) {
             intRestantes();
         }
         cambio = false;
@@ -113,114 +117,126 @@ public class JuegoAhorcado extends AppCompatActivity {
 
 
     }
-    public void gameOver(){
+
+    public void gameOver() throws Exception {
 
         String termino = hideWord.getText().toString();
         termino.split(" +");
         int contador = 0;
-        for(int i = 0 ; i < termino.length(); i++){
-            if(termino.charAt(i) == '_'){
+        for (int i = 0; i < termino.length(); i++) {
+            if (termino.charAt(i) == '_') {
                 contador++;
             }
         }
         if (contador == 0) {
-            puedeJugar = false;
-            showEnum.setText("FELICITACIONES, PUEDES CONTINUAR!");
+            for (int i = 0; i < letters.length; i++) {
+                letters[i].setEnabled(false);
+            }
+            runner = new Runnable() {
+                @Override
+                public void run() {
+                    alMapa();
+                }
+            };
+            waiter.postDelayed(runner, 2500);
 
-            //showEnum.setAutoSizeTextTypeWithDefaults(TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM);
+
         }
-        if(intentos == 0){
-            puedeJugar = false;
+        if (intentos == 0) {
             hideWord.setText("PERDISTE!");
 
         }
     }
 
-    public void reiniciar(View vista){
-        intentos = 7;
-        palabraRandom();
-        cambioImagen();
-        enunciadoRand();
-        letrasRandom();
-
-    }
-
-
-    public void cambioImagen(){
-        switch (intentos){
-            case 6: animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado1));
+    public void cambioImagen() {
+        switch (intentos) {
+            case 6:
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado1));
                 break;
 
-            case 5: animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado2));
+            case 5:
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado2));
                 break;
 
-            case 4: animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado3));
+            case 4:
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado3));
                 break;
 
-            case 3: animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado4));
+            case 3:
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado4));
                 break;
 
-            case 2: animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado5));
+            case 2:
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado5));
                 break;
 
-            case 1: animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado6));
+            case 1:
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado6));
                 break;
 
-            case 0: animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado7));
+            case 0:
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado7));
                 break;
 
-            default: animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado0));
+            default:
+                animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado0));
         }
     }
 
-    public void intRestantes (){
+    public void intRestantes() {
         intentos--;
         intentosRestantes.setText(String.valueOf(intentos));
         cambioImagen();
-    }
-
-    public void palabraRandom(){
-        if(puedeJugar) {
-            int rand = randomWords.nextInt(palabras.length);
-            hideWord.setText(palabras[rand]);
-            String hideR = "";
-            for (int i = 0; i < hideWord.getText().toString().length(); i++) {
-                hideR += "_ ";
+        if (intentos == 0) {
+            for (int i = 0; i < letters.length; i++) {
+                letters[i].setEnabled(false);
             }
-
-            hideWord.setText(hideR.trim());
-            index = rand;
         }
     }
 
-    public void enunciadoRand(){
+    public void palabraRandom() {
+        int rand = randomWords.nextInt(palabras.length);
+        hideWord.setText(palabras[rand]);
+        String hideR = "";
+        for (int i = 0; i < hideWord.getText().toString().length(); i++) {
+            hideR += "_ ";
+        }
+
+        hideWord.setText(hideR.trim());
+        index = rand;
+    }
+
+    public void enunciadoRand() {
         showEnum.setText(enunciadosPalabras[index]);
     }
 
     public void letrasRandom() {
-        if(puedeJugar) {
-            String word = palabras[index];
-            char[] an_g = word.toCharArray();
-            Set<Character> conjunto = new TreeSet<Character>();
-            int j = 0;
-            while (conjunto.size() < 21) {
-                if (j < word.length()) {
-                    conjunto.add(an_g[j]);
-                    j++;
-                } else {
-                    int rand = randomLetters.nextInt(26);
-                    conjunto.add((char) (rand + 65));
-                }
-            }
-            String ale = "";
-            while (conjunto.size() != 0) {
-                char aux = ((TreeSet<Character>) conjunto).first();
-                ale += String.valueOf(aux);
-                conjunto.remove(aux);
-            }
-            for (int i = 0; i < 21; i++) {
-                letters[i].setText(String.valueOf(ale.charAt(i)));
+        String word = palabras[index];
+        char[] an_g = word.toCharArray();
+        Set<Character> conjunto = new TreeSet<Character>();
+        int j = 0;
+        while (conjunto.size() < 21) {
+            if (j < word.length()) {
+                conjunto.add(an_g[j]);
+                j++;
+            } else {
+                int rand = randomLetters.nextInt(26);
+                conjunto.add((char) (rand + 65));
             }
         }
+        String ale = "";
+        while (conjunto.size() != 0) {
+            char aux = ((TreeSet<Character>) conjunto).first();
+            ale += String.valueOf(aux);
+            conjunto.remove(aux);
+        }
+        for (int i = 0; i < 21; i++) {
+            letters[i].setText(String.valueOf(ale.charAt(i)));
+        }
+    }
+
+    public void alMapa(){
+        Intent i = new Intent(this, Mapa.class);
+        startActivity(i);
     }
 }

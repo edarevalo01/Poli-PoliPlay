@@ -11,17 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+
         <TextView
             android:id="@+id/enunPreg"
             android:layout_width="362dp"
             android:layout_height="328dp"
             android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
             android:layout_marginTop="36dp"
             android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp"
             android:layout_marginBottom="30dp"
             android:gravity="fill_horizontal"
+            android:padding="15dp"
             android:scrollbars="vertical"
             android:text="texto"
             android:textAllCaps="false"
