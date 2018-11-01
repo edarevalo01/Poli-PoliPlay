@@ -7,7 +7,7 @@
     <string name="textContrasena">Contraseña</string>
     <string name="btnLogin">Entrar</string>
     <string name="textNoRegis">¿Aún no estás registrado?</string>
-    <string name="textRegistAqui">Registrate aquí.</string>
+    <string name="textRegistAqui"><u>Registrate aquí.</u></string>
 
     <!-- PANTALLA SELECCION CURSO -->
     <string name="selCurso">SELECCIONA EL CURSO</string>

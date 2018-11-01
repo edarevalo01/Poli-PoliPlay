@@ -9,27 +9,26 @@ import android.widget.TextView;
 
 public class SeleccionarCurso extends AppCompatActivity {
 
-    private RadioButton cultura, proceso;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_curso);
-        cultura = (RadioButton)findViewById(R.id.culturaButton);
-        proceso = (RadioButton)findViewById(R.id.procesoButton);
-        cultura.setChecked(true);
     }
 
-    public void continuarSelCurso(View view){
+    public void selAmbiental(View view){
         Intent i = new Intent(this, SeleccionarRol.class);
-        if(cultura.isChecked()){
-            Login.user.setSignature("Cultura Ambiental");
-            startActivity(i);
-        }
-        else if(proceso.isChecked()){
-            Login.user.setSignature("Proceso Administrativo");
-            startActivity(i);
-        }
+        Login.user.setSignature("Cultura Ambiental");
+        startActivity(i);
+    }
 
+    public void selAdmin(View view){
+        Intent i = new Intent(this, SeleccionarRol.class);
+        Login.user.setSignature("Proceso Administrativo");
+        startActivity(i);
+    }
+
+    public void btnVolver(View view){
+        Intent i = new Intent(this, Login.class);
+        startActivity(i);
     }
 }
