@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JuegoCrucigrama">
@@ -30,6 +32,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -41,6 +44,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -52,6 +56,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -63,6 +68,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -74,6 +80,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -85,6 +92,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -96,6 +104,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -107,6 +116,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -118,6 +128,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -129,6 +140,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -140,6 +152,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -151,6 +164,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -162,6 +176,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -173,6 +188,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -184,6 +200,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -196,6 +213,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -208,6 +226,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -220,6 +239,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -232,18 +252,20 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/l20"
             android:layout_width="21dp"
             android:layout_height="21dp"
-            android:layout_alignStart="@+id/l6"
             android:layout_below="@+id/l"
+            android:layout_alignStart="@+id/l6"
             android:layout_margin="1dp"
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -256,6 +278,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -268,6 +291,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -280,6 +304,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -292,6 +317,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -304,6 +330,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -316,6 +343,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -328,6 +356,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -340,6 +369,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -351,6 +381,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -363,6 +394,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -375,6 +407,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -387,6 +420,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -399,6 +433,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -411,6 +446,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -423,6 +459,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -435,6 +472,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -447,6 +485,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -459,6 +498,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -471,6 +511,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -483,6 +524,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -495,6 +537,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -507,6 +550,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -518,6 +562,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -530,6 +575,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -542,6 +588,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -554,6 +601,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -566,6 +614,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -578,6 +627,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -590,6 +640,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -602,6 +653,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -614,6 +666,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -626,6 +679,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -638,6 +692,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -650,6 +705,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -662,6 +718,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -674,6 +731,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -685,6 +743,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -697,6 +756,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -709,6 +769,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -721,6 +782,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -733,6 +795,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -745,6 +808,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -757,6 +821,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -769,6 +834,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -781,6 +847,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -793,6 +860,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -805,6 +873,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -817,6 +886,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -829,6 +899,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -841,6 +912,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -852,6 +924,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -864,6 +937,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -876,6 +950,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -888,6 +963,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -900,6 +976,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -912,6 +989,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -924,6 +1002,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -936,6 +1015,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -948,6 +1028,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -960,6 +1041,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -972,6 +1054,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -984,6 +1067,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -996,6 +1080,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1008,6 +1093,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1019,6 +1105,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1031,6 +1118,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1043,6 +1131,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1055,6 +1144,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1067,6 +1157,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1079,6 +1170,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1091,6 +1183,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1103,6 +1196,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1115,6 +1209,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1127,6 +1222,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1139,6 +1235,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1151,6 +1248,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1163,6 +1261,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1175,6 +1274,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1186,6 +1286,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1198,6 +1299,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1210,6 +1312,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1222,6 +1325,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1234,6 +1338,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1246,6 +1351,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1258,6 +1364,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1270,6 +1377,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1282,6 +1390,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1294,6 +1403,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1306,6 +1416,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1318,6 +1429,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1330,6 +1442,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1342,6 +1455,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1353,6 +1467,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1365,6 +1480,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1377,6 +1493,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1389,6 +1506,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1401,6 +1519,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1413,6 +1532,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1425,6 +1545,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1437,6 +1558,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1449,6 +1571,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1461,6 +1584,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1473,6 +1597,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1485,6 +1610,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1497,6 +1623,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1509,6 +1636,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1520,6 +1648,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1532,6 +1661,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1544,6 +1674,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1556,6 +1687,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1568,6 +1700,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1580,6 +1713,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1592,6 +1726,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1604,6 +1739,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1616,6 +1752,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1628,6 +1765,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1640,6 +1778,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1652,6 +1791,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1664,6 +1804,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1676,6 +1817,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1687,6 +1829,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1699,6 +1842,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1711,6 +1855,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1723,6 +1868,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1735,6 +1881,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1747,6 +1894,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1759,6 +1907,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1771,6 +1920,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1783,6 +1933,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1795,6 +1946,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1807,6 +1959,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1819,6 +1972,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1831,6 +1985,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1843,6 +1998,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1854,6 +2010,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1866,6 +2023,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1878,6 +2036,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1890,6 +2049,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1902,6 +2062,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1914,6 +2075,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1926,6 +2088,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1938,6 +2101,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1950,6 +2114,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1962,6 +2127,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1974,6 +2140,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1986,6 +2153,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -1998,6 +2166,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2010,6 +2179,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2021,6 +2191,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2033,6 +2204,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2045,6 +2217,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2057,6 +2230,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2069,6 +2243,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2081,6 +2256,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2093,6 +2269,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2105,6 +2282,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2117,6 +2295,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2129,6 +2308,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2141,6 +2321,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2153,6 +2334,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2165,6 +2347,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2177,6 +2360,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2188,6 +2372,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2200,6 +2385,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2212,6 +2398,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2224,6 +2411,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2236,6 +2424,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2248,6 +2437,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2260,6 +2450,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2272,6 +2463,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2284,6 +2476,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2296,6 +2489,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2308,6 +2502,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2320,6 +2515,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2332,6 +2528,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2344,6 +2541,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2355,6 +2553,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2367,6 +2566,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2379,6 +2579,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2391,6 +2592,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2403,6 +2605,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2415,6 +2618,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2427,6 +2631,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2439,6 +2644,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2451,6 +2657,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2463,6 +2670,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2475,6 +2683,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2487,6 +2696,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2499,6 +2709,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2511,6 +2722,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2522,6 +2734,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2534,6 +2747,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2546,6 +2760,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2558,6 +2773,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2570,6 +2786,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2582,6 +2799,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2594,6 +2812,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2606,6 +2825,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2618,6 +2838,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2630,6 +2851,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2642,6 +2864,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2654,6 +2877,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2666,6 +2890,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2678,6 +2903,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2689,6 +2915,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2701,6 +2928,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2713,6 +2941,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2725,6 +2954,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2737,6 +2967,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2749,6 +2980,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2761,6 +2993,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2773,6 +3006,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2785,6 +3019,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2797,6 +3032,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2809,6 +3045,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2821,6 +3058,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2833,6 +3071,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
         <TextView
@@ -2845,6 +3084,7 @@
             android:onClick="tocar"
             android:text="@string/space"
             android:textAlignment="center"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
     </RelativeLayout>
@@ -2860,7 +3100,8 @@
         android:id="@+id/enunciado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
