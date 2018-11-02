@@ -44,7 +44,7 @@ public class JuegoTrivia extends AppCompatActivity{
                     "\n" +
                     "Enunciado: \n" +
                     "\n" +
-                    "Para que los equipos inicien con el diagnostico estratégico y tengan la herramienta para evaluar a fondo el impacto para su nuevo proyecto, sería conveniente iniciar el diagnostico con un:",
+                    "Para que los equipos inicien con el diagnostico estratégico y tengan la herramienta para evaluar a fondo_principal el impacto para su nuevo proyecto, sería conveniente iniciar el diagnostico con un:",
             //Cuarto
             "Un buen administrador coordina y aprovecha los recursos de la organización y las personas, para alcanzar los objetivos con eficacia y eficiencia. Obtiene resultados a través de la planeación, organización, dirección, control e integración y el del equipo de trabajo conformado por personas de la organización. \n" +
                     "\n" +

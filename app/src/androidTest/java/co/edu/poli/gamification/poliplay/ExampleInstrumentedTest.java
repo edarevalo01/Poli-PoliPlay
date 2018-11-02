@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("co.edu.poli.gamification.poliplay", appContext.getPackageName());
+        assertEquals("co.edu.poli.gamification.logo_poliplay_grande", appContext.getPackageName());
     }
 }

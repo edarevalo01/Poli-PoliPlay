@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo_principal"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -26,7 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
-        app:srcCompat="@drawable/poliplay" />
+        app:srcCompat="@drawable/logo_poliplay_grande" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline9"
@@ -104,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline12"
-        app:srcCompat="@drawable/botonentrar" />
+        app:srcCompat="@drawable/boton_entrar" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline13"

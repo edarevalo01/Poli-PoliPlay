@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo_principal"
     tools:context=".SeleccionarCurso">
 
     <ImageView
@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/titulo" />
+        app:srcCompat="@drawable/titulo_sel_curso" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:srcCompat="@drawable/culturaambiental" />
+        app:srcCompat="@drawable/boton_ambiental" />
 
     <ImageButton
         android:id="@+id/btn_admin"
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_ambiental"
-        app:srcCompat="@drawable/procesoadmin" />
+        app:srcCompat="@drawable/boton_proceso" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
@@ -75,6 +75,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:srcCompat="@drawable/volver" />
+        app:srcCompat="@drawable/boton_volver" />
 
 </android.support.constraint.ConstraintLayout>
