@@ -1,6 +1,7 @@
 package co.edu.poli.gamification.poliplay;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import java.util.*;
 public class JuegoCrucigrama extends AppCompatActivity {
 
     private int[][] screenMat;
+    private char[][] solved = new char[17][14];
     private final char resuelto[][] = new char[17][14];   //Matriz leida desde archivo plano con el crucigrama resuelto
     private final byte posValidas[][] = new byte[17][14]; //Matriz de bits de posiciones donde es válido colocar carcateres
     private final TreeMap<Integer, int[]> formPalabra = new TreeMap<>();
@@ -24,7 +26,7 @@ public class JuegoCrucigrama extends AppCompatActivity {
     private EditText resp;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juego_crucigrama2);
         llenarScreenMat();
@@ -35,151 +37,153 @@ public class JuegoCrucigrama extends AppCompatActivity {
         }
         llenarPosicionesValidas();
         pintarCuadricula();
-        enun = (TextView)findViewById(R.id.enunciado);
-        resp = (EditText)findViewById(R.id.respuesta);
+        enun = (TextView) findViewById(R.id.enunciado);
+        resp = (EditText) findViewById(R.id.respuesta);
     }
 
-    public void tocar(View view){
+    public void btnTerminar(View view){
+        Intent i = new Intent(this, JuegoCrucigramaSolucion.class);
+        for(int j = 0; j< solved.length; j++){
+            i.putExtra(String.valueOf(j), solved[j]);
+        }
+        startActivity(i);
+    }
+
+    public void tocar(View view) {
         pintarCuadricula();
-        TextView a = (TextView)view;
+        TextView a = (TextView) view;
         int pos[] = formPalabra.get(a.getId());
-        posAct[0] = pos[0]; posAct[1] = pos[1];
-        if(formPalabra.containsKey(a.getId())) {
+        posAct[0] = pos[0];
+        posAct[1] = pos[1];
+        if (formPalabra.containsKey(a.getId())) {
             String palabra = getPalabra(pos);
-            if(enunciados.containsKey(palabra)){
+            if (enunciados.containsKey(palabra))
                 enun.setText(enunciados.get(palabra));
-            }
-            else{
-                enun.setText("Select otra posición");
-            }
+            else
+                enun.setText("Selecciona otra posición");
         }
         resp.setText("");
     }
 
-    public void sendAnswer(View view){
+    public void sendAnswer(View view) {
         String palabra = getPalabra(posAct);
         String respuesta = resp.getText().toString();
         int x = posAct[0];
         int y = posAct[1];
-        if(enunciados.containsKey(palabra)){
-            if(enunciados.get(palabra).charAt(0) == 'H'){
+        if (enunciados.containsKey(palabra)) {
+            if (enunciados.get(palabra).charAt(0) == 'H') {
                 int posInicio = 0;
-                loop: for (int i = y; i >= 0; i--){
-                    if(posValidas[x][i] == 0){
-                        posInicio = i+1;
+                loop:
+                for (int i = y; i >= 0; i--) {
+                    if (posValidas[x][i] == 0) {
+                        posInicio = i + 1;
                         break loop;
                     }
                 }
-                for(int i = posInicio, j = 0; j < respuesta.length(); i++, j++){
-                    if(j == palabra.length())break;
-                    TextView tx = (TextView)findViewById(screenMat[x][i]);
+                for (int i = posInicio, j = 0; j < respuesta.length(); i++, j++) {
+                    if (j == palabra.length()) break;
+                    TextView tx = (TextView) findViewById(screenMat[x][i]);
                     tx.setText(String.valueOf(respuesta.charAt(j)).toUpperCase());
+                    solved[x][i] = String.valueOf(respuesta.charAt(j)).toUpperCase().charAt(0);
                 }
-            }
-            else if(enunciados.get(palabra).charAt(0) == 'V'){
+            } else if (enunciados.get(palabra).charAt(0) == 'V') {
                 int posInicio = 0;
-                loop: for(int i = x; i >= 0; i--){
-                    if(posValidas[i][y] == 0){
-                        posInicio = i+1;
+                loop:
+                for (int i = x; i >= 0; i--) {
+                    if (posValidas[i][y] == 0) {
+                        posInicio = i + 1;
                         break loop;
                     }
                 }
-                for(int i = posInicio, j = 0; j < respuesta.length(); i++, j++){
-                    if(j == palabra.length())break;
-                    TextView ty = (TextView)findViewById(screenMat[i][y]);
+                for (int i = posInicio, j = 0; j < respuesta.length(); i++, j++) {
+                    if (j == palabra.length()) break;
+                    TextView ty = (TextView) findViewById(screenMat[i][y]);
                     ty.setText(String.valueOf(respuesta.charAt(j)).toUpperCase());
+                    solved[i][y] = String.valueOf(respuesta.charAt(j)).toUpperCase().charAt(0);
                 }
             }
         }
-        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
-    private String getPalabra(int[] pos){
+    private String getPalabra(int[] pos) {
         boolean horizontal = true;
         boolean vertical = true;
         int x = pos[0];
         int y = pos[1];
-        if(x > -1 && y > -1 && x < 14 && y < 17) {
-            if (posValidas[x+1][y] == 0 || (x-1 >= 0? posValidas[x-1][y] == 0 : posValidas[x][y] == 0)) {
+        if (x > -1 && y > -1 && x < 14 && y < 17) {
+            if (posValidas[x + 1][y] == 0 || (x - 1 >= 0 ? posValidas[x - 1][y] == 0 : posValidas[x][y] == 0)) {
                 vertical = false;
-            }
-            else if(posValidas[x][y+1] == 0 || (y-1 >= 0? posValidas[x][y-1] == 0 : posValidas[x][y] == 0)){
+            } else if (posValidas[x][y + 1] == 0 || (y - 1 >= 0 ? posValidas[x][y - 1] == 0 : posValidas[x][y] == 0)) {
                 horizontal = false;
             }
         }
         String palabra = "";
-        if(horizontal){
-            for(int i = y; i < posValidas[0].length; i++){
-                if(posValidas[x][i] == 1) {
+        if (horizontal) {
+            for (int i = y; i < posValidas[0].length; i++) {
+                if (posValidas[x][i] == 1) {
                     palabra = palabra + String.valueOf(resuelto[x][i]);
-                    TextView p = (TextView)findViewById(screenMat[x][i]);
+                    TextView p = (TextView) findViewById(screenMat[x][i]);
                     p.setBackground(getResources().getDrawable(R.drawable.rectangulo_letra_sel));
-                }
-                else break;
+                } else break;
             }
-            for(int i = y-1; i >= 0; i--){
-                if(posValidas[x][i] == 1){
+            for (int i = y - 1; i >= 0; i--) {
+                if (posValidas[x][i] == 1) {
                     String aux = palabra;
                     palabra = String.valueOf(resuelto[x][i]) + aux;
-                    TextView p = (TextView)findViewById(screenMat[x][i]);
+                    TextView p = (TextView) findViewById(screenMat[x][i]);
                     p.setBackground(getResources().getDrawable(R.drawable.rectangulo_letra_sel));
-                }
-                else break;
+                } else break;
             }
-        }
-        else if(vertical){
-            for(int i = x; i < posValidas.length; i++){
-                if(posValidas[i][y] == 1) {
+        } else if (vertical) {
+            for (int i = x; i < posValidas.length; i++) {
+                if (posValidas[i][y] == 1) {
                     palabra = palabra + String.valueOf(resuelto[i][y]);
-                    TextView p = (TextView)findViewById(screenMat[i][y]);
+                    TextView p = (TextView) findViewById(screenMat[i][y]);
                     p.setBackground(getResources().getDrawable(R.drawable.rectangulo_letra_sel));
-                }
-                else break;
+                } else break;
             }
-            for(int i =x-1; i >= 0; i--){
-                if(posValidas[i][y] == 1){
+            for (int i = x - 1; i >= 0; i--) {
+                if (posValidas[i][y] == 1) {
                     String aux = palabra;
                     palabra = String.valueOf(resuelto[i][y]) + aux;
-                    TextView p = (TextView)findViewById(screenMat[i][y]);
+                    TextView p = (TextView) findViewById(screenMat[i][y]);
                     p.setBackground(getResources().getDrawable(R.drawable.rectangulo_letra_sel));
-                }
-                else break;
+                } else break;
             }
         }
         palabra = palabra.replaceAll("\\s", "");
-        if(palabra.length() <= 2){
+        if (palabra.length() <= 2) {
             palabra = "";
         }
         return palabra;
     }
 
-    private void pintarCuadricula(){
-        for(int i = 0; i < posValidas.length; i++){
-            for(int j = 0; j < posValidas[0].length; j++){
-                if(posValidas[i][j] == 1){
-                    TextView pos = (TextView)findViewById(screenMat[i][j]);
+    private void pintarCuadricula() {
+        for (int i = 0; i < posValidas.length; i++) {
+            for (int j = 0; j < posValidas[0].length; j++) {
+                if (posValidas[i][j] == 1) {
+                    TextView pos = (TextView) findViewById(screenMat[i][j]);
                     pos.setBackground(getResources().getDrawable(R.drawable.rectangulo_letra));
-                    formPalabra.put(screenMat[i][j], new int[]{i,j});
-                }
-                else{
-                    TextView pos = (TextView)findViewById(screenMat[i][j]);
+                    formPalabra.put(screenMat[i][j], new int[]{i, j});
+                } else {
+                    TextView pos = (TextView) findViewById(screenMat[i][j]);
                     pos.setEnabled(false);
                 }
             }
-            System.out.println(Arrays.toString(posValidas[i]));
         }
     }
 
-    private void lecturaResuelto() throws Exception{
+    private void lecturaResuelto() throws Exception {
         InputStream archivo = getResources().openRawResource(R.raw.field);
         BufferedReader llenar = new BufferedReader(new InputStreamReader(archivo));
-        for(int i = 0; i < resuelto.length; i++) {
+        for (int i = 0; i < resuelto.length; i++) {
             String line = llenar.readLine();
             resuelto[i] = line.toCharArray();
         }
         int s = Integer.parseInt(llenar.readLine().trim());
-        for(int i = 0; i < s; i++){
+        for (int i = 0; i < s; i++) {
             String line = llenar.readLine();
             StringTokenizer tok = new StringTokenizer(line, ";");
             String key = tok.nextToken();
@@ -191,7 +195,7 @@ public class JuegoCrucigrama extends AppCompatActivity {
     private void llenarPosicionesValidas() {
         for (int i = 0; i < posValidas.length; i++) {
             for (int j = 0; j < posValidas[0].length; j++) {
-                if(resuelto[i][j] == '.')
+                if (resuelto[i][j] == '.')
                     posValidas[i][j] = 0; //Posición vacía (no válida)
                 else
                     posValidas[i][j] = 1;//Posicion válida
@@ -200,7 +204,7 @@ public class JuegoCrucigrama extends AppCompatActivity {
     }
 
 
-    private void llenarScreenMat(){
+    private void llenarScreenMat() {
         screenMat = new int[][]{{R.id.l, R.id.l2, R.id.l3, R.id.l4, R.id.l5, R.id.l6, R.id.l7, R.id.l8, R.id.l9, R.id.l10, R.id.l11, R.id.l12, R.id.l13, R.id.l14},
                 {R.id.l15, R.id.l16, R.id.l17, R.id.l18, R.id.l19, R.id.l20, R.id.l21, R.id.l22, R.id.l23, R.id.l24, R.id.l25, R.id.l26, R.id.l27, R.id.l28},
                 {R.id.l29, R.id.l30, R.id.l31, R.id.l32, R.id.l33, R.id.l34, R.id.l35, R.id.l36, R.id.l37, R.id.l38, R.id.l39, R.id.l40, R.id.l41, R.id.l42},
