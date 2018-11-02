@@ -4,51 +4,62 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class SeleccionarRol extends AppCompatActivity {
 
-    private RadioButton rol1, rol2, rol3, rol4, rol5, rol6;
+    private ImageView rolM1;
+    private ImageView rolF1;
+    private ImageView rolM2;
+    private ImageView rolF2;
+    private ImageView rolM3;
+    private ImageView rolF3;
+    private ImageView rolM4;
+    private ImageView rolF4;
+    private ImageView rolM5;
+    private ImageView rolF5;
+    private ImageView rolM6;
+    private ImageView rolF6;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_rol);
-        rol1 = (RadioButton) findViewById(R.id.rol1);
-        rol2 = (RadioButton) findViewById(R.id.rol2);
-        rol3 = (RadioButton) findViewById(R.id.rol3);
-        rol4 = (RadioButton) findViewById(R.id.rol4);
-        rol5 = (RadioButton) findViewById(R.id.rol5);
-        rol6 = (RadioButton) findViewById(R.id.rol6);
-        String s = Login.user.getSignature();
-        if(s.equals("Cultura Ambiental")){
-            rol1.setText(getResources().getString(R.string.rolAgua));
-            rol2.setText(getResources().getString(R.string.rolTierra));
-            rol3.setText(getResources().getString(R.string.rolAire));
-            rol4.setText(getResources().getString(R.string.rolEnergia));
-            rol5.setText(getResources().getString(R.string.rolFauna));
-            rol6.setText(getResources().getString(R.string.rolReciclaje));
-        }
-        else if(s.equals("Proceso Administrativo")){
-            rol1.setText(getResources().getString(R.string.rol1));
-            rol2.setText(getResources().getString(R.string.rol2));
-            rol3.setText(getResources().getString(R.string.rol3));
-            rol4.setText(getResources().getString(R.string.rol4));
-            rol5.setText(getResources().getString(R.string.rol5));
-            rol6.setText(getResources().getString(R.string.rol6));
-        }
-        rol1.setChecked(true);
+
+
+
+        rolM1 = (ImageView)findViewById(R.id.rolM1);
+        rolF1 = (ImageView)findViewById(R.id.rolF1);
+        rolM2 = (ImageView)findViewById(R.id.rolM2);
+        rolF2 = (ImageView)findViewById(R.id.rolF2);
+        rolM3 = (ImageView)findViewById(R.id.rolM3);
+        rolF3 = (ImageView)findViewById(R.id.rolF3);
+        rolM4 = (ImageView)findViewById(R.id.rolM4);
+        rolF4 = (ImageView)findViewById(R.id.rolF4);
+        rolM5 = (ImageView)findViewById(R.id.rolM5);
+        rolF5 = (ImageView)findViewById(R.id.rolF5);
+        rolM6 = (ImageView)findViewById(R.id.rolM6);
+        rolF6 = (ImageView)findViewById(R.id.rolF6);
+
+
+    }
+    public void btnSelRolM(View view){
+        Intent i = new Intent(this, SeleccionarRolPopUp.class);
+        startActivity(i);
+    }
+    public void btnSelRolF(View view){
+        Intent i = new Intent(this, SeleccionarRolPopUp.class);
+        startActivity(i);
     }
 
-    public void continuarBtn(View view){
-        Intent i = new Intent(this, SeleccionarTransporte.class);
-        if(rol1.isChecked()) Login.user.setRole(rol1.getText().toString());
-        else if(rol2.isChecked()) Login.user.setRole(rol2.getText().toString());
-        else if(rol3.isChecked()) Login.user.setRole(rol3.getText().toString());
-        else if(rol4.isChecked()) Login.user.setRole(rol4.getText().toString());
-        else if(rol5.isChecked()) Login.user.setRole(rol5.getText().toString());
-        else if(rol6.isChecked()) Login.user.setRole(rol6.getText().toString());
+    public void btnVolver(View view){
+        Intent i = new Intent(this, SeleccionarCurso.class);
         startActivity(i);
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
+    android:background="@drawable/fondo"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,93 +8,171 @@
     android:layout_height="match_parent"
     tools:context=".SeleccionarRol">
 
-    <TextView
-        android:id="@+id/textSelRol"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:text="@string/selRol"
-        android:textColor="@color/colorWhite"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/poliplay" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="323dp"
-        android:layout_height="314dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="300dp"
+        android:layout_height="480dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
-        <RadioButton
-            android:id="@+id/rol1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="RadioButton" />
+            android:layout_height="80dp"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/rol2"
+            <ImageView
+                android:id="@+id/rolM1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="TODO"
+                android:onClick="btnSelRolM"
+                app:srcCompat="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/rolF1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnSelRolF"
+                app:srcCompat="@color/colorSecondary" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="RadioButton" />
+            android:layout_height="80dp"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/rol3"
+            <ImageView
+                android:id="@+id/rolM2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnSelRolM"
+                app:srcCompat="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/rolF2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnSelRolF"
+                app:srcCompat="@color/colorSecondary" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="RadioButton" />
+            android:layout_height="80dp"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/rol4"
+            <ImageView
+                android:id="@+id/rolM3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnSelRolM"
+                app:srcCompat="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/rolF3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@color/colorSecondary"
+                android:onClick="btnSelRolF" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="RadioButton" />
+            android:layout_height="80dp"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/rol5"
+            <ImageView
+                android:id="@+id/rolM4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnSelRolM"
+                app:srcCompat="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/rolF4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnSelRolF"
+                app:srcCompat="@color/colorSecondary" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="RadioButton" />
+            android:layout_height="80dp"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/rol6"
+            <ImageView
+                android:id="@+id/rolM5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnSelRolM"
+                app:srcCompat="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/rolF5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnSelRolF"
+                app:srcCompat="@color/colorSecondary" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="RadioButton" />
-    </RadioGroup>
+            android:layout_height="80dp"
+            android:orientation="horizontal">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline4"
+            <ImageView
+                android:id="@+id/rolM6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnSelRolM"
+                app:srcCompat="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/rolF6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnSelRolF"
+                app:srcCompat="@color/colorSecondary" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.84" />
-
-    <Button
-        android:id="@+id/selRolButton"
-        android:layout_width="254dp"
-        android:layout_height="wrap_content"
-        android:onClick="continuarBtn"
-        android:text="@string/seleccionar"
+        android:onClick="btnVolver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/volver" />
+
 </android.support.constraint.ConstraintLayout>

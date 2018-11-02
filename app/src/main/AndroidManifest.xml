@@ -27,6 +27,7 @@
         <activity android:name=".JuegoCalculadora" />
         <activity android:name=".JuegoCrucigrama" />
         <activity android:name=".JuegoCrucigramaSolucion"></activity>
+        <activity android:name=".SeleccionarRolPopUp" android:theme="@style/AppTheme.CustomTheme"></activity>
     </application>
 
 </manifest>
