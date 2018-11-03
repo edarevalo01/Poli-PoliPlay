@@ -2,13 +2,14 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo_crucigrama"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JuegoCrucigramaSolucion">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="322dp"
+        android:layout_width="324dp"
         android:layout_height="391dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
@@ -29,7 +30,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s2"
@@ -40,7 +41,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s3"
@@ -51,7 +52,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s4"
@@ -62,7 +63,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s5"
@@ -73,7 +74,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s6"
@@ -84,7 +85,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s7"
@@ -95,7 +96,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s8"
@@ -106,7 +107,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s9"
@@ -117,7 +118,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s10"
@@ -128,7 +129,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s11"
@@ -139,7 +140,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s12"
@@ -150,7 +151,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s13"
@@ -161,7 +162,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s14"
@@ -172,7 +173,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s15"
@@ -183,7 +184,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s16"
@@ -195,7 +196,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s17"
@@ -207,7 +208,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s18"
@@ -219,7 +220,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s19"
@@ -231,7 +232,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s20"
@@ -243,7 +244,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s21"
@@ -255,7 +256,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s22"
@@ -267,7 +268,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s23"
@@ -279,7 +280,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s24"
@@ -291,7 +292,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s25"
@@ -303,7 +304,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s26"
@@ -315,7 +316,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s27"
@@ -327,7 +328,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s28"
@@ -339,7 +340,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s29"
@@ -350,7 +351,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s30"
@@ -362,7 +363,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s31"
@@ -374,7 +375,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s32"
@@ -386,7 +387,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s33"
@@ -398,7 +399,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s34"
@@ -410,7 +411,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s35"
@@ -422,7 +423,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s36"
@@ -434,7 +435,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s37"
@@ -446,7 +447,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s38"
@@ -458,7 +459,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s39"
@@ -470,7 +471,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s40"
@@ -482,7 +483,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s41"
@@ -494,7 +495,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s42"
@@ -506,7 +507,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s43"
@@ -517,7 +518,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s44"
@@ -529,7 +530,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s45"
@@ -541,7 +542,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s46"
@@ -553,7 +554,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s47"
@@ -565,7 +566,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s48"
@@ -577,7 +578,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s49"
@@ -589,7 +590,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s50"
@@ -601,7 +602,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s51"
@@ -613,7 +614,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s52"
@@ -625,7 +626,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s53"
@@ -637,7 +638,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s54"
@@ -649,7 +650,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s55"
@@ -661,7 +662,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s56"
@@ -673,7 +674,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s57"
@@ -684,7 +685,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s58"
@@ -696,7 +697,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s59"
@@ -708,7 +709,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s60"
@@ -720,7 +721,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s61"
@@ -732,7 +733,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s62"
@@ -744,7 +745,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s63"
@@ -756,7 +757,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s64"
@@ -768,7 +769,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s65"
@@ -780,7 +781,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s66"
@@ -792,7 +793,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s67"
@@ -804,7 +805,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s68"
@@ -816,7 +817,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s69"
@@ -828,7 +829,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s70"
@@ -840,7 +841,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s71"
@@ -851,7 +852,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s72"
@@ -863,7 +864,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s73"
@@ -875,7 +876,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s74"
@@ -887,7 +888,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s75"
@@ -899,7 +900,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s76"
@@ -911,7 +912,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s77"
@@ -923,7 +924,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s78"
@@ -935,7 +936,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s79"
@@ -947,7 +948,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s80"
@@ -959,7 +960,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s81"
@@ -971,7 +972,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s82"
@@ -983,7 +984,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s83"
@@ -995,7 +996,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s84"
@@ -1007,7 +1008,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s85"
@@ -1018,7 +1019,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s86"
@@ -1030,7 +1031,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s87"
@@ -1042,7 +1043,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s88"
@@ -1054,7 +1055,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s89"
@@ -1066,7 +1067,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s90"
@@ -1078,7 +1079,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s91"
@@ -1090,7 +1091,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s92"
@@ -1102,7 +1103,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s93"
@@ -1114,7 +1115,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s94"
@@ -1126,7 +1127,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s95"
@@ -1138,7 +1139,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s96"
@@ -1150,7 +1151,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s97"
@@ -1162,7 +1163,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s98"
@@ -1174,7 +1175,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s99"
@@ -1185,7 +1186,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s100"
@@ -1197,7 +1198,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s101"
@@ -1209,7 +1210,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s102"
@@ -1221,7 +1222,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s103"
@@ -1233,7 +1234,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s104"
@@ -1245,7 +1246,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s105"
@@ -1257,7 +1258,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s106"
@@ -1269,7 +1270,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s107"
@@ -1281,7 +1282,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s108"
@@ -1293,7 +1294,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s109"
@@ -1305,7 +1306,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s110"
@@ -1317,7 +1318,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s111"
@@ -1329,7 +1330,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s112"
@@ -1341,7 +1342,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s113"
@@ -1352,7 +1353,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s114"
@@ -1364,7 +1365,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s115"
@@ -1376,7 +1377,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s116"
@@ -1388,7 +1389,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s117"
@@ -1400,7 +1401,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s118"
@@ -1412,7 +1413,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s119"
@@ -1424,7 +1425,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s120"
@@ -1436,7 +1437,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s121"
@@ -1448,7 +1449,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s122"
@@ -1460,7 +1461,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s123"
@@ -1472,7 +1473,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s124"
@@ -1484,7 +1485,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s125"
@@ -1496,7 +1497,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s126"
@@ -1508,7 +1509,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s127"
@@ -1519,7 +1520,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s128"
@@ -1531,7 +1532,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s129"
@@ -1543,7 +1544,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s130"
@@ -1555,7 +1556,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s131"
@@ -1567,7 +1568,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s132"
@@ -1579,7 +1580,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s133"
@@ -1591,7 +1592,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s134"
@@ -1603,7 +1604,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s135"
@@ -1615,7 +1616,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s136"
@@ -1627,7 +1628,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s137"
@@ -1639,7 +1640,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s138"
@@ -1651,7 +1652,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s139"
@@ -1663,7 +1664,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s140"
@@ -1675,7 +1676,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s141"
@@ -1686,7 +1687,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s142"
@@ -1698,7 +1699,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s143"
@@ -1710,7 +1711,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s144"
@@ -1722,7 +1723,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s145"
@@ -1734,7 +1735,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s146"
@@ -1746,7 +1747,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s147"
@@ -1758,7 +1759,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s148"
@@ -1770,7 +1771,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s149"
@@ -1782,7 +1783,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s150"
@@ -1794,7 +1795,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s151"
@@ -1806,7 +1807,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s152"
@@ -1818,7 +1819,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s153"
@@ -1830,7 +1831,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s154"
@@ -1842,7 +1843,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s155"
@@ -1853,7 +1854,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s156"
@@ -1865,7 +1866,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s157"
@@ -1877,7 +1878,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s158"
@@ -1889,7 +1890,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s159"
@@ -1901,7 +1902,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s160"
@@ -1913,7 +1914,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s161"
@@ -1925,7 +1926,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s162"
@@ -1937,7 +1938,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s163"
@@ -1949,7 +1950,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s164"
@@ -1961,7 +1962,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s165"
@@ -1973,7 +1974,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s166"
@@ -1985,7 +1986,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s167"
@@ -1997,7 +1998,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s168"
@@ -2009,7 +2010,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s169"
@@ -2020,7 +2021,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s170"
@@ -2032,7 +2033,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s171"
@@ -2044,7 +2045,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s172"
@@ -2056,7 +2057,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s173"
@@ -2068,7 +2069,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s174"
@@ -2080,7 +2081,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s175"
@@ -2092,7 +2093,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s176"
@@ -2104,7 +2105,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s177"
@@ -2116,7 +2117,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s178"
@@ -2128,7 +2129,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s179"
@@ -2140,7 +2141,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s180"
@@ -2152,7 +2153,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s181"
@@ -2164,7 +2165,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s182"
@@ -2176,7 +2177,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s183"
@@ -2187,7 +2188,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s184"
@@ -2199,7 +2200,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s185"
@@ -2211,7 +2212,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s186"
@@ -2223,7 +2224,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s187"
@@ -2235,7 +2236,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s188"
@@ -2247,7 +2248,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s189"
@@ -2259,7 +2260,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s190"
@@ -2271,7 +2272,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s191"
@@ -2283,7 +2284,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s192"
@@ -2295,7 +2296,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s193"
@@ -2307,7 +2308,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s194"
@@ -2319,7 +2320,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s195"
@@ -2331,7 +2332,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s196"
@@ -2343,7 +2344,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s197"
@@ -2354,7 +2355,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s198"
@@ -2366,7 +2367,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s199"
@@ -2378,7 +2379,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s200"
@@ -2390,7 +2391,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s201"
@@ -2402,7 +2403,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s202"
@@ -2414,7 +2415,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s203"
@@ -2426,7 +2427,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s204"
@@ -2438,7 +2439,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s205"
@@ -2450,7 +2451,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s206"
@@ -2462,7 +2463,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s207"
@@ -2474,7 +2475,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s208"
@@ -2486,7 +2487,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s209"
@@ -2498,7 +2499,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s210"
@@ -2510,7 +2511,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s211"
@@ -2521,7 +2522,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s212"
@@ -2533,7 +2534,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s213"
@@ -2545,7 +2546,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s214"
@@ -2557,7 +2558,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s215"
@@ -2569,7 +2570,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s216"
@@ -2581,7 +2582,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s217"
@@ -2593,7 +2594,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s218"
@@ -2605,7 +2606,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s219"
@@ -2617,7 +2618,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s220"
@@ -2629,7 +2630,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s221"
@@ -2641,7 +2642,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s222"
@@ -2653,7 +2654,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s223"
@@ -2665,7 +2666,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s224"
@@ -2677,7 +2678,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s225"
@@ -2688,7 +2689,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s226"
@@ -2700,7 +2701,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s227"
@@ -2712,7 +2713,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s228"
@@ -2724,7 +2725,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s229"
@@ -2736,7 +2737,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s230"
@@ -2748,7 +2749,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s231"
@@ -2760,7 +2761,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s232"
@@ -2772,7 +2773,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s233"
@@ -2784,7 +2785,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s234"
@@ -2796,7 +2797,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s235"
@@ -2808,7 +2809,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s236"
@@ -2820,7 +2821,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s237"
@@ -2832,7 +2833,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/s238"
@@ -2844,7 +2845,7 @@
             android:text="@string/space"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
