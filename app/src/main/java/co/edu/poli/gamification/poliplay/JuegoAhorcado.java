@@ -89,6 +89,7 @@ public class JuegoAhorcado extends AppCompatActivity {
             if (partsWord.charAt(i) == d.charAt(0)) {
                 c[i] = d;
                 cambio = true;
+                t.setTextColor(getResources().getColor(R.color.colorSecondary));
                 t.setEnabled(false);
             }
         }
@@ -130,6 +131,7 @@ public class JuegoAhorcado extends AppCompatActivity {
         }
         if (contador == 0) {
             for (int i = 0; i < letters.length; i++) {
+                letters[i].setTextColor(getResources().getColor(R.color.colorSecondary));
                 letters[i].setEnabled(false);
             }
             runner = new Runnable() {

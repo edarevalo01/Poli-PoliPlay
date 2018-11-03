@@ -7,10 +7,13 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class SeleccionarRol extends AppCompatActivity {
 
+
+    private int rolesExis;
     private ImageView rolM1;
     private ImageView rolF1;
     private ImageView rolM2;
@@ -46,10 +49,17 @@ public class SeleccionarRol extends AppCompatActivity {
         rolF5 = (ImageView)findViewById(R.id.rolF5);
         rolM6 = (ImageView)findViewById(R.id.rolM6);
         rolF6 = (ImageView)findViewById(R.id.rolF6);
+        String f = rolF1.getContentDescription().toString();
+
 
 
     }
+    public void asignarRol(View view){
+        Login.user.setRole(view.getContentDescription().toString());
+    }
+
     public void btnSelRolM(View view){
+        asignarRol(view);
         Intent i = new Intent(this, SeleccionarRolPopUp.class);
         startActivity(i);
     }

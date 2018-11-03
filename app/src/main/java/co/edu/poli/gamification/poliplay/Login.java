@@ -24,8 +24,8 @@ public class Login extends AppCompatActivity {
     public void entrar(View view){
         user.setName("Alejandro");
         user.setLastName("Arévalo");
-        user.setEmail("aaa");
-        user.setPassword("a123");
+        user.setEmail("a");
+        user.setPassword("a");
         String varEmail = email.getText().toString();
         String varContrasena = contrasena.getText().toString();
         if(varEmail.equals(user.getEmail()) && varContrasena.equals(user.getPassword())){

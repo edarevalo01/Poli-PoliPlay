@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:contentDescription="TODO"
+                android:contentDescription="@string/rol1"
                 android:onClick="btnSelRolM"
                 app:srcCompat="@color/colorPrimaryDark" />
 
@@ -48,6 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/rol1"
                 android:onClick="btnSelRolF"
                 app:srcCompat="@color/colorSecondary" />
         </LinearLayout>
@@ -62,16 +63,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/rol2"
                 android:onClick="btnSelRolM"
-                app:srcCompat="@color/colorPrimaryDark" />
+                app:srcCompat="@color/colorPrimary" />
 
             <ImageView
                 android:id="@+id/rolF2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/rol2"
                 android:onClick="btnSelRolF"
-                app:srcCompat="@color/colorSecondary" />
+                app:srcCompat="@color/colorSecondaryDark" />
         </LinearLayout>
 
         <LinearLayout
@@ -84,6 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/rol3"
                 android:onClick="btnSelRolM"
                 app:srcCompat="@color/colorPrimaryDark" />
 
@@ -92,8 +96,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@color/colorSecondary"
-                android:onClick="btnSelRolF" />
+                android:contentDescription="@string/rol3"
+                android:onClick="btnSelRolF"
+                app:srcCompat="@color/colorSecondary" />
         </LinearLayout>
 
         <LinearLayout
@@ -106,16 +111,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/rol4"
                 android:onClick="btnSelRolM"
-                app:srcCompat="@color/colorPrimaryDark" />
+                app:srcCompat="@color/colorPrimary" />
 
             <ImageView
                 android:id="@+id/rolF4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/rol4"
                 android:onClick="btnSelRolF"
-                app:srcCompat="@color/colorSecondary" />
+                app:srcCompat="@color/colorSecondaryDark" />
         </LinearLayout>
 
         <LinearLayout
@@ -128,6 +135,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/rol5"
                 android:onClick="btnSelRolM"
                 app:srcCompat="@color/colorPrimaryDark" />
 
@@ -136,6 +144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/rol5"
                 android:onClick="btnSelRolF"
                 app:srcCompat="@color/colorSecondary" />
         </LinearLayout>
@@ -150,16 +159,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/rol6"
                 android:onClick="btnSelRolM"
-                app:srcCompat="@color/colorPrimaryDark" />
+                app:srcCompat="@color/colorPrimary" />
 
             <ImageView
                 android:id="@+id/rolF6"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:contentDescription="@string/rol6"
                 android:onClick="btnSelRolF"
-                app:srcCompat="@color/colorSecondary" />
+                app:srcCompat="@color/colorSecondaryDark" />
         </LinearLayout>
 
     </LinearLayout>
