@@ -47,6 +47,4 @@ public class Mapa extends AppCompatActivity {
         Intent i = new Intent(this, JuegoCalculadora.class);
         startActivity(i);
     }
-
-
 }

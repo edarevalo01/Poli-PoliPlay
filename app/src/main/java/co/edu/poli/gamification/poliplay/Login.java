@@ -22,8 +22,8 @@ public class Login extends AppCompatActivity {
     }
 
     public void entrar(View view){
-        user.setName("Alejandro");
-        user.setLastName("Arévalo");
+        user.setName("Nombre Estudiante");
+        user.setLastName("Apellido Estudiante");
         user.setEmail("a");
         user.setPassword("a");
         String varEmail = email.getText().toString();
@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity {
             Intent i = new Intent(this, SeleccionarCurso.class);
             startActivity(i);
         }
-        else if(varEmail.equals("test")){
+        else if(varEmail.equals("t")){
             Intent i = new Intent(this, Mapa.class);
             startActivity(i);
         }

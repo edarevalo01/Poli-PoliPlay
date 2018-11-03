@@ -49,7 +49,6 @@ public class SeleccionarRol extends AppCompatActivity {
         rolF5 = (ImageView)findViewById(R.id.rolF5);
         rolM6 = (ImageView)findViewById(R.id.rolM6);
         rolF6 = (ImageView)findViewById(R.id.rolF6);
-        String f = rolF1.getContentDescription().toString();
 
 
 
