@@ -66,6 +66,12 @@ public class SeleccionarRol extends AppCompatActivity {
             rolF6.setImageDrawable(getDrawable(R.drawable.sel_der_comunicadora));
         }
         else if(Login.user.getSignature() == "Cultura Ambiental"){
+            rolF1.setEnabled(false);
+            rolF2.setEnabled(false);
+            rolF3.setEnabled(false);
+            rolF4.setEnabled(false);
+            rolF5.setEnabled(false);
+            rolF6.setEnabled(false);
 
         }
 

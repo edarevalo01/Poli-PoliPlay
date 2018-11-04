@@ -27,10 +27,12 @@
             android:id="@+id/button2"
             android:layout_width="136dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
             android:onClick="btnSelRol"
             android:text="Seleccionar"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
     </android.support.constraint.ConstraintLayout>
+
 </android.support.constraint.ConstraintLayout>

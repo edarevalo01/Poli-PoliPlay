@@ -20,15 +20,15 @@ public class SeleccionarRolPopUp extends Activity {
         setContentView(R.layout.activity_seleccionar_rol_pop_up);
 
         rol = (ImageView)findViewById(R.id.rolPrin);
-        rolSelected = Login.user.getRole();
+        rolSelected = Login.user.getRole().toString();
+
+
 
         //EscalarPantalla
         DisplayMetrics md = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(md);
-
         int width = md.widthPixels;
         int heigth = md.heightPixels;
-
         getWindow().setLayout((int) (width * .8), (int) (heigth * .6));
 
         escogerRolPop();
@@ -36,23 +36,61 @@ public class SeleccionarRolPopUp extends Activity {
 
     public void escogerRolPop() {
         if (Login.user.getSignature() == "Proceso Administrativo") {
-            if (rolSelected == "Rol 1") {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_explorador));
+            if (rolSelected.equals("Rol 1"))    {
+                rol.setImageDrawable(getDrawable(R.drawable.h_explorador));
             }
-            if (rolSelected == "Rol 2") {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_filantropo));
+            else if (rolSelected.equals("Rol 1f"))    {
+                rol.setImageDrawable(getDrawable(R.drawable.m_explorador));
             }
-            if (rolSelected == "Rol 3") {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_triunfador));
+            else if (rolSelected.equals("Rol 2")) {
+                rol.setImageDrawable(getDrawable(R.drawable.h_filantropo));
             }
-            if (Login.user.getRole() == "Rol 4") {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_pensador));
+            else if (rolSelected.equals("Rol 2f")) {
+                rol.setImageDrawable(getDrawable(R.drawable.m_filantropa));
             }
-            if (Login.user.getRole() == "Rol 5") {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_revolucionario));
+            else if (rolSelected.equals("Rol 3")) {
+                rol.setImageDrawable(getDrawable(R.drawable.h_triunfador));
             }
-            if (Login.user.getRole() == "Rol 6") {
-                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_socializador));
+            else if (rolSelected.equals("Rol 3f")) {
+                rol.setImageDrawable(getDrawable(R.drawable.m_triunfadora));
+            }
+            else if (rolSelected.equals("Rol 4")) {
+                rol.setImageDrawable(getDrawable(R.drawable.h_pensador));
+            }
+            else if (rolSelected.equals("Rol 4f")) {
+                rol.setImageDrawable(getDrawable(R.drawable.m_pensadora));
+            }
+            else if (rolSelected.equals("Rol 5")) {
+                rol.setImageDrawable(getDrawable(R.drawable.h_revolucionario));
+            }
+            else if (rolSelected.equals("Rol 5f")) {
+                rol.setImageDrawable(getDrawable(R.drawable.m_revolucionaria));
+            }
+            else if(rolSelected.equals("Rol 6")){
+                rol.setImageDrawable(getDrawable(R.drawable.h_socializador));
+            }
+            else if(rolSelected.equals("Rol 6f")){
+                rol.setImageDrawable(getDrawable(R.drawable.m_socializador));
+            }
+        }
+        else if (Login.user.getSignature() == "Cultura Ambiental") {
+            if (rolSelected.equals("Rol 1")) {
+                rol.setImageDrawable(getDrawable(R.drawable.coati));
+            }
+            else if (rolSelected.equals("Rol 2")) {
+                rol.setImageDrawable(getDrawable(R.drawable.aguila));
+            }
+            else if (rolSelected.equals("Rol 3")) {
+                rol.setImageDrawable(getDrawable(R.drawable.tucan));
+            }
+            else if (rolSelected.equals("Rol 4")) {
+                rol.setImageDrawable(getDrawable(R.drawable.carpintero));
+            }
+            else if (rolSelected.equals("Rol 5")) {
+                rol.setImageDrawable(getDrawable(R.drawable.coati));
+            }
+            else{
+                rol.setImageDrawable(getDrawable(R.drawable.coati));
             }
         }
     }

@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">PoliPlay</string>
+    <string name="app_name">Gamificación</string>
 
     <!-- PANTALLA LOGIN -->
-    <string name="titulo">POLI PLAY</string>
+    <string name="titulo">Gamificación</string>
     <string name="textEmail">Usuario</string>
     <string name="textContrasena">Contraseña</string>
     <string name="btnLogin">Entrar</string>
@@ -30,6 +30,13 @@
     <string name="rol4">Rol 4</string>
     <string name="rol5">Rol 5</string>
     <string name="rol6">Rol 6</string>
+    <string name="rol1f">Rol 1f</string>
+    <string name="rol2f">Rol 2f</string>
+    <string name="rol3f">Rol 3f</string>
+    <string name="rol4f">Rol 4f</string>
+    <string name="rol5f">Rol 5f</string>
+    <string name="rol6f">Rol 6f</string>
+
 
     <!-- PANTALLA DE TRANSPORTE -->
     <string name="selTrans">SELECCIONA UN MEDIO DE TRANSPORTE</string>
