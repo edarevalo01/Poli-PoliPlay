@@ -13,7 +13,6 @@ import android.widget.TextView;
 public class SeleccionarRol extends AppCompatActivity {
 
 
-    private int rolesExis;
     private ImageView rolM1;
     private ImageView rolF1;
     private ImageView rolM2;
@@ -35,8 +34,6 @@ public class SeleccionarRol extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_rol);
 
-
-
         rolM1 = (ImageView)findViewById(R.id.rolM1);
         rolF1 = (ImageView)findViewById(R.id.rolF1);
         rolM2 = (ImageView)findViewById(R.id.rolM2);
@@ -50,19 +47,36 @@ public class SeleccionarRol extends AppCompatActivity {
         rolM6 = (ImageView)findViewById(R.id.rolM6);
         rolF6 = (ImageView)findViewById(R.id.rolF6);
 
-
+        asignarMiniRoles();
 
     }
-    public void asignarRol(View view){
-        Login.user.setRole(view.getContentDescription().toString());
-    }
+    public void asignarMiniRoles(){
+        if(Login.user.getSignature() == "Proceso Administrativo"){
+            rolM1.setImageDrawable(getDrawable(R.drawable.sel_izq_explorador));
+            rolF1.setImageDrawable(getDrawable(R.drawable.sel_der_explorador));
+            rolM2.setImageDrawable(getDrawable(R.drawable.sel_izq_filantropo));
+            rolF2.setImageDrawable(getDrawable(R.drawable.sel_der_filantropa));
+            rolM3.setImageDrawable(getDrawable(R.drawable.sel_izq_triunfador));
+            rolF3.setImageDrawable(getDrawable(R.drawable.sel_der_triunfador));
+            rolM4.setImageDrawable(getDrawable(R.drawable.sel_izq_pensador));
+            rolF4.setImageDrawable(getDrawable(R.drawable.sel_der_pensadora));
+            rolM5.setImageDrawable(getDrawable(R.drawable.sel_izq_revolucionario));
+            rolF5.setImageDrawable(getDrawable(R.drawable.sel_der_revolucionaria));
+            rolM6.setImageDrawable(getDrawable(R.drawable.sel_izq_comunicador));
+            rolF6.setImageDrawable(getDrawable(R.drawable.sel_der_comunicadora));
+        }
+        else if(Login.user.getSignature() == "Cultura Ambiental"){
 
+        }
+
+    }
     public void btnSelRolM(View view){
-        asignarRol(view);
+        Login.user.setRole(view.getContentDescription().toString());
         Intent i = new Intent(this, SeleccionarRolPopUp.class);
         startActivity(i);
     }
     public void btnSelRolF(View view){
+        Login.user.setRole(view.getContentDescription().toString());
         Intent i = new Intent(this, SeleccionarRolPopUp.class);
         startActivity(i);
     }

@@ -49,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol1"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRolM"
                 app:srcCompat="@color/colorSecondary" />
         </LinearLayout>
 
@@ -73,7 +73,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol2"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRolM"
                 app:srcCompat="@color/colorSecondaryDark" />
         </LinearLayout>
 
@@ -97,7 +97,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol3"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRolM"
                 app:srcCompat="@color/colorSecondary" />
         </LinearLayout>
 
@@ -121,7 +121,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol4"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRolM"
                 app:srcCompat="@color/colorSecondaryDark" />
         </LinearLayout>
 
@@ -145,7 +145,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol5"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRolM"
                 app:srcCompat="@color/colorSecondary" />
         </LinearLayout>
 
@@ -169,7 +169,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol6"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRolM"
                 app:srcCompat="@color/colorSecondaryDark" />
         </LinearLayout>
 

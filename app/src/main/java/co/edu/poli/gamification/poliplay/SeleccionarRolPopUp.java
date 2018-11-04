@@ -12,6 +12,7 @@ import android.widget.ImageView;
 public class SeleccionarRolPopUp extends Activity {
 
     private ImageView rol;
+    private String rolSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,39 +20,45 @@ public class SeleccionarRolPopUp extends Activity {
         setContentView(R.layout.activity_seleccionar_rol_pop_up);
 
         rol = (ImageView)findViewById(R.id.rolPrin);
-        escogerRolPop();
+        rolSelected = Login.user.getRole();
+
+        //EscalarPantalla
         DisplayMetrics md = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(md);
 
         int width = md.widthPixels;
         int heigth = md.heightPixels;
 
-        getWindow().setLayout((int)(width*.8),(int)(heigth*.6));
+        getWindow().setLayout((int) (width * .8), (int) (heigth * .6));
 
+        escogerRolPop();
     }
-    public void escogerRolPop(){
 
-        if(Login.user.getRole() == "Rol 1"){
-            rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_explorador));
-        }
-        if(Login.user.getRole() == "Rol 2"){
-            rol.setImageDrawable(getResources().getDrawable(R.drawable.personaje_hombre_filantropo));
-        }
-        if(Login.user.getRole() == "Rol 3"){
-            rol.setImageDrawable(getResources().getDrawable(R.drawable.personaje_hombre_pensador));
-        }
-        if(Login.user.getRole() == "Rol 4"){
-            rol.setImageDrawable(getResources().getDrawable(R.drawable.personaje_hombre_revolucionario));
-        }
-        if(Login.user.getRole() == "Rol 5"){
-            rol.setImageDrawable(getResources().getDrawable(R.drawable.personaje_hombre_socializador));
-        }
-        if(Login.user.getRole() == "Rol 6"){
-            rol.setImageDrawable(getResources().getDrawable(R.drawable.personaje_hombre_triunfador));
+    public void escogerRolPop() {
+        if (Login.user.getSignature() == "Proceso Administrativo") {
+            if (rolSelected == "Rol 1") {
+                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_explorador));
+            }
+            if (rolSelected == "Rol 2") {
+                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_filantropo));
+            }
+            if (rolSelected == "Rol 3") {
+                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_triunfador));
+            }
+            if (Login.user.getRole() == "Rol 4") {
+                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_pensador));
+            }
+            if (Login.user.getRole() == "Rol 5") {
+                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_revolucionario));
+            }
+            if (Login.user.getRole() == "Rol 6") {
+                rol.setImageDrawable(getDrawable(R.drawable.personaje_hombre_socializador));
+            }
         }
     }
-    public void btnSelRol (View view){
-        Intent i = new Intent( this, SeleccionarTransporte.class );
+
+    public void btnSelRol(View view) {
+        Intent i = new Intent(this, SeleccionarTransporte.class);
         startActivity(i);
     }
 }
