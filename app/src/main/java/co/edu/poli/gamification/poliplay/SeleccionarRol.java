@@ -72,6 +72,12 @@ public class SeleccionarRol extends AppCompatActivity {
             rolF4.setEnabled(false);
             rolF5.setEnabled(false);
             rolF6.setEnabled(false);
+            rolM1.setImageDrawable(getDrawable(R.drawable.coati_full));
+            rolM2.setImageDrawable(getDrawable(R.drawable.tucan_full));
+            rolM3.setImageDrawable(getDrawable(R.drawable.aguila_arpia));
+            rolM4.setImageDrawable(getDrawable(R.drawable.carpintero_full));
+            rolM5.setImageDrawable(getDrawable(R.drawable.tingua_full));
+            rolM6.setImageDrawable(getDrawable(R.drawable.rana_full));
 
         }
 

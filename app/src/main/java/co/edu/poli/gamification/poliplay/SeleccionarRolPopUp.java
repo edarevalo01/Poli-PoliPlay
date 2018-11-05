@@ -78,19 +78,19 @@ public class SeleccionarRolPopUp extends Activity {
                 rol.setImageDrawable(getDrawable(R.drawable.coati));
             }
             else if (rolSelected.equals("Rol 2")) {
-                rol.setImageDrawable(getDrawable(R.drawable.aguila));
+                rol.setImageDrawable(getDrawable(R.drawable.tucan));
             }
             else if (rolSelected.equals("Rol 3")) {
-                rol.setImageDrawable(getDrawable(R.drawable.tucan));
+                rol.setImageDrawable(getDrawable(R.drawable.aguila));
             }
             else if (rolSelected.equals("Rol 4")) {
                 rol.setImageDrawable(getDrawable(R.drawable.carpintero));
             }
             else if (rolSelected.equals("Rol 5")) {
-                rol.setImageDrawable(getDrawable(R.drawable.coati));
+                rol.setImageDrawable(getDrawable(R.drawable.tingua));
             }
             else{
-                rol.setImageDrawable(getDrawable(R.drawable.coati));
+                rol.setImageDrawable(getDrawable(R.drawable.rana));
             }
         }
     }
