@@ -7,8 +7,19 @@
     android:background="@drawable/fondo_crucigrama"
     tools:context=".JuegoCrucigrama">
 
+    <ImageView
+        android:id="@+id/tituloCrucigrama1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/header_crucigrama1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/titulo_crucigrama" />
+
     <android.support.constraint.Guideline
-        android:id="@+id/header_crucigrama"
+        android:id="@+id/header_crucigrama1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -23,11 +34,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/fieldDivisor"
+        app:layout_constraintBottom_toTopOf="@+id/fieldDivisor1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/header_crucigrama">
+        app:layout_constraintTop_toTopOf="@+id/header_crucigrama1">
 
         <TextView
             android:id="@+id/l"
@@ -4288,7 +4299,7 @@
     </RelativeLayout>
 
     <android.support.constraint.Guideline
-        android:id="@+id/fieldDivisor"
+        android:id="@+id/fieldDivisor1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -4306,13 +4317,13 @@
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fieldDivisor" />
+        app:layout_constraintTop_toTopOf="@+id/fieldDivisor1" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/footer_crucigrama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -4332,42 +4343,32 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/btnCargarCrucigrama"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/header_crucigrama"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/titulo_crucigrama" />
+        app:layout_constraintTop_toTopOf="@+id/footer_crucigrama" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnCargarCrucigrama"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:background="@drawable/rectangulo_boton"
         android:onClick="sendAnswer"
         android:text="Cargar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/btnTerminarCrucigrama"
         app:layout_constraintStart_toEndOf="@+id/respuesta"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toTopOf="@+id/footer_crucigrama" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnTerminarCrucigrama"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:background="@drawable/rectangulo_boton"
+        android:onClick="btnTerminar"
         android:text="Terminar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintStart_toEndOf="@+id/btnCargarCrucigrama"
+        app:layout_constraintTop_toTopOf="@+id/footer_crucigrama" />
 
 </android.support.constraint.ConstraintLayout>

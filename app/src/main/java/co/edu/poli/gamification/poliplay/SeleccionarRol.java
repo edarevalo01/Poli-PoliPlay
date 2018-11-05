@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 public class SeleccionarRol extends AppCompatActivity {
 
-
     private ImageView rolM1;
     private ImageView rolF1;
     private ImageView rolM2;
@@ -25,9 +24,6 @@ public class SeleccionarRol extends AppCompatActivity {
     private ImageView rolF5;
     private ImageView rolM6;
     private ImageView rolF6;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +47,7 @@ public class SeleccionarRol extends AppCompatActivity {
 
     }
     public void asignarMiniRoles(){
-        if(Login.user.getSignature() == "Proceso Administrativo"){
+        if(Login.user.getSignature().equals("Proceso Administrativo")){
             rolM1.setImageDrawable(getDrawable(R.drawable.sel_izq_explorador));
             rolF1.setImageDrawable(getDrawable(R.drawable.sel_der_explorador));
             rolM2.setImageDrawable(getDrawable(R.drawable.sel_izq_filantropo));
@@ -65,7 +61,7 @@ public class SeleccionarRol extends AppCompatActivity {
             rolM6.setImageDrawable(getDrawable(R.drawable.sel_izq_comunicador));
             rolF6.setImageDrawable(getDrawable(R.drawable.sel_der_comunicadora));
         }
-        else if(Login.user.getSignature() == "Cultura Ambiental"){
+        else if(Login.user.getSignature().equals("Cultura Ambiental")){
             rolF1.setEnabled(false);
             rolF2.setEnabled(false);
             rolF3.setEnabled(false);

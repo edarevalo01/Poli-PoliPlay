@@ -1,13 +1,19 @@
 <resources>
-    <string name="app_name">Gamificación</string>
+    <string name="app_name">PoliPlay</string>
+    <string name="poli_play">PoliPlay</string>
+    <string name="toast_salir">Presione una vez más para salir de la aplicación.</string>
+    <string name="progress_esperar">Por favor espere.</string>
 
     <!-- PANTALLA LOGIN -->
-    <string name="titulo">Gamificación</string>
-    <string name="textEmail">Usuario</string>
-    <string name="textContrasena">Contraseña</string>
-    <string name="btnLogin">Entrar</string>
-    <string name="textNoRegis">¿Aún no estás registrado?</string>
-    <string name="textRegistAqui"><u>Registrate aquí.</u></string>
+    <string name="text_username">Usuario</string>
+    <string name="text_contrasena">Contraseña</string>
+    <string name="text_noRegis">¿Aún no estás registrado?</string>
+    <string name="text_registAqui"><u>Registrate aquí.</u></string>
+    <string name="btn_login">Entrar</string>
+    <string name="toast_usuario">Ingrese su Usuario.</string>
+    <string name="toast_contrasena">Ingrese su Contraseña.</string>
+    <string name="toast_noEquals">Datos incorrectos.</string>
+    <string name="progress_login">Iniciando Sesión.</string>
 
     <!-- PANTALLA SELECCION CURSO -->
     <string name="selCurso">SELECCIONA EL CURSO</string>
@@ -17,6 +23,7 @@
 
     <!-- PANTALLA SELECCION ROL -->
     <string name="selRol">SELECCIONA UN ROL</string>
+
     <string name="rolAgua">Agua</string>
     <string name="rolTierra">Tierra</string>
     <string name="rolAire">Aire</string>

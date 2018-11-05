@@ -22,8 +22,6 @@ public class SeleccionarRolPopUp extends Activity {
         rol = (ImageView)findViewById(R.id.rolPrin);
         rolSelected = Login.user.getRole().toString();
 
-
-
         //EscalarPantalla
         DisplayMetrics md = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(md);
@@ -35,7 +33,7 @@ public class SeleccionarRolPopUp extends Activity {
     }
 
     public void escogerRolPop() {
-        if (Login.user.getSignature() == "Proceso Administrativo") {
+        if (Login.user.getSignature().equals("Proceso Administrativo")) {
             if (rolSelected.equals("Rol 1"))    {
                 rol.setImageDrawable(getDrawable(R.drawable.h_explorador));
             }
@@ -73,7 +71,7 @@ public class SeleccionarRolPopUp extends Activity {
                 rol.setImageDrawable(getDrawable(R.drawable.m_socializador));
             }
         }
-        else if (Login.user.getSignature() == "Cultura Ambiental") {
+        else if (Login.user.getSignature().equals("Cultura Ambiental")) {
             if (rolSelected.equals("Rol 1")) {
                 rol.setImageDrawable(getDrawable(R.drawable.coati));
             }

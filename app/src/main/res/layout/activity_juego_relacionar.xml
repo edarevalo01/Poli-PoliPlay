@@ -3,13 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo_principal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JuegoRelacionar">
     tools:layout_editor_absoluteY="25dp">
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/footer_crucigrama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -30,7 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toTopOf="@+id/footer_crucigrama" />
 
     <TextView
         android:id="@+id/txt2"
@@ -48,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toTopOf="@+id/footer_crucigrama" />
 
     <TextView
         android:id="@+id/txt3"
@@ -66,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintVertical_bias="0.125" />
 
     <TextView
@@ -85,7 +86,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.932"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintVertical_bias="0.125" />
 
     <TextView
@@ -104,7 +105,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.932"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toTopOf="@+id/footer_crucigrama" />
 
     <TextView
         android:id="@+id/txt6"
@@ -122,7 +123,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintVertical_bias="0.125" />
 
     <TextView
@@ -133,12 +134,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#91B9FF"
+        android:background="@drawable/rectangulo_letra_sel"
         android:padding="5dp"
         android:text="                           "
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintStart_toStartOf="parent"
@@ -153,12 +154,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#91B9FF"
+        android:background="@drawable/rectangulo_letra_sel"
         android:padding="5dp"
         android:text="                           "
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintStart_toStartOf="parent"
@@ -173,12 +174,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#91B9FF"
+        android:background="@drawable/rectangulo_letra_sel"
         android:padding="5dp"
         android:text="                           "
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.963"
         app:layout_constraintStart_toStartOf="parent"
@@ -193,12 +194,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#91B9FF"
+        android:background="@drawable/rectangulo_letra_sel"
         android:padding="5dp"
         android:text="                           "
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.963"
         app:layout_constraintStart_toStartOf="parent"
@@ -213,12 +214,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#91B9FF"
+        android:background="@drawable/rectangulo_letra_sel"
         android:padding="5dp"
         android:text="                           "
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintStart_toStartOf="parent"
@@ -233,12 +234,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#91B9FF"
+        android:background="@drawable/rectangulo_letra_sel"
         android:padding="5dp"
         android:text="                           "
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.963"
         app:layout_constraintStart_toStartOf="parent"
@@ -253,14 +254,16 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/rectangulo_boton"
         android:onClick="respuestas"
         android:text="Ver respuestas"
         android:textAllCaps="false"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -273,8 +276,9 @@
         android:layout_marginTop="8dp"
         android:text="@string/enunciado1"
         android:textAlignment="center"
+        android:textColor="@color/colorBlack"
         android:textSize="11sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="@+id/enunciado4"
         app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
@@ -291,8 +295,9 @@
         android:layout_marginTop="8dp"
         android:text="@string/enunciado2"
         android:textAlignment="center"
+        android:textColor="@color/colorBlack"
         android:textSize="11sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="parent"
@@ -309,8 +314,9 @@
         android:layout_marginTop="8dp"
         android:text="@string/enunciado3"
         android:textAlignment="center"
+        android:textColor="@color/colorBlack"
         android:textSize="11sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
@@ -327,8 +333,9 @@
         android:layout_marginTop="8dp"
         android:text="@string/enunciado4"
         android:textAlignment="center"
+        android:textColor="@color/colorBlack"
         android:textSize="11sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="parent"
@@ -345,8 +352,9 @@
         android:layout_marginTop="8dp"
         android:text="@string/enunciado5"
         android:textAlignment="center"
+        android:textColor="@color/colorBlack"
         android:textSize="11sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
@@ -363,8 +371,9 @@
         android:layout_marginTop="8dp"
         android:text="@string/enunciado6"
         android:textAlignment="center"
+        android:textColor="@color/colorBlack"
         android:textSize="11sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/footer_crucigrama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="parent"

@@ -4,7 +4,7 @@ public class Usuario {
 
     private String name;
     private String lastName;
-    private String email;
+    private String username;
     private String password;
     private String career;
     private String code;
@@ -15,7 +15,7 @@ public class Usuario {
     public Usuario(){
         this.name = "";
         this.lastName = "";
-        this.email = "";
+        this.username = "";
         this.password = "";
         this.career = "";
         this.code = "";
@@ -25,19 +25,20 @@ public class Usuario {
     }
 
     /** Name, email, password */
-    public Usuario(String name, String email, String password){
+    public Usuario(String name, String lastName, String username, String password){
         this.name = name;
-        this.lastName = "";
-        this.email = email;
+        this.lastName = lastName;
+        this.username = username;
         this.password = password;
         this.career = "";
         this.code = "";
     }
+
     /** All items */
-    public Usuario(String name, String lastName, String email, String password, String career, String code){
+    public Usuario(String name, String lastName, String username, String password, String career, String code){
         this.name = name;
         this.lastName = lastName;
-        this.email = email;
+        this.username = username;
         this.password = password;
         this.career = career;
         this.code = code;
@@ -59,12 +60,12 @@ public class Usuario {
         this.lastName = lastName;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUmail(String email) {
+        this.username = email;
     }
 
     public String getPassword() {

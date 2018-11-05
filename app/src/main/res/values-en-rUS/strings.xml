@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PoliPlay</string>
+    <string name="poli_play">PoliPlay</string>
+    <string name="toast_salir">Press once more to exit the application.</string>
+    <string name="progress_esperar">Please wait.</string>
+
+    <!-- PANTALLA LOGIN -->
+    <string name="text_username">Username</string>
+    <string name="text_contrasena">Password</string>
+    <string name="text_noRegis">Still not registered?</string>
+    <string name="text_registAqui"><u>Sign up here.</u></string>
+    <string name="btn_login">Login</string>
+    <string name="toast_usuario">Enter your User.</string>
+    <string name="toast_contrasena">Enter your Password</string>
+    <string name="toast_noEquals">Incorrect data.</string>
+    <string name="progress_login">Logging in.</string>
+
+
+</resources>

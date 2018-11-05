@@ -18,6 +18,8 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
     private final TreeMap<Integer, int[]> formPalabraSol = new TreeMap<>();
     private final TreeMap<String, String> enunciadosSol = new TreeMap<>();
 
+    private TextView enunciadoSol;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,10 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
         llenarPosicionesValidas();
         pintarCuadricula();
 
+        enunciadoSol = (TextView)findViewById(R.id.enunciadoSol);
+        enunciadoSol.setText("Bien hecho");
+
+        onBackPressed();
     }
 
     public void continuarBtn(View view){
@@ -97,6 +103,11 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
                     posValidasSol[i][j] = 1;//Posicion válida
             }
         }
+    }
+
+    @Override
+    public void onBackPressed(){
+        //Se deja vacío intencional para bloquear el retorno de actividad.
     }
 
 

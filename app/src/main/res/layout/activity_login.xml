@@ -1,113 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    android:background="@drawable/fondo_principal"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo_principal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Login">
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline8"
+        android:id="@+id/headerLogin1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
 
     <ImageView
-        android:id="@+id/titulo"
+        android:id="@+id/tituloLogin"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:adjustViewBounds="true"
-        android:contentDescription="@string/blankSpace"
-        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintBottom_toTopOf="@+id/headerLogin2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/headerLogin1"
         app:srcCompat="@drawable/logo_app" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline9"
+        android:id="@+id/headerLogin2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.35" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline10"
+        android:id="@+id/spaceLoginTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.43" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/usernameLogin"
         android:layout_width="292dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:background="@drawable/textfield_data"
         android:ems="10"
-        android:hint="@string/textEmail"
+        android:hint="@string/text_username"
         android:inputType="textPersonName"
+        android:paddingBottom="8dp"
+        android:paddingEnd="1dp"
         android:paddingStart="10dp"
         android:paddingTop="8dp"
-        android:paddingEnd="1dp"
-        android:paddingBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintBottom_toTopOf="@+id/spaceLoginMiddle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+        app:layout_constraintTop_toTopOf="@+id/spaceLoginTop" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline11"
+        android:id="@+id/spaceLoginMiddle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.53" />
 
     <EditText
-        android:id="@+id/contrasena"
+        android:id="@+id/passwordLogin"
         android:layout_width="292dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/textfield_data"
         android:ems="10"
-        android:hint="@string/textContrasena"
+        android:hint="@string/text_contrasena"
         android:inputType="textPassword"
+        android:paddingBottom="8dp"
+        android:paddingEnd="1dp"
         android:paddingStart="10dp"
         android:paddingTop="8dp"
-        android:paddingEnd="1dp"
-        android:paddingBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintBottom_toTopOf="@+id/spaceLoginBottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+        app:layout_constraintTop_toTopOf="@+id/spaceLoginMiddle" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline12"
+        android:id="@+id/spaceLoginBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.63" />
 
-    <ImageButton
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/blankSpace"
-        android:onClick="entrar"
-        app:layout_constraintBottom_toTopOf="@+id/guideline13"
+        android:background="@drawable/boton_login"
+        android:text="@string/btn_login"
+        android:textColor="@color/colorWhite"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/footerLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline12"
-        app:srcCompat="@drawable/boton_entrar" />
+        app:layout_constraintTop_toTopOf="@+id/spaceLoginBottom" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline13"
+        android:id="@+id/footerLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -117,28 +120,28 @@
         android:id="@+id/msj_no_registro1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginBottom="24dp"
-        android:text="@string/textNoRegis"
+        android:layout_marginStart="32dp"
+        android:text="@string/text_noRegis"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/msj_no_registro2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline13" />
+        app:layout_constraintTop_toTopOf="@+id/footerLogin" />
 
     <TextView
         android:id="@+id/msj_no_registro2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
         android:layout_marginBottom="24dp"
-        android:text="@string/textRegistAqui"
+        android:layout_marginEnd="32dp"
+        android:text="@string/text_registAqui"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/msj_no_registro1"
-        app:layout_constraintTop_toTopOf="@+id/guideline13" />
+        app:layout_constraintTop_toTopOf="@+id/footerLogin" />
 
 </android.support.constraint.ConstraintLayout>

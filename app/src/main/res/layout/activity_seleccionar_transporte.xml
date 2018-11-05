@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo_principal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SeleccionarTransporte">
@@ -12,21 +13,24 @@
         android:layout_width="307dp"
         android:layout_height="wrap_content"
         android:text="@string/selTrans"
-        android:textSize="40sp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.30" />
+        app:layout_constraintGuide_percent="0.33" />
 
     <RadioGroup
-        android:layout_width="323dp"
+        android:layout_width="280dp"
         android:layout_height="306dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,42 +44,60 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/trans2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/trans3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/trans4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/trans5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/trans6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
     </RadioGroup>
 
     <android.support.constraint.Guideline
@@ -83,16 +105,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.84" />
+        app:layout_constraintGuide_percent="0.88" />
 
     <Button
         android:id="@+id/selTrans"
         android:layout_width="254dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/rectangulo_boton"
         android:onClick="selTrans"
         android:text="@string/seleccionar"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="201dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textSelTransporte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_app" />
 </android.support.constraint.ConstraintLayout>
