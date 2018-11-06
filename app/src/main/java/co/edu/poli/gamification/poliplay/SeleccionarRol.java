@@ -4,11 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.Switch;
-import android.widget.TextView;
 
 public class SeleccionarRol extends AppCompatActivity {
 
@@ -68,12 +64,12 @@ public class SeleccionarRol extends AppCompatActivity {
             rolF4.setEnabled(false);
             rolF5.setEnabled(false);
             rolF6.setEnabled(false);
-            rolM1.setImageDrawable(getDrawable(R.drawable.coati_full));
-            rolM2.setImageDrawable(getDrawable(R.drawable.tucan_full));
-            rolM3.setImageDrawable(getDrawable(R.drawable.aguila_arpia));
-            rolM4.setImageDrawable(getDrawable(R.drawable.carpintero_full));
-            rolM5.setImageDrawable(getDrawable(R.drawable.tingua_full));
-            rolM6.setImageDrawable(getDrawable(R.drawable.rana_full));
+            rolM1.setImageDrawable(getDrawable(R.drawable.sel_completo_coati));
+            rolM2.setImageDrawable(getDrawable(R.drawable.sel_completo_tucan));
+            rolM3.setImageDrawable(getDrawable(R.drawable.sel_completo_aguila));
+            rolM4.setImageDrawable(getDrawable(R.drawable.sel_completo_carpintero));
+            rolM5.setImageDrawable(getDrawable(R.drawable.sel_completo_tingua));
+            rolM6.setImageDrawable(getDrawable(R.drawable.sel_completo_rana));
 
         }
 
