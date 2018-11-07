@@ -35,7 +35,12 @@ public class SeleccionarTransporte extends AppCompatActivity {
 
         }
         else if(Login.user.getSignature().equals("Cultura Ambiental")){
-
+            transp1.setImageDrawable(getDrawable(R.drawable.sel_completo_trans_avion));
+            transp2.setImageDrawable(getDrawable(R.drawable.sel_completo_trans_barco));
+            transp3.setImageDrawable(getDrawable(R.drawable.sel_completo_trans_globo));
+            transp4.setImageDrawable(getDrawable(R.drawable.sel_completo_trans_balsa));
+            transp5.setImageDrawable(getDrawable(R.drawable.sel_completo_trans_submarino));
+            transp6.setImageDrawable(getDrawable(R.drawable.sel_completo_trans_tronco));
         }
     }
     public void btnVolver(View view){

@@ -15,7 +15,7 @@ public class SeleccionarTransportePopUp extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seleccionar_rol_pop_up);
+        setContentView(R.layout.activity_seleccionar_transporte_pop_up);
 
         transporte = (ImageView)findViewById(R.id.transportePrincipal);
         transporteSeleccionado = Login.user.getTransport();
@@ -53,6 +53,24 @@ public class SeleccionarTransportePopUp extends Activity {
             }
         }
         else if (Login.user.getSignature().equals("Cultura Ambiental")) {
+            if (transporteSeleccionado.equals("Transporte 1"))    {
+                transporte.setImageDrawable(getDrawable(R.drawable.transporte_avion));
+            }
+            else if (transporteSeleccionado.equals("Transporte 2"))    {
+                transporte.setImageDrawable(getDrawable(R.drawable.transporte_barco));
+            }
+            else if (transporteSeleccionado.equals("Transporte 3")) {
+                transporte.setImageDrawable(getDrawable(R.drawable.transporte_globo));
+            }
+            else if (transporteSeleccionado.equals("Transporte 4")) {
+                transporte.setImageDrawable(getDrawable(R.drawable.transporte_balsa));
+            }
+            else if (transporteSeleccionado.equals("Transporte 5")) {
+                transporte.setImageDrawable(getDrawable(R.drawable.transporte_submarino));
+            }
+            else if (transporteSeleccionado.equals("Transporte 6")) {
+                transporte.setImageDrawable(getDrawable(R.drawable.transporte_tronco));
+            }
         }
     }
 
