@@ -18,7 +18,7 @@ public class SeleccionarRolPopUp extends Activity {
         setContentView(R.layout.activity_seleccionar_rol_pop_up);
 
         rol = (ImageView)findViewById(R.id.rolPrin);
-        rolSelected = Login.user.getRole().toString();
+        rolSelected = Login.user.getRole();
 
         //EscalarPantalla
         DisplayMetrics md = new DisplayMetrics();

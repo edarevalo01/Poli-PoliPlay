@@ -47,12 +47,12 @@
 
     <!-- PANTALLA DE TRANSPORTE -->
     <string name="selTrans">SELECCIONA UN MEDIO DE TRANSPORTE</string>
-    <string name="transInst">Ruta Institucional</string>
-    <string name="transCar">Carro</string>
-    <string name="transMot">Moto</string>
-    <string name="transTab">Patines</string>
-    <string name="transCam">Caminando</string>
-    <string name="transBic">Bicicleta</string>
+    <string name="Transporte1">Transporte 1</string>
+    <string name="Transporte2">Transporte 2</string>
+    <string name="Transporte3">Transporte 3</string>
+    <string name="Transporte4">Transporte 4</string>
+    <string name="Transporte5">Transporte 5</string>
+    <string name="Transporte6">Transporte 6</string>
 
     <!-- Comunes -->
     <string name="continuar">Continuar</string>

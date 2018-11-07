@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class SeleccionarCurso extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,19 +17,20 @@ public class SeleccionarCurso extends AppCompatActivity {
         setContentView(R.layout.activity_seleccionar_curso);
     }
 
-    public void selAmbiental(View view){
+
+    public void selAmbiental(View view) {
         Intent i = new Intent(this, IntroduccionCurso.class);
         Login.user.setSignature("Cultura Ambiental");
         startActivity(i);
     }
 
-    public void selAdmin(View view){
+    public void selAdmin(View view) {
         Intent i = new Intent(this, IntroduccionCurso.class);
         Login.user.setSignature("Proceso Administrativo");
         startActivity(i);
     }
 
-    public void btnVolver(View view){
+    public void btnVolver(View view) {
         Intent i = new Intent(this, Login.class);
         startActivity(i);
     }

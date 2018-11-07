@@ -74,12 +74,7 @@ public class SeleccionarRol extends AppCompatActivity {
         }
 
     }
-    public void btnSelRolM(View view){
-        Login.user.setRole(view.getContentDescription().toString());
-        Intent i = new Intent(this, SeleccionarRolPopUp.class);
-        startActivity(i);
-    }
-    public void btnSelRolF(View view){
+    public void btnSelRol(View view){
         Login.user.setRole(view.getContentDescription().toString());
         Intent i = new Intent(this, SeleccionarRolPopUp.class);
         startActivity(i);

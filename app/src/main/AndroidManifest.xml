@@ -55,7 +55,10 @@
             android:name=".SeleccionarRolPopUp"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomTheme" />
-        <activity android:name=".IntroduccionCurso"></activity>
+        <activity android:name=".IntroduccionCurso" />
+        <activity android:name=".SeleccionarTransportePopUp"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CustomTheme"></activity>
     </application>
 
 </manifest>

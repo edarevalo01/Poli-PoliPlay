@@ -41,7 +41,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol1"
-                android:onClick="btnSelRolM"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorPrimaryDark" />
 
             <ImageView
@@ -50,7 +50,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol1f"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorSecondary" />
         </LinearLayout>
 
@@ -66,7 +66,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol2"
-                android:onClick="btnSelRolM"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorPrimary" />
 
             <ImageView
@@ -75,7 +75,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol2f"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorSecondaryDark" />
         </LinearLayout>
 
@@ -91,7 +91,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol3"
-                android:onClick="btnSelRolM"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorPrimaryDark" />
 
             <ImageView
@@ -100,7 +100,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol3f"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorSecondary" />
         </LinearLayout>
 
@@ -116,7 +116,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol4"
-                android:onClick="btnSelRolM"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorPrimary" />
 
             <ImageView
@@ -125,7 +125,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol4f"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorSecondaryDark" />
         </LinearLayout>
 
@@ -141,7 +141,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol5"
-                android:onClick="btnSelRolM"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorPrimaryDark" />
 
             <ImageView
@@ -150,7 +150,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol5f"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorSecondary" />
         </LinearLayout>
 
@@ -166,7 +166,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol6"
-                android:onClick="btnSelRolM"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorPrimary" />
 
             <ImageView
@@ -175,7 +175,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/rol6f"
-                android:onClick="btnSelRolF"
+                android:onClick="btnSelRol"
                 app:srcCompat="@color/colorSecondaryDark" />
         </LinearLayout>
 
