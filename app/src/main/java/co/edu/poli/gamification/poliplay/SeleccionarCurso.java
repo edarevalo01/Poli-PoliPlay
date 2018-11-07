@@ -16,13 +16,13 @@ public class SeleccionarCurso extends AppCompatActivity {
     }
 
     public void selAmbiental(View view){
-        Intent i = new Intent(this, SeleccionarRol.class);
+        Intent i = new Intent(this, IntroduccionCurso.class);
         Login.user.setSignature("Cultura Ambiental");
         startActivity(i);
     }
 
     public void selAdmin(View view){
-        Intent i = new Intent(this, SeleccionarRol.class);
+        Intent i = new Intent(this, IntroduccionCurso.class);
         Login.user.setSignature("Proceso Administrativo");
         startActivity(i);
     }

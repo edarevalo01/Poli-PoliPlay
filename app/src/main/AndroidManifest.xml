@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login"
+        <activity
+            android:name=".Login"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,18 +18,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SeleccionarCurso" android:screenOrientation="portrait"/>
-        <activity android:name=".SeleccionarRol" android:screenOrientation="portrait"/>
-        <activity android:name=".SeleccionarTransporte" android:screenOrientation="portrait"/>
-        <activity android:name=".Mapa" android:screenOrientation="portrait"/>
-        <activity android:name=".JuegoRelacionar" android:screenOrientation="portrait"/>
-        <activity android:name=".JuegoRelacionarSolucion" android:screenOrientation="portrait"/>
-        <activity android:name=".JuegoAhorcado" android:screenOrientation="portrait"/>
-        <activity android:name=".JuegoTrivia" android:screenOrientation="portrait"/>
-        <activity android:name=".JuegoCalculadora" android:screenOrientation="portrait"/>
-        <activity android:name=".JuegoCrucigrama" android:screenOrientation="portrait"/>
-        <activity android:name=".JuegoCrucigramaSolucion" android:screenOrientation="portrait" />
-        <activity android:name=".SeleccionarRolPopUp" android:theme="@style/AppTheme.CustomTheme" android:screenOrientation="portrait" />
+        <activity
+            android:name=".SeleccionarCurso"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SeleccionarRol"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SeleccionarTransporte"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Mapa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JuegoRelacionar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JuegoRelacionarSolucion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JuegoAhorcado"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JuegoTrivia"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JuegoCalculadora"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JuegoCrucigrama"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JuegoCrucigramaSolucion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SeleccionarRolPopUp"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name=".IntroduccionCurso"></activity>
     </application>
 
 </manifest>

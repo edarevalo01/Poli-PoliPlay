@@ -86,7 +86,7 @@ public class SeleccionarRol extends AppCompatActivity {
     }
 
     public void btnVolver(View view){
-        Intent i = new Intent(this, SeleccionarCurso.class);
+        Intent i = new Intent(this, IntroduccionCurso.class);
         startActivity(i);
     }
 }
