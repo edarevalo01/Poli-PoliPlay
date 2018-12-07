@@ -56,9 +56,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".IntroduccionCurso" />
-        <activity android:name=".SeleccionarTransportePopUp"
+        <activity
+            android:name=".SeleccionarTransportePopUp"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.CustomTheme"></activity>
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name=".Registro"></activity>
     </application>
 
 </manifest>
