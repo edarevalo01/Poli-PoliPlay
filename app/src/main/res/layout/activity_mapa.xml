@@ -140,7 +140,7 @@
         android:id="@+id/btnCalculadora"
         android:layout_width="235dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/rectangulo_boton"
+        android:background="@drawable/rectangulo_boton_claro"
         android:onClick="calculadoraBtn"
         android:text="@string/juego5"
         android:textColor="@color/colorWhite"

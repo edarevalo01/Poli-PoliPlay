@@ -37,19 +37,46 @@ public class JuegoCalculadora extends AppCompatActivity {
     public  void opcion1cal (View view){
         switch (estadoCalculadora) {
             case 0:
+                enunciadoCalculadora.setText("MI CONSUMO DE ENERGÍA ELÉCTRICA");
+                ingresoNumCalculadora.setEnabled(true);
+                opc1cal.setText("Ingresar");
+                opc2cal.setText("");
+                opc3cal.setText("");
+                estadoCalculadora++;
+                break;
+            case 1:
                 enunciadoCalculadora.setText("MI DIETA");
+                ingresoNumCalculadora.setEnabled(false);
+                ingresoNumCalculadora.setText("");
                 subtextCal.setText("Escoja la opción que más se acomode a sus hábitos alimenticios.");
                 opc1cal.setText("Vegetariano");
                 opc2cal.setText("Baja en carne");
                 opc3cal.setText("Alta en carne");
-                estadoCalculadora++;
                 break;
-            case 1:
+            case 2:
                 enunciadoCalculadora.setText("TRANSPORTE");
                 subtextCal.setText("Seleccione la opción más conveniente según la información  que posea.");
                 opc1cal.setText("Conozco la distancia diaria que recorro");
                 opc2cal.setText("Conozco cuantas horas diarias manejo");
                 opc3cal.setText("No tengo vehículo");
+                estadoCalculadora++;
+                break;
+            case 3:
+                enunciadoCalculadora.setText("MI VEHÍCULO");
+                subtextCal.setText("Conozco la distancia diaria que recojo");
+                ingresoNumCalculadora.setEnabled(true);
+                opc1cal.setText("Gasolina");
+                opc2cal.setText("Diesel");
+                opc3cal.setText("Gas");
+                estadoCalculadora++;
+                break;
+            case 4:
+                enunciadoCalculadora.setText("TRANSPORTE PÚBLICO");
+                subtextCal.setText("Horas Semanales:");
+                opc1cal.setText("");
+                opc2cal.setText("");
+                opc3cal.setText("Ingresar");
+                ingresoNumCalculadora.setEnabled(true);
                 estadoCalculadora++;
                 break;
         }
@@ -72,6 +99,26 @@ public class JuegoCalculadora extends AppCompatActivity {
                 opc3cal.setText("No tengo vehículo");
                 estadoCalculadora++;
                 break;
+            case 2:
+                enunciadoCalculadora.setText("MI VEHÍCULO");
+                subtextCal.setText("Conozco cuantas horas diarias manejo");
+                ingresoNumCalculadora.setEnabled(true);
+                opc1cal.setText("Gasolina");
+                opc2cal.setText("Diesel");
+                opc3cal.setText("Gas");
+                estadoCalculadora++;
+                break;
+            case 4:
+                enunciadoCalculadora.setText("TRANSPORTE PÚBLICO");
+                subtextCal.setText("Horas Semanales:");
+                opc1cal.setText("");
+                opc2cal.setText("");
+                opc3cal.setText("Ingresar");
+                ingresoNumCalculadora.setEnabled(true);
+                ingresoNumCalculadora.setText("");
+                estadoCalculadora++;
+                break;
+
         }
     }
     public  void opcion3cal (View view){
@@ -95,13 +142,14 @@ public class JuegoCalculadora extends AppCompatActivity {
                 ingresoNumCalculadora.setEnabled(true);
                 estadoCalculadora++;
                 break;
-            case 3:
+            case 4:
                 enunciadoCalculadora.setText("TRANSPORTE PÚBLICO");
                 subtextCal.setText("Horas Semanales:");
                 opc1cal.setText("");
                 opc2cal.setText("");
                 opc3cal.setText("Ingresar");
                 ingresoNumCalculadora.setEnabled(true);
+
                 estadoCalculadora++;
                 break;
         }
