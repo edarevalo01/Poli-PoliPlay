@@ -19,7 +19,7 @@ public class Mapa extends AppCompatActivity {
         rol = (TextView)findViewById(R.id.roll);
         transporte = (TextView)findViewById(R.id.transporte);
 
-        nombre.setText(Login.user.getName() + " " + Login.user.getLastName());
+        nombre.setText(Login.user.getUsername());
         materia.setText(Login.user.getSignature());
         rol.setText(Login.user.getRole());
         transporte.setText(Login.user.getTransport());

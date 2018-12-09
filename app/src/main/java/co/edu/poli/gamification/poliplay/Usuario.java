@@ -2,95 +2,50 @@ package co.edu.poli.gamification.poliplay;
 
 public class Usuario {
 
-    private String name;
-    private String lastName;
+    private String code;
+    private String email;
     private String username;
     private String password;
-    private String career;
-    private String code;
     private String signature;
     private String role;
     private String transport;
 
     public Usuario(){
-        this.name = "";
-        this.lastName = "";
+        this.code = "";
+        this.email = "";
         this.username = "";
         this.password = "";
-        this.career = "";
-        this.code = "";
         this.signature = "";
         this.role = "";
         this.transport = "";
     }
 
-    /** Name, email, password */
-    public Usuario(String name, String lastName, String username, String password){
-        this.name = name;
-        this.lastName = lastName;
+    /** Register user create */
+    public Usuario(String code, String email, String username, String password){
+        this.code = code;
+        this.email = email;
         this.username = username;
         this.password = password;
-        this.career = "";
-        this.code = "";
+        signature = "";
+        role = "";
+        transport = "";
     }
 
-    /** All items */
-    public Usuario(String name, String lastName, String username, String password, String career, String code){
-        this.name = name;
-        this.lastName = lastName;
-        this.username = username;
-        this.password = password;
-        this.career = career;
-        this.code = code;
-    }
+    public String getCode() { return code; }
 
-    public String getName() {
-        return name;
-    }
+    public void setCode(String code) { this.code = code; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public String getEmail() { return email; }
 
-    public String getLastName() {
-        return lastName;
-    }
+    public void setEmail(String email) { this.email = email; }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    public String getUsername() { return username; }
 
-    public String getUsername() {
-        return username;
-    }
+    public void setUsername(String username) { this.username = username; }
 
-    public void setUmail(String email) {
-        this.username = email;
-    }
+    public String getPassword() { return password; }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getCareer() {
-        return career;
-    }
-
-    public void setCareer(String career) {
-        this.career = career;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
+    public void setPassword(String password) { this.password = password; }
 
     public String getSignature() { return signature; }
 
@@ -103,4 +58,5 @@ public class Usuario {
     public String getTransport() { return transport; }
 
     public void setTransport(String transport) { this.transport = transport; }
+
 }

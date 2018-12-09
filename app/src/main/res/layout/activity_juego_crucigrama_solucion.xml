@@ -2902,7 +2902,7 @@
         android:id="@+id/buttonContinuar"
         android:layout_width="204dp"
         android:layout_height="33dp"
-        android:background="@drawable/rectangulo_boton"
+        android:background="@drawable/rectangulo_boton_claro"
         android:onClick="continuarBtn"
         android:text="@string/continuar"
         app:layout_constraintBottom_toBottomOf="parent"

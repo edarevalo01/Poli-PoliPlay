@@ -3,6 +3,7 @@ package co.edu.poli.gamification.poliplay;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.nfc.Tag;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,14 +11,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
 
 public class Login extends AppCompatActivity {
 
+    private static final int CODE_GET_REQUEST = 1024;
+    private static final int CODE_POST_REQUEST = 1025;
+
     private static long back_pressed;
     private Button btnLogin;
-    private EditText usernameLogin;
-    private EditText passwordLogin;
+    private EditText usernameLogin, passwordLogin;
+    private TextView noReg;
     private ProgressDialog loadingBar;
     private static final String TAG = "Login";
 
@@ -31,6 +41,7 @@ public class Login extends AppCompatActivity {
         btnLogin = (Button)findViewById(R.id.btnLogin);
         usernameLogin = (EditText)findViewById(R.id.usernameLogin);
         passwordLogin = (EditText)findViewById(R.id.passwordLogin);
+        noReg = (TextView)findViewById(R.id.msj_no_registro2);
 
         loadingBar = new ProgressDialog(this, R.style.Theme_AppCompat_DayNight_Dialog);
         loadingBar.setCanceledOnTouchOutside(false);
@@ -39,6 +50,14 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 login();
+            }
+        });
+        noReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Login.this, Registro.class);
+                startActivity(i);
+                finish();
             }
         });
     }
@@ -126,5 +145,50 @@ public class Login extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy called");
+    }
+
+
+    private class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
+
+        String url;
+        HashMap<String, String> params;
+        int requestCode;
+
+        PerformNetworkRequest(String url, HashMap<String, String> params, int requestCode){
+            this.url = url;
+            this.params = params;
+            this.requestCode = requestCode;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            try{
+                JSONObject object = new JSONObject(s);
+                if(!object.getBoolean("error")){
+                    Toast.makeText(getApplicationContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
+                    //refreshHeroList
+                }
+            }catch (JSONException e){
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            RequestHandler requestHandler = new RequestHandler();
+            if(requestCode == CODE_POST_REQUEST){
+                return requestHandler.sendPostRequest(url, params);
+            }
+            if(requestCode == CODE_GET_REQUEST){
+                return requestHandler.sendGetRequest(url);
+            }
+            return null;
+        }
     }
 }

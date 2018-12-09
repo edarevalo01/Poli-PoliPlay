@@ -15,6 +15,14 @@
     <string name="toast_noEquals">Datos incorrectos.</string>
     <string name="progress_login">Iniciando Sesión.</string>
 
+    <!-- PANTALLA REGISTRO -->
+    <string name="btn_registro">REGISTRARME</string>
+    <string name="ingreso_email">Ingresa tu E-mail</string>
+    <string name="ingreso_usuario">Ingresa tu nombre de usuario</string>
+    <string name="ingreso_codigo">Ingresa tu código</string>
+    <string name="ingreso_contrasena">Ingresa tu contraseña</string>
+    <string name="ingreso_contrasena_conf">Confirma tu contraseña</string>
+
     <!-- PANTALLA SELECCION CURSO -->
     <string name="selCurso">SELECCIONA EL CURSO</string>
     <string name="cultura">Cultura Ambiental</string>
