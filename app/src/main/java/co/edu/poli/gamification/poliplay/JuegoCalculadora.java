@@ -1,48 +1,110 @@
 package co.edu.poli.gamification.poliplay;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class JuegoCalculadora extends AppCompatActivity {
 
-    private EditText dato1, dato2, dato3, dato4, dato5, dato6, dato7;
-    private TextView resultado;
+    private TextView enunciadoCalculadora;
+    private EditText ingresoNumCalculadora;
+    private TextView subtextCal;
+    private Button opc1cal, opc2cal, opc3cal;
+    int estadoCalculadora = 0;
+    int transporteIngresador = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juego_calculadora);
-        dato1 = (EditText) findViewById(R.id.dato1);
-        dato2 = (EditText) findViewById(R.id.dato2);
-        dato3 = (EditText) findViewById(R.id.dato3);
-        dato4 = (EditText) findViewById(R.id.dato4);
-        dato5 = (EditText) findViewById(R.id.dato5);
-        dato6 = (EditText) findViewById(R.id.dato6);
-        dato7 = (EditText) findViewById(R.id.dato7);
-
-        resultado = (TextView) findViewById(R.id.resultado);
-
-
+        enunciadoCalculadora = (TextView) findViewById(R.id.enunciado_calculadora);
+        enunciadoCalculadora.setText("CONSUMO DE ENERGÍA");
+        subtextCal = (TextView) findViewById(R.id.subtext_calc);
+        subtextCal.setText("Escoja una de las siguientes opciones:");
+        ingresoNumCalculadora = (EditText) findViewById(R.id.ingreso_num_cal);
+        ingresoNumCalculadora.setEnabled(false);
+        opc1cal = (Button) findViewById(R.id.cal_opcion_1);
+        opc1cal.setText(R.string.opcion_1_calculadora);
+        opc2cal = (Button) findViewById(R.id.cal_opcion_2);
+        opc2cal.setText(R.string.opcion_2_calculadora);
+        opc3cal = (Button) findViewById(R.id.cal_opcion_3);
+        opc3cal.setText("");
     }
-    public  void suma (View view){
-        int dat1, dat2, dat3, dat4, dat5, dat6, dat7, res;
-
-        dat1 = Integer.parseInt(dato1.getText().toString());
-        dat2 = Integer.parseInt(dato2.getText().toString());
-        dat3 = Integer.parseInt(dato3.getText().toString());
-        dat4 = Integer.parseInt(dato4.getText().toString());
-        dat5 = Integer.parseInt(dato5.getText().toString());
-        dat6 = Integer.parseInt(dato6.getText().toString());
-        dat7 = Integer.parseInt(dato7.getText().toString());
-
-
-        res = dat1+dat2+dat3+dat7+dat6+dat5+dat4;
-
-        resultado.setText(String.valueOf(res));
+    public  void opcion1cal (View view){
+        switch (estadoCalculadora) {
+            case 0:
+                enunciadoCalculadora.setText("MI DIETA");
+                subtextCal.setText("Escoja la opción que más se acomode a sus hábitos alimenticios.");
+                opc1cal.setText("Vegetariano");
+                opc2cal.setText("Baja en carne");
+                opc3cal.setText("Alta en carne");
+                estadoCalculadora++;
+                break;
+            case 1:
+                enunciadoCalculadora.setText("TRANSPORTE");
+                subtextCal.setText("Seleccione la opción más conveniente según la información  que posea.");
+                opc1cal.setText("Conozco la distancia diaria que recorro");
+                opc2cal.setText("Conozco cuantas horas diarias manejo");
+                opc3cal.setText("No tengo vehículo");
+                estadoCalculadora++;
+                break;
+        }
+    }
+    public  void opcion2cal (View view){
+        switch (estadoCalculadora) {
+            case 0:
+                enunciadoCalculadora.setText("MI DIETA");
+                subtextCal.setText("Escoja la opción que más se acomode a sus hábitos alimenticios.");
+                opc1cal.setText("Vegetariano");
+                opc2cal.setText("Baja en carne");
+                opc3cal.setText("Alta en carne");
+                estadoCalculadora++;
+                break;
+            case 1:
+                enunciadoCalculadora.setText("TRANSPORTE");
+                subtextCal.setText("Seleccione la opción más conveniente según la información  que posea.");
+                opc1cal.setText("Conozco la distancia diaria que recorro");
+                opc2cal.setText("Conozco cuantas horas diarias manejo");
+                opc3cal.setText("No tengo vehículo");
+                estadoCalculadora++;
+                break;
+        }
+    }
+    public  void opcion3cal (View view){
+        switch (estadoCalculadora) {
+            case 0:
+                break;
+            case 1:
+                enunciadoCalculadora.setText("TRANSPORTE");
+                subtextCal.setText("Seleccione la opción más conveniente según la información  que posea.");
+                opc1cal.setText("Conozco la distancia diaria que recorro");
+                opc2cal.setText("Conozco cuantas horas diarias manejo");
+                opc3cal.setText("No tengo vehículo");
+                estadoCalculadora++;
+                break;
+            case 2:
+                enunciadoCalculadora.setText("TRANSPORTE PÚBLICO");
+                subtextCal.setText("Horas Semanales:");
+                opc1cal.setText("");
+                opc2cal.setText("");
+                opc3cal.setText("Ingresar");
+                ingresoNumCalculadora.setEnabled(true);
+                estadoCalculadora++;
+                break;
+            case 3:
+                enunciadoCalculadora.setText("TRANSPORTE PÚBLICO");
+                subtextCal.setText("Horas Semanales:");
+                opc1cal.setText("");
+                opc2cal.setText("");
+                opc3cal.setText("Ingresar");
+                ingresoNumCalculadora.setEnabled(true);
+                estadoCalculadora++;
+                break;
+        }
     }
 
 }

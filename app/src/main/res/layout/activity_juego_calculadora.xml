@@ -3,121 +3,93 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo_crucigrama"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JuegoCalculadora">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="450dp">
-
-        <EditText
-            android:id="@+id/dato4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Ingrese dato 4"
-            android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/dato5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dato3" />
-
-        <EditText
-            android:id="@+id/dato7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Ingrese dato 7"
-            android:inputType="number"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dato6" />
-
-        <EditText
-            android:id="@+id/dato3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Ingrese dato 3"
-            android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/dato4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dato2" />
-
-        <EditText
-            android:id="@+id/dato5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Ingrese dato 5"
-            android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/dato6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dato4" />
-
-        <EditText
-            android:id="@+id/dato6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Ingrese dato 6"
-            android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/dato7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dato5" />
-
-        <EditText
-            android:id="@+id/dato2"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:hint="Ingrese dato 2"
-            android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/dato3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dato1" />
-
-        <EditText
-            android:id="@+id/dato1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Ingrese dato 1"
-            android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/dato2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
-    </android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/cal_opcion_1"
+        android:layout_width="300dp"
+        android:layout_height="85dp"
+        android:background="@android:color/transparent"
+        android:onClick="opcion1cal"
+        android:text="Button"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cal_opcion_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingreso_num_cal"
+        tools:text="@string/opcion_1_calculadora" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="61dp"
-        android:onClick="suma"
-        android:text="Calcular"
-        app:layout_constraintBottom_toTopOf="@+id/resultado"
+        android:id="@+id/cal_opcion_2"
+        android:layout_width="300dp"
+        android:layout_height="85dp"
+        android:background="@android:color/transparent"
+        android:onClick="opcion2cal"
+        android:text="Button"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cal_opcion_3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cal_opcion_1"
+        tools:text="@string/opcion_2_calculadora" />
 
     <TextView
-        android:id="@+id/resultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:text="..."
+        android:id="@+id/enunciado_calculadora"
+        android:layout_width="351dp"
+        android:layout_height="102dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="TextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/subtext_calc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cal_opcion_3"
+        android:layout_width="300dp"
+        android:layout_height="85dp"
+        android:background="@android:color/transparent"
+        android:onClick="opcion3cal"
+        android:text="Button"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cal_opcion_2" />
 
+    <TextView
+        android:id="@+id/subtext_calc"
+        android:layout_width="329dp"
+        android:layout_height="121dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="SubText"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/ingreso_num_cal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enunciado_calculadora" />
+
+    <EditText
+        android:id="@+id/ingreso_num_cal"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/cal_opcion_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtext_calc" />
 </android.support.constraint.ConstraintLayout>
