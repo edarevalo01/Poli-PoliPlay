@@ -20,7 +20,7 @@ public class Usuario {
         this.transport = "";
     }
 
-    /** Login user create */
+    /** User create */
     public Usuario(String code, String email, String signature, String role, String transport){
         this.code = code;
         this.email = email;
@@ -31,15 +31,15 @@ public class Usuario {
         this.transport = transport;
     }
 
-    /** Register user create */
+    /** Login user create */
     public Usuario(String code, String email, String username, String password){
         this.code = code;
         this.email = email;
         this.username = username;
         this.password = password;
-        signature = "";
-        role = "";
-        transport = "";
+        this.signature = "";
+        this.role = "";
+        this.transport = "";
     }
 
     public String getCode() { return code; }

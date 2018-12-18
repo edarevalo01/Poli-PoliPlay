@@ -5,25 +5,19 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class Login extends AppCompatActivity {
-
-    private static final int CODE_GET_REQUEST = 1024;
-    private static final int CODE_POST_REQUEST = 1025;
 
     private static long back_pressed;
     private Button btnLogin;
@@ -31,24 +25,20 @@ public class Login extends AppCompatActivity {
     private TextView noReg;
     private ProgressDialog loadingBar;
 
-    private static final String TAG = "Login";
-
-    public List<Usuario> usuarioList;
-
-   public static Usuario user = new Usuario("Usuario", "Pruebas", "testuser", "a123*");
+    public static Usuario user = new Usuario("Usuario", "Pruebas", "testuser", "a123*");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        btnLogin = (Button)findViewById(R.id.btnLogin);
         usernameLogin = (EditText)findViewById(R.id.usernameLogin);
         passwordLogin = (EditText)findViewById(R.id.passwordLogin);
+        btnLogin = (Button)findViewById(R.id.btnLogin);
         noReg = (TextView)findViewById(R.id.msj_no_registro2);
+
         loadingBar = new ProgressDialog(this, R.style.Theme_AppCompat_DayNight_Dialog);
         loadingBar.setCanceledOnTouchOutside(false);
-        usuarioList = new ArrayList<>();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,73 +57,83 @@ public class Login extends AppCompatActivity {
     }
 
     private void login(){
-        String username = usernameLogin.getText().toString();
-        String password = passwordLogin.getText().toString();
+        final String username = usernameLogin.getText().toString().trim();
+        final String password = passwordLogin.getText().toString().trim();
         if(username.isEmpty()){
-            Toast.makeText(Login.this, R.string.toast_usuario, Toast.LENGTH_SHORT).show();
+            usernameLogin.setError("Ingrese un nombre de Usuario.");
+            usernameLogin.requestFocus();
             return;
         }
         if(password.isEmpty()){
-            Toast.makeText(Login.this, R.string.toast_contrasena, Toast.LENGTH_SHORT).show();
+            passwordLogin.setError("Ingrese una contraseña.");
+            passwordLogin.requestFocus();
             return;
         }
-        readHeroes(username, password);
         loadingBar.setTitle(R.string.progress_login);
         loadingBar.setMessage(getString(R.string.progress_esperar));
         loadingBar.show();
-        if(confirmData(username, password)){
-            loadingBar.cancel();
-            Intent i = new Intent(Login.this, SeleccionarCurso.class);
-            startActivity(i);
-            finish();
-            return;
-        }
-        else if(username.equals("t")){
+        if(username.equals("t")){//Ingreso genérico a usuario de pruebas de juegos.
             loadingBar.cancel();
             Intent i = new Intent(Login.this, Mapa.class);
             startActivity(i);
             finish();
             return;
         }
+
+        class UserLogin extends AsyncTask<Void, Void, String> {
+            private ProgressBar progressBar;
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                progressBar = (ProgressBar) findViewById(R.id.progressBarLogin);
+                progressBar.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                progressBar.setVisibility(View.GONE);
+
+                try {
+                    JSONObject obj = new JSONObject(s);
+                    if (!obj.getBoolean("error")) {
+                        Toast.makeText(Login.this, obj.getString("message"), Toast.LENGTH_SHORT).show();
+                        //Obtener el JSON del usuario en base de datos.
+                        JSONObject userJson = obj.getJSONObject("user");
+                        //Crear un nuevo usuario.
+                        user = new Usuario(
+                                userJson.getString("codigo"),
+                                userJson.getString("correo"),
+                                userJson.getString("username"),
+                                password);
+
+                        finish();
+                        startActivity(new Intent(getApplicationContext(), SeleccionarCurso.class));
+                    } else {
+                        Toast.makeText(Login.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            protected String doInBackground(Void... voids) {
+                RequestHandler requestHandler = new RequestHandler();
+
+                HashMap<String, String> params = new HashMap<>();
+                params.put("username", username);
+                params.put("contrasena", password);
+
+                return requestHandler.sendPostRequest(Api.URL_LOGIN_USER, params);
+            }
+        }
+        UserLogin ul = new UserLogin();
+        ul.execute();
         loadingBar.cancel();
-        Toast.makeText(this, R.string.toast_noEquals, Toast.LENGTH_SHORT).show();
     }
 
-    /**
-     * @param username Usuario ingresado en la pantalla de Login que se compara en la base de datos
-     * @param password Contrasena ingresada en la pantalla de Login que se compara en la base de datos
-     * @return Si los datos son válidos o no
-     */
-    private boolean confirmData(String username, String password){
-        if(usuarioList.size() <= 0){
-            return true;
-        }
-        String usbd = usuarioList.get(0).getUsername();
-        String psbd = usuarioList.get(0).getPassword();
-        return username.equals(usbd) && password.equals(psbd);
-    }
-
-    private void refreshUsuarios(JSONArray usuarios) throws JSONException{
-        usuarioList.clear();
-        for (int i = 0; i < usuarios.length(); i++) {
-            JSONObject obj = usuarios.getJSONObject(i);
-
-            usuarioList.add(new Usuario(
-                    obj.getString("codigo"),
-                    obj.getString("correo"),
-                    obj.getString("materia"),
-                    obj.getString("rol"),
-                    obj.getString("transporte")
-            ));
-        }
-    }
-
-    private void readHeroes(String user, String pass) {
-        //PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_USERS, null, CODE_GET_REQUEST);
-        //request.execute();
-        //request.cancel(true);
-
-    }
 
     /**
      * Cuando el usuario oprima el botón de regresar dos veces en menos de 2 segundos
@@ -149,42 +149,4 @@ public class Login extends AppCompatActivity {
         back_pressed = System.currentTimeMillis();
     }
 
-    private class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
-        String url;
-        HashMap<String, String> params;
-        int requestCode;
-
-        PerformNetworkRequest(String url, HashMap<String, String> params, int requestCode) {
-            this.url = url;
-            this.params = params;
-            this.requestCode = requestCode;
-        }
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            try {
-                JSONObject object = new JSONObject(s);
-                if (!object.getBoolean("error")) {
-                    Toast.makeText(getApplicationContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
-                    refreshUsuarios(object.getJSONArray("usuarios"));
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        protected String doInBackground(Void... voids) {
-            RequestHandler requestHandler = new RequestHandler();
-            if (requestCode == CODE_POST_REQUEST) return requestHandler.sendPostRequest(url, params);
-            if (requestCode == CODE_GET_REQUEST) return requestHandler.sendGetRequest(url);
-            return null;
-        }
-    }
 }

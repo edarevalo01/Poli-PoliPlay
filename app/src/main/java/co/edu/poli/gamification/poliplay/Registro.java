@@ -11,16 +11,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import org.apache.commons.codec.digest.DigestUtils;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.HashMap;
 
 public class Registro extends AppCompatActivity {
-
-    private static final int CODE_GET_REQUEST = 1024;
-    private static final int CODE_POST_REQUEST = 1025;
 
     private EditText emailR, userR, codeR, pass1, pass2;
     private Button btnR;
@@ -41,10 +34,8 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 createUser();
-                Toast.makeText(Registro.this, "¡Registro Exitoso!", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     private void createUser() {
@@ -108,13 +99,13 @@ public class Registro extends AppCompatActivity {
                 super.onPostExecute(s);
                 try{
                     finish();
+                    Toast.makeText(Registro.this, "¡Registro Exitoso!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), Login.class));
                 }catch (Exception e){
                     e.printStackTrace();
                 }
             }
         }
-
         RegisterUser ru = new RegisterUser();
         ru.execute();
     }
