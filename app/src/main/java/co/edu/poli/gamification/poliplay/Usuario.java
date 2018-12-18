@@ -20,6 +20,17 @@ public class Usuario {
         this.transport = "";
     }
 
+    /** Login user create */
+    public Usuario(String code, String email, String signature, String role, String transport){
+        this.code = code;
+        this.email = email;
+        this.username = "";
+        this.password = "";
+        this.signature = signature;
+        this.role = role;
+        this.transport = transport;
+    }
+
     /** Register user create */
     public Usuario(String code, String email, String username, String password){
         this.code = code;

@@ -16,22 +16,12 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class RequestHandler {
 
-    /**
-     * @param requestURL es la URL hacia donde se enviarán las peticiones
-     * @param postDataParams contiene los datos que se enviarán en la petición
-     * @return
-     *
-     * Este método se utiliza para enviar peticiones POST
-     * haciendo una petición httpPostRequest
-     *
-     */
-    public String sendPostRequest(String requestURL,  HashMap<String, String> postDataParams){
+    public String sendPostRequest(String requestURL, HashMap<String, String> postDataParams) {
         URL url;
 
         StringBuilder sb = new StringBuilder();
-        try{
+        try {
             url = new URL(requestURL);
-
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
             conn.setReadTimeout(15000);
@@ -48,46 +38,48 @@ public class RequestHandler {
             writer.flush();
             writer.close();
             os.close();
-
             int responseCode = conn.getResponseCode();
 
-            if(responseCode == HttpsURLConnection.HTTP_OK){
+            if (responseCode == HttpsURLConnection.HTTP_OK) {
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 sb = new StringBuilder();
                 String response;
-                while((response = br.readLine()) !=  null){
+                while ((response = br.readLine()) != null) {
                     sb.append(response);
                 }
             }
-        } catch (Exception e){
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return sb.toString();
     }
 
-    public String sendGetRequest(String requestURL){
+    public String sendGetRequest(String requestURL) {
         StringBuilder sb = new StringBuilder();
-        try{
+        try {
             URL url = new URL(requestURL);
-            HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
-            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
             String s;
-            while((s = in.readLine()) !=  null){
+            while ((s = bufferedReader.readLine()) != null) {
                 sb.append(s + "\n");
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return sb.toString();
     }
 
-    private String getPostDataString(HashMap<String, String> params) throws UnsupportedEncodingException{
+
+    private String getPostDataString(HashMap<String, String> params) throws UnsupportedEncodingException {
         StringBuilder result = new StringBuilder();
         boolean first = true;
-        for (Map.Entry<String, String> entry: params.entrySet()){
-            if(first) first = false;
+        for (Map.Entry<String, String> entry : params.entrySet()) {
+            if (first) first = false;
             else result.append("&");
+
             result.append(URLEncoder.encode(entry.getKey(), "UTF-8"));
             result.append("=");
             result.append(URLEncoder.encode(entry.getValue(), "UTF-8"));

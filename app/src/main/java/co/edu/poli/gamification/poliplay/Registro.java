@@ -1,5 +1,6 @@
 package co.edu.poli.gamification.poliplay;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,9 +24,6 @@ public class Registro extends AppCompatActivity {
 
     private EditText emailR, userR, codeR, pass1, pass2;
     private Button btnR;
-    private ProgressBar progressBar;
-
-    boolean isUpdating = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,97 +41,81 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 createUser();
+                Toast.makeText(Registro.this, "¡Registro Exitoso!", Toast.LENGTH_SHORT).show();
             }
         });
-        Toast.makeText(Registro.this, "¡Registro Exitoso!", Toast.LENGTH_SHORT).show();
+
     }
 
-    private void createUser(){
-        String email = emailR.getText().toString().trim();
-        String user = userR.getText().toString().trim();
-        String code = codeR.getText().toString().trim();
-        String passU = (pass1.getText().toString().trim());
-        String passD = (pass2.getText().toString().trim());
-        if(TextUtils.isEmpty(email)){
+    private void createUser() {
+        final String email = emailR.getText().toString().trim();
+        final String user = userR.getText().toString().trim();
+        final String code = codeR.getText().toString().trim();
+        final String passU = pass1.getText().toString().trim();
+        final String passD = pass2.getText().toString().trim();
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             emailR.setError("Por favor ingresa un email válido.");
             emailR.requestFocus();
             return;
         }
-        if(TextUtils.isEmpty(user)){
+        if (TextUtils.isEmpty(user)) {
             userR.setError("Ingresa un nombre de usuario.");
             userR.requestFocus();
             return;
         }
-        if(TextUtils.isEmpty(code)){
+        if (TextUtils.isEmpty(code)) {
             codeR.setError("Ingresa un código");
             codeR.requestFocus();
             return;
         }
-        if(TextUtils.isEmpty(passU)){
+        if (TextUtils.isEmpty(passU)) {
             pass1.setError("Ingresa una contraseña");
             pass1.requestFocus();
             return;
         }
-        if(!passU.equals(passD)){
+        if (!passU.equals(passD)) {
             pass2.setError("Las contraseñas no coinciden.");
             pass2.requestFocus();
             return;
         }
-        HashMap<String, String> params = new HashMap<>();
-        params.put("codigo", code);
-        params.put("correo", email);
-        params.put("username", user);
-        params.put("contrasena", passU);
 
-        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_CREATE_USER, params, CODE_POST_REQUEST);
-        request.execute();
-    }
+        class RegisterUser extends AsyncTask<Void, Void, String> {
 
-    private String encrip(String pass){
-        return DigestUtils.md5Hex(pass.trim());
-    }
+            private ProgressBar progressBar;
 
-    private class PerformNetworkRequest extends AsyncTask<Void, Void, String>{
+            @Override
+            protected String doInBackground(Void... voids) {
+                RequestHandler requestHandler = new RequestHandler();
 
-        String url;
-        HashMap<String, String> params;
-        int requestCode;
+                HashMap<String, String> params = new HashMap<>();
+                params.put("codigo", code);
+                params.put("correo", email);
+                params.put("username", user);
+                params.put("contrasena", passU);
 
-        PerformNetworkRequest(String url, HashMap<String, String> params, int requestCode){
-            this.url = url;
-            this.params = params;
-            this.requestCode = requestCode;
-        }
+                return requestHandler.sendPostRequest(Api.URL_REGISTER_USER, params);
+            }
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                progressBar = (ProgressBar) findViewById(R.id.progressBar);
+                progressBar.setVisibility(View.VISIBLE);
+            }
 
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            try{
-                JSONObject object = new JSONObject(s);
-                if(!object.getBoolean("error")){
-                    Toast.makeText(getApplicationContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
-                    //refreshHeroList
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                try{
+                    finish();
+                    startActivity(new Intent(getApplicationContext(), Login.class));
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
-            }catch (JSONException e){
-                e.printStackTrace();
             }
         }
 
-        @Override
-        protected String doInBackground(Void... voids) {
-            RequestHandler requestHandler = new RequestHandler();
-            if(requestCode == CODE_POST_REQUEST){
-                return requestHandler.sendPostRequest(url, params);
-            }
-            if(requestCode == CODE_GET_REQUEST){
-                return requestHandler.sendGetRequest(url);
-            }
-            return null;
-        }
+        RegisterUser ru = new RegisterUser();
+        ru.execute();
     }
 }
