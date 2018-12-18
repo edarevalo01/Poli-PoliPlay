@@ -1,4 +1,4 @@
-package co.edu.poli.gamification.poliplay;
+package co.edu.poli.gamification.poliplay.Servicios;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -79,7 +79,6 @@ public class RequestHandler {
         for (Map.Entry<String, String> entry : params.entrySet()) {
             if (first) first = false;
             else result.append("&");
-
             result.append(URLEncoder.encode(entry.getKey(), "UTF-8"));
             result.append("=");
             result.append(URLEncoder.encode(entry.getValue(), "UTF-8"));

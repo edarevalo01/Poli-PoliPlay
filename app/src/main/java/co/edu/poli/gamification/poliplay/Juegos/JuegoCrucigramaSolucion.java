@@ -1,4 +1,4 @@
-package co.edu.poli.gamification.poliplay;
+package co.edu.poli.gamification.poliplay.Juegos;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import java.io.*;
 import java.util.*;
+
+import co.edu.poli.gamification.poliplay.Secuencia.Mapa;
+import co.edu.poli.gamification.poliplay.R;
 
 public class JuegoCrucigramaSolucion extends AppCompatActivity {
 

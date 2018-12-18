@@ -6,7 +6,7 @@
     android:background="@drawable/fondo_principal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JuegoRelacionar">
+    tools:context=".Juegos.JuegoRelacionar">
     tools:layout_editor_absoluteY="25dp">
 
     <android.support.constraint.Guideline

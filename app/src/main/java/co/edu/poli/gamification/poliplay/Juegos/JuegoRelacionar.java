@@ -1,4 +1,4 @@
-package co.edu.poli.gamification.poliplay;
+package co.edu.poli.gamification.poliplay.Juegos;
 
 import android.content.ClipData;
 import android.content.Intent;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.View;
 import android.widget.TextView;
+
+import co.edu.poli.gamification.poliplay.R;
 
 public class JuegoRelacionar extends AppCompatActivity {
 

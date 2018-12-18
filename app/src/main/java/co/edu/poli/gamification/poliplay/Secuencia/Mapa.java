@@ -1,10 +1,17 @@
-package co.edu.poli.gamification.poliplay;
+package co.edu.poli.gamification.poliplay.Secuencia;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import co.edu.poli.gamification.poliplay.Juegos.JuegoAhorcado;
+import co.edu.poli.gamification.poliplay.Juegos.JuegoCalculadora;
+import co.edu.poli.gamification.poliplay.Juegos.JuegoCrucigrama;
+import co.edu.poli.gamification.poliplay.Juegos.JuegoRelacionar;
+import co.edu.poli.gamification.poliplay.Juegos.JuegoTrivia;
+import co.edu.poli.gamification.poliplay.R;
 
 public class Mapa extends AppCompatActivity {
 
@@ -29,12 +36,10 @@ public class Mapa extends AppCompatActivity {
         Intent i = new Intent(this, JuegoRelacionar.class);
         startActivity(i);
     }
-
     public void ahorcadoBtn(View view){
         Intent i = new Intent(this, JuegoAhorcado.class);
         startActivity(i);
     }
-
     public void triviaBtn(View view){
         Intent i = new Intent(this, JuegoTrivia.class);
         startActivity(i);

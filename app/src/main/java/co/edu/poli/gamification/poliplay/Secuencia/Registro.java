@@ -1,4 +1,4 @@
-package co.edu.poli.gamification.poliplay;
+package co.edu.poli.gamification.poliplay.Secuencia;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -12,6 +12,10 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import java.util.HashMap;
+
+import co.edu.poli.gamification.poliplay.R;
+import co.edu.poli.gamification.poliplay.Servicios.Api;
+import co.edu.poli.gamification.poliplay.Servicios.RequestHandler;
 
 public class Registro extends AppCompatActivity {
 

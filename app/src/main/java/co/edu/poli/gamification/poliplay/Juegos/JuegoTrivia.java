@@ -1,4 +1,4 @@
-package co.edu.poli.gamification.poliplay;
+package co.edu.poli.gamification.poliplay.Juegos;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.constraint.ConstraintLayout;
@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Random;
+
+import co.edu.poli.gamification.poliplay.R;
 
 public class JuegoTrivia extends AppCompatActivity{
 

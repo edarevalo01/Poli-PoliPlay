@@ -1,18 +1,18 @@
-package co.edu.poli.gamification.poliplay;
+package co.edu.poli.gamification.poliplay.Narrativa;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.Guideline;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.text.Layout;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+
+import co.edu.poli.gamification.poliplay.Secuencia.Login;
+import co.edu.poli.gamification.poliplay.R;
+import co.edu.poli.gamification.poliplay.Secuencia.SeleccionarCurso;
+import co.edu.poli.gamification.poliplay.Secuencia.SeleccionarRol;
 
 public class IntroduccionCurso extends AppCompatActivity {
 
@@ -21,7 +21,6 @@ public class IntroduccionCurso extends AppCompatActivity {
     private ImageView titulo, descripcion;
     private ImageButton btnBack, btnCont;
     private boolean parteUno = false;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +73,4 @@ public class IntroduccionCurso extends AppCompatActivity {
             titulo.setImageDrawable(getResources().getDrawable(R.drawable.titulo_intro_proceso));
         }
     }
-
-
 }

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Login"
+            android:name=".Secuencia.Login"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,48 +21,48 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SeleccionarCurso"
+            android:name=".Secuencia.SeleccionarCurso"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SeleccionarRol"
+            android:name=".Secuencia.SeleccionarRol"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SeleccionarTransporte"
+            android:name=".Secuencia.SeleccionarTransporte"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Mapa"
+            android:name=".Secuencia.Mapa"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".JuegoRelacionar"
+            android:name=".Juegos.JuegoRelacionar"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".JuegoRelacionarSolucion"
+            android:name=".Juegos.JuegoRelacionarSolucion"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".JuegoAhorcado"
+            android:name=".Juegos.JuegoAhorcado"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".JuegoTrivia"
+            android:name=".Juegos.JuegoTrivia"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".JuegoCalculadora"
+            android:name=".Juegos.JuegoCalculadora"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".JuegoCrucigrama"
+            android:name=".Juegos.JuegoCrucigrama"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".JuegoCrucigramaSolucion"
+            android:name=".Juegos.JuegoCrucigramaSolucion"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SeleccionarRolPopUp"
+            android:name=".Secuencia.SeleccionarRolPopUp"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomTheme" />
-        <activity android:name=".IntroduccionCurso" />
+        <activity android:name=".Narrativa.IntroduccionCurso" />
         <activity
-            android:name=".SeleccionarTransportePopUp"
+            android:name=".Secuencia.SeleccionarTransportePopUp"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomTheme" />
-        <activity android:name=".Registro"></activity>
+        <activity android:name=".Secuencia.Registro"></activity>
     </application>
 
 </manifest>

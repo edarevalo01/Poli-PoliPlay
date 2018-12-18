@@ -1,4 +1,4 @@
-package co.edu.poli.gamification.poliplay;
+package co.edu.poli.gamification.poliplay.Juegos;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -11,6 +11,9 @@ import android.widget.TextView;
 import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
+
+import co.edu.poli.gamification.poliplay.Secuencia.Mapa;
+import co.edu.poli.gamification.poliplay.R;
 
 public class JuegoAhorcado extends AppCompatActivity {
 

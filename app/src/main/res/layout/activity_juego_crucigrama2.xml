@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_crucigrama"
-    tools:context=".JuegoCrucigrama">
+    tools:context=".Juegos.JuegoCrucigrama">
 
     <ImageView
         android:id="@+id/tituloCrucigrama1"

@@ -6,7 +6,7 @@
     android:background="@drawable/fondo_crucigrama"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JuegoCalculadora">
+    tools:context=".Juegos.JuegoCalculadora">
 
     <Button
         android:id="@+id/cal_opcion_1"

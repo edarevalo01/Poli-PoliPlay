@@ -1,4 +1,4 @@
-package co.edu.poli.gamification.poliplay;
+package co.edu.poli.gamification.poliplay.Secuencia;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -16,6 +16,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+
+import co.edu.poli.gamification.poliplay.Modelo.Usuario;
+import co.edu.poli.gamification.poliplay.R;
+import co.edu.poli.gamification.poliplay.Servicios.Api;
+import co.edu.poli.gamification.poliplay.Servicios.RequestHandler;
 
 public class Login extends AppCompatActivity {
 
@@ -72,9 +77,16 @@ public class Login extends AppCompatActivity {
         loadingBar.setTitle(R.string.progress_login);
         loadingBar.setMessage(getString(R.string.progress_esperar));
         loadingBar.show();
-        if(username.equals("t")){//Ingreso genérico a usuario de pruebas de juegos.
+        if(username.equals("j")){//Ingreso genérico a usuario de pruebas de juegos.
             loadingBar.cancel();
             Intent i = new Intent(Login.this, Mapa.class);
+            startActivity(i);
+            finish();
+            return;
+        }
+        if(username.equals("t")){//Ingreso genérico a usuario de pruebas sin bd.
+            loadingBar.cancel();
+            Intent i = new Intent(Login.this, SeleccionarCurso.class);
             startActivity(i);
             finish();
             return;

@@ -1,12 +1,12 @@
-package co.edu.poli.gamification.poliplay;
+package co.edu.poli.gamification.poliplay.Secuencia;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.TextView;
+
+import co.edu.poli.gamification.poliplay.Narrativa.IntroduccionCurso;
+import co.edu.poli.gamification.poliplay.R;
 
 public class SeleccionarCurso extends AppCompatActivity {
 
