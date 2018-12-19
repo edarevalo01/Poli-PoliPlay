@@ -36,7 +36,7 @@ public class SeleccionarTransportePopUp extends Activity {
 
         if (Login.user.getSignature().equals("Proceso Administrativo")) {
             if (transporteSeleccionado.equals("Transporte 1"))    {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_avion));
+                transporte.setImageDrawable(getDrawable(R.drawable.transporte_alas));
             }
             else if (transporteSeleccionado.equals("Transporte 2"))    {
                 transporte.setImageDrawable(getDrawable(R.drawable.transporte_barco));
@@ -56,7 +56,7 @@ public class SeleccionarTransportePopUp extends Activity {
         }
         else if (Login.user.getSignature().equals("Cultura Ambiental")) {
             if (transporteSeleccionado.equals("Transporte 1"))    {
-                transporte.setImageDrawable(getDrawable(R.drawable.transporte_avion));
+                transporte.setImageDrawable(getDrawable(R.drawable.transporte_alas));
             }
             else if (transporteSeleccionado.equals("Transporte 2"))    {
                 transporte.setImageDrawable(getDrawable(R.drawable.transporte_barco));
