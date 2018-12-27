@@ -87,6 +87,10 @@ public class Registro extends AppCompatActivity {
                 params.put("correo", email);
                 params.put("username", user);
                 params.put("contrasena", passU);
+                params.put("materia", "vacio");
+                params.put("rol", "vacio");
+                params.put("transporte", "vacio");
+                params.put("grupo", "vacio");
 
                 return requestHandler.sendPostRequest(Api.URL_REGISTER_USER, params);
             }

@@ -9,6 +9,7 @@ public class Usuario {
     private String signature;
     private String role;
     private String transport;
+    private String group;
 
     public Usuario(){
         this.code = "";
@@ -18,17 +19,19 @@ public class Usuario {
         this.signature = "";
         this.role = "";
         this.transport = "";
+        this.group = "";
     }
 
-    /** User create */
-    public Usuario(String code, String email, String signature, String role, String transport){
+    /** LOGIN User create complete */
+    public Usuario(String code, String email, String username, String password, String signature, String role, String transport, String group){
         this.code = code;
         this.email = email;
-        this.username = "";
-        this.password = "";
+        this.username = username;
+        this.password = password;
         this.signature = signature;
         this.role = role;
         this.transport = transport;
+        this.group = group;
     }
 
     /** Login user create */
@@ -69,5 +72,9 @@ public class Usuario {
     public String getTransport() { return transport; }
 
     public void setTransport(String transport) { this.transport = transport; }
+
+    public String getGroup() { return group; }
+
+    public void setGroup(String group) { this.group = group; }
 
 }

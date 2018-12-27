@@ -18,6 +18,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 
 import co.edu.poli.gamification.poliplay.Modelo.Usuario;
+import co.edu.poli.gamification.poliplay.Modelo.Utiles;
 import co.edu.poli.gamification.poliplay.R;
 import co.edu.poli.gamification.poliplay.Servicios.Api;
 import co.edu.poli.gamification.poliplay.Servicios.RequestHandler;
@@ -30,7 +31,8 @@ public class Login extends AppCompatActivity {
     private TextView noReg;
     private ProgressDialog loadingBar;
 
-    public static Usuario user = new Usuario("Usuario", "Pruebas", "testuser", "a123*");
+    public static Usuario user;
+    public static long startCon, endCon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,13 +116,19 @@ public class Login extends AppCompatActivity {
                         //Obtener el JSON del usuario en base de datos.
                         JSONObject userJson = obj.getJSONObject("user");
                         //Crear un nuevo usuario.
+                        //cod ema user, pass, sig, rol, tran, gro
                         user = new Usuario(
                                 userJson.getString("codigo"),
                                 userJson.getString("correo"),
                                 userJson.getString("username"),
-                                password);
+                                userJson.getString("contrasena"),
+                                userJson.getString("materia"),
+                                userJson.getString("rol"),
+                                userJson.getString("transporte"),
+                                userJson.getString("grupo"));
 
                         finish();
+                        startCon = System.currentTimeMillis();
                         startActivity(new Intent(getApplicationContext(), SeleccionarCurso.class));
                     } else {
                         Toast.makeText(Login.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
@@ -154,11 +162,15 @@ public class Login extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
-        if(back_pressed + 2000 > System.currentTimeMillis())
+        if(back_pressed + 2000 > System.currentTimeMillis()) {
             System.exit(0);
+        }
         else
             Toast.makeText(getBaseContext(), R.string.toast_salir, Toast.LENGTH_SHORT).show();
         back_pressed = System.currentTimeMillis();
     }
+
+
+
 
 }

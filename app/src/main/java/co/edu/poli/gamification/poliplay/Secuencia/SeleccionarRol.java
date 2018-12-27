@@ -1,13 +1,22 @@
 package co.edu.poli.gamification.poliplay.Secuencia;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
 
 import co.edu.poli.gamification.poliplay.Narrativa.IntroduccionCurso;
 import co.edu.poli.gamification.poliplay.R;
+import co.edu.poli.gamification.poliplay.Servicios.Api;
+import co.edu.poli.gamification.poliplay.Servicios.RequestHandler;
 
 public class SeleccionarRol extends AppCompatActivity {
 
@@ -78,13 +87,65 @@ public class SeleccionarRol extends AppCompatActivity {
 
     }
     public void btnSelRol(View view){
-        Login.user.setRole(view.getContentDescription().toString());
-        Intent i = new Intent(this, SeleccionarRolPopUp.class);
-        startActivity(i);
+        String role = Login.user.getRole();
+        if(role.equals("vacio")){
+            String r = view.getContentDescription().toString();
+            AddRole ar = new AddRole(r);
+            ar.execute();
+        }
+        else{
+            startActivity(new Intent(this, SeleccionarTransporte.class));
+        }
     }
 
     public void btnVolver(View view){
         Intent i = new Intent(this, IntroduccionCurso.class);
         startActivity(i);
+    }
+
+    class AddRole extends AsyncTask<Void, Void, String> {
+        private String roleAdd;
+
+        public AddRole(String roleAdd){
+            this.roleAdd = roleAdd;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            try {
+                JSONObject obj = new JSONObject(s);
+                if (!obj.getBoolean("error")) {
+                    Toast.makeText(SeleccionarRol.this, obj.getString("message"), Toast.LENGTH_SHORT).show();
+                    JSONObject userJson = obj.getJSONObject("user");
+                    //Agregar la materia al usuario.
+                    Login.user.setRole(roleAdd);
+
+                    finish();
+                    startActivity(new Intent(getApplicationContext(), SeleccionarRolPopUp.class));
+                } else {
+                    Toast.makeText(SeleccionarRol.this, "Invalid data", Toast.LENGTH_SHORT).show();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            RequestHandler requestHandler = new RequestHandler();
+
+            HashMap<String, String> params = new HashMap<>();
+            params.put("codigo", Login.user.getCode());
+            params.put("rol", roleAdd);
+
+            return requestHandler.sendPostRequest(Api.URL_ADD_ROLE, params);
+        }
     }
 }
