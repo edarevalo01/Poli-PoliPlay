@@ -117,17 +117,8 @@ public class JuegoAhorcado extends AppCompatActivity {
         cambio = false;
         //Método que no deja jugar más si pierde
         gameOver();
-        String res = hideWord.getText().toString();
-        end = System.currentTimeMillis();
-        long totaltime = (end-start)/1000;
-        TiempoConexionJuego atr = new TiempoConexionJuego(
-                Utiles.getFecha(),
-                Login.user.getCode(),
-                Login.user.getGroup(),
-                "Ahorcado",
-                String.valueOf(res.equals("PERDISTE!")? "No solucionado" : "Solucionado"),
-                String.valueOf(totaltime));
-        atr.execute();
+
+
     }
 
     public void gameOver() throws Exception {
@@ -150,11 +141,29 @@ public class JuegoAhorcado extends AppCompatActivity {
                     alMapa();
                 }
             };
+            hideWord.setText("Solucionado");
+            String res = hideWord.getText().toString();
+            guardarRes(res);
             waiter.postDelayed(runner, 2500);
         }
         if (intentos == 0) {
-            hideWord.setText("PERDISTE!");
+            hideWord.setText("No solucionado");
+            String res = hideWord.getText().toString();
+            guardarRes(res);
         }
+    }
+
+    public void guardarRes(String res){
+        end = System.currentTimeMillis();
+        long totaltime = (end-start)/1000;
+        TiempoConexionJuego atr = new TiempoConexionJuego(
+                Utiles.getFecha(),
+                Login.user.getCode(),
+                Login.user.getGroup(),
+                "Ahorcado",
+                String.valueOf(res),
+                String.valueOf(totaltime));
+        atr.execute();
     }
 
     public void cambioImagen() {
