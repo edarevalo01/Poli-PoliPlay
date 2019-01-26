@@ -62,7 +62,9 @@
             android:name=".Secuencia.SeleccionarTransportePopUp"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomTheme" />
-        <activity android:name=".Secuencia.Registro"></activity>
+        <activity android:name=".Secuencia.Registro" />
+        <activity android:name=".Narrativa.InicioViaje" />
+        <activity android:name=".Secuencia.PreguntasInicio"></activity>
     </application>
 
 </manifest>

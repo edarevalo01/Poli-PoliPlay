@@ -11,6 +11,9 @@ public class Usuario {
     private String transport;
     private String group;
 
+    private String tempRole;
+    private String tempTransport;
+
     public Usuario(){
         this.code = "";
         this.email = "";
@@ -76,5 +79,13 @@ public class Usuario {
     public String getGroup() { return group; }
 
     public void setGroup(String group) { this.group = group; }
+
+    public String getTempRole() { return tempRole; }
+
+    public void setTempRole(String tempRole) { this.tempRole = tempRole; }
+
+    public String getTempTransport() { return tempTransport; }
+
+    public void setTempTransport(String tempTransport) { this.tempTransport = tempTransport; }
 
 }

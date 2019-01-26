@@ -12,6 +12,9 @@ import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
 
+import co.edu.poli.gamification.poliplay.Modelo.TiempoConexionJuego;
+import co.edu.poli.gamification.poliplay.Modelo.Utiles;
+import co.edu.poli.gamification.poliplay.Secuencia.Login;
 import co.edu.poli.gamification.poliplay.Secuencia.Mapa;
 import co.edu.poli.gamification.poliplay.R;
 
@@ -39,10 +42,14 @@ public class JuegoAhorcado extends AppCompatActivity {
     private Handler waiter = new Handler();
     private Runnable runner;
 
+    private long start, end;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juego_ahorcado);
+        Utiles.startCon = System.currentTimeMillis();
+        start = System.currentTimeMillis();
         intentosRes = (TextView) findViewById(R.id.intenRes);
         intentosRestantes = (TextView) findViewById(R.id.intentosRest);
         hideWord = (TextView) findViewById(R.id.hideWord);
@@ -74,14 +81,10 @@ public class JuegoAhorcado extends AppCompatActivity {
         letters[18] = (TextView) findViewById(R.id.let19);
         letters[19] = (TextView) findViewById(R.id.let20);
         letters[20] = (TextView) findViewById(R.id.let21);
-
         letrasRandom();
-
-
     }
 
     public void comprobar(View vista) throws Exception {
-
         TextView t = (TextView) vista;
 
         String partsWord = palabras[index];
@@ -96,7 +99,6 @@ public class JuegoAhorcado extends AppCompatActivity {
                 t.setEnabled(false);
             }
         }
-
         char[] e = new char[(c.length * 2) - 1];
         int contador = 0;
         for (int i = 0; i < e.length; i++) {
@@ -107,23 +109,28 @@ public class JuegoAhorcado extends AppCompatActivity {
                 contador++;
             }
         }
-
         String f = String.valueOf(e).trim();
         hideWord.setText(f);
-
         if (!cambio) {
             intRestantes();
         }
         cambio = false;
-
         //Método que no deja jugar más si pierde
         gameOver();
-
-
+        String res = hideWord.getText().toString();
+        end = System.currentTimeMillis();
+        long totaltime = (end-start)/1000;
+        TiempoConexionJuego atr = new TiempoConexionJuego(
+                Utiles.getFecha(),
+                Login.user.getCode(),
+                Login.user.getGroup(),
+                "Ahorcado",
+                String.valueOf(res.equals("PERDISTE!")? "No solucionado" : "Solucionado"),
+                String.valueOf(totaltime));
+        atr.execute();
     }
 
     public void gameOver() throws Exception {
-
         String termino = hideWord.getText().toString();
         termino.split(" +");
         int contador = 0;
@@ -144,12 +151,9 @@ public class JuegoAhorcado extends AppCompatActivity {
                 }
             };
             waiter.postDelayed(runner, 2500);
-
-
         }
         if (intentos == 0) {
             hideWord.setText("PERDISTE!");
-
         }
     }
 
@@ -158,31 +162,24 @@ public class JuegoAhorcado extends AppCompatActivity {
             case 6:
                 animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado1));
                 break;
-
             case 5:
                 animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado2));
                 break;
-
             case 4:
                 animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado3));
                 break;
-
             case 3:
                 animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado4));
                 break;
-
             case 2:
                 animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado5));
                 break;
-
             case 1:
                 animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado6));
                 break;
-
             case 0:
                 animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado7));
                 break;
-
             default:
                 animador.setImageDrawable(getResources().getDrawable(R.drawable.ahorcado0));
         }
@@ -240,8 +237,9 @@ public class JuegoAhorcado extends AppCompatActivity {
         }
     }
 
-    public void alMapa(){
+    public void alMapa() {
         Intent i = new Intent(this, Mapa.class);
+        Utiles.terminarConexion();
         startActivity(i);
     }
 }

@@ -30,6 +30,11 @@ public class SeleccionarCurso extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_curso);
+        Utiles.startCon = System.currentTimeMillis();
+
+        if(!Login.user.getSignature().equals("vacio")){
+            startActivity(new Intent(this, IntroduccionCurso.class));
+        }
     }
 
     public void selAmbiental(View view) {
@@ -37,41 +42,34 @@ public class SeleccionarCurso extends AppCompatActivity {
         if(signature.equals("vacio")){
             AddSignature as = new AddSignature("Cultura Ambiental");
             as.execute();
-        }
-        else{
+        } else{
             startActivity(new Intent(this, IntroduccionCurso.class));
         }
     }
 
     public void selAdmin(View view) {
         String signature = Login.user.getSignature();
-        if(signature.equals("vacio")){
+        if (signature.equals("vacio")) {
             AddSignature as = new AddSignature("Proceso Administrativo");
             as.execute();
-        }
-        else{
+        } else {
             startActivity(new Intent(this, IntroduccionCurso.class));
         }
     }
 
-    @Override
-    protected void onStop() {
-        Utiles.terminarConexion();
-        super.onStop();
+    public void btnVolver(View view){
+        Intent i = new Intent(this, Login.class);
+        startActivity(i);
     }
 
     @Override
     public void onBackPressed() {
-        if(back_pressed + 2000 > System.currentTimeMillis()) {
-            Utiles.terminarConexion();
+        if(back_pressed + 2000 > System.currentTimeMillis())
             System.exit(0);
-        }
         else
             Toast.makeText(getBaseContext(), R.string.toast_salir, Toast.LENGTH_SHORT).show();
         back_pressed = System.currentTimeMillis();
     }
-
-
 
     class AddSignature extends AsyncTask<Void, Void, String> {
         private String signatureAdd;
@@ -88,16 +86,15 @@ public class SeleccionarCurso extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-
             try {
                 JSONObject obj = new JSONObject(s);
                 if (!obj.getBoolean("error")) {
                     Toast.makeText(SeleccionarCurso.this, obj.getString("message"), Toast.LENGTH_SHORT).show();
                     JSONObject userJson = obj.getJSONObject("user");
-                    //Agregar la materia al usuario.
                     Login.user.setSignature(signatureAdd);
 
                     finish();
+                    Utiles.terminarConexion();
                     startActivity(new Intent(getApplicationContext(), IntroduccionCurso.class));
                 } else {
                     Toast.makeText(SeleccionarCurso.this, "Invalid data", Toast.LENGTH_SHORT).show();

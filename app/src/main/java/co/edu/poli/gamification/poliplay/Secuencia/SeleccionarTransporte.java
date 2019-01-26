@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import co.edu.poli.gamification.poliplay.Modelo.Utiles;
 import co.edu.poli.gamification.poliplay.R;
 
 public class SeleccionarTransporte extends AppCompatActivity {
@@ -16,7 +17,11 @@ public class SeleccionarTransporte extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_transporte);
-
+        if(!Login.user.getTransport().equals("vacio")){
+            Intent i = new Intent(this, Mapa.class);
+            startActivity(i);
+        }
+        Utiles.startCon = System.currentTimeMillis();
         transp1 = (ImageView) findViewById(R.id.transp1);
         transp2 = (ImageView) findViewById(R.id.transp2);
         transp3 = (ImageView) findViewById(R.id.transp3);
@@ -50,10 +55,16 @@ public class SeleccionarTransporte extends AppCompatActivity {
         startActivity(i);
     }
     public void btnSelTrans(View view){
-        Login.user.setTransport(view.getContentDescription().toString());
-        Intent i = new Intent(this, SeleccionarTransportePopUp.class);
-        startActivity(i);
+        String transport = Login.user.getTransport();
+        if(transport.equals("vacio")){
+            String r = view.getContentDescription().toString();
+            Login.user.setTempTransport(r);
+            Intent i = new Intent(this, SeleccionarTransportePopUp.class);
+            i.putExtra("transport", r);
+            startActivity(i);
+        }else{
+            Intent i = new Intent(this, Mapa.class);
+            startActivity(i);
+        }
     }
-
-
 }

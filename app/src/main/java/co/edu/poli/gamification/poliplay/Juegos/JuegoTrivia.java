@@ -18,6 +18,12 @@ import co.edu.poli.gamification.poliplay.R;
 
 public class JuegoTrivia extends AppCompatActivity{
 
+    //---------------------------------------------------------------------------
+    //
+    // Falta poner los contadores de tiempo de juego y conexion
+    //
+    //---------------------------------------------------------------------------
+
     private String [] enunciadosPreg ={
             //Primer Enunciado
             "Unos jóvenes emprendedores acaban de naufragar en una isla en la que deben salir antes de 2 meses.  ¡Cuentan con un equipo de trabajo para sumir y lograr el reto!! \n" +
@@ -121,7 +127,6 @@ public class JuegoTrivia extends AppCompatActivity{
         respues3.setText(opcionesRespuestas[randomEnunciados][2]);
         respues4.setText(opcionesRespuestas[randomEnunciados][3]);
         randy = randomEnunciados;
-
     }
 
     public void nextScreen (View vista){
@@ -132,6 +137,4 @@ public class JuegoTrivia extends AppCompatActivity{
         screens++;
         pantallaRandom();
     }
-
-
 }

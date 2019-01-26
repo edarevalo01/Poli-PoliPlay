@@ -17,6 +17,8 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 
+import co.edu.poli.gamification.poliplay.Modelo.TiempoConexionJuego;
+import co.edu.poli.gamification.poliplay.Modelo.Utiles;
 import co.edu.poli.gamification.poliplay.R;
 import co.edu.poli.gamification.poliplay.Secuencia.Login;
 import co.edu.poli.gamification.poliplay.Servicios.Api;
@@ -33,8 +35,8 @@ public class JuegoRelacionar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juego_relacionar);
-
         start = System.currentTimeMillis();
+        Utiles.startCon = start;
         txt1 = (TextView) findViewById(R.id.txt1);
         txt2 = (TextView) findViewById(R.id.txt2);
         txt3 = (TextView) findViewById(R.id.txt3);
@@ -186,7 +188,6 @@ public class JuegoRelacionar extends AppCompatActivity {
         }
     };
 
-
     public void respuestas(View view){
         int points = getPoints();
         Intent intent = new Intent(this, JuegoRelacionarSolucion.class);
@@ -205,8 +206,8 @@ public class JuegoRelacionar extends AppCompatActivity {
         intent.putExtra("sal6", target6.getText());
         end = System.currentTimeMillis();
         long totaltime = (end-start)/1000;
-        AddTimeRelacionar atr = new AddTimeRelacionar(
-                getFecha(),
+        TiempoConexionJuego atr = new TiempoConexionJuego(
+                Utiles.getFecha(),
                 Login.user.getCode(),
                 Login.user.getGroup(),
                 "Relacionar",
@@ -214,19 +215,6 @@ public class JuegoRelacionar extends AppCompatActivity {
                 String.valueOf(totaltime));
         atr.execute();
         startActivity(intent);
-    }
-
-    private String getFecha(){
-        String res = "";
-        Calendar fecha = new GregorianCalendar();
-        int ano = fecha.get(Calendar.YEAR);
-        int mes = fecha.get(Calendar.MONTH);
-        int dia = fecha.get(Calendar.DAY_OF_MONTH);
-        int hora = fecha.get(Calendar.HOUR_OF_DAY);
-        int minuto = fecha.get(Calendar.MINUTE);
-
-        res += ano + "/" + mes + "/" + dia + "-" + hora + ":" + minuto;
-        return res;
     }
 
     public int getPoints(){
@@ -239,61 +227,4 @@ public class JuegoRelacionar extends AppCompatActivity {
         if(target6.getText() == txt6.getText()) cont++;
         return cont;
     }
-
-    class AddTimeRelacionar extends AsyncTask<Void, Void, String> {
-        private String fecha;
-        private String codigo_usuario;
-        private String grupo_usuario;
-        private String nombre_juego;
-        private String puntaje;
-        private String tiempo;
-
-        public AddTimeRelacionar(String fecha, String codigo_usuario, String grupo_usuario, String nombre_juego, String puntaje, String tiempo){
-            this.fecha = fecha;
-            this.codigo_usuario = codigo_usuario;
-            this.grupo_usuario = grupo_usuario;
-            this.nombre_juego = nombre_juego;
-            this.puntaje = puntaje;
-            this.tiempo = tiempo;
-        }
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-
-            try {
-                JSONObject obj = new JSONObject(s);
-                if (!obj.getBoolean("error")) {
-                    Toast.makeText(JuegoRelacionar.this, obj.getString("message"), Toast.LENGTH_SHORT).show();
-                    JSONObject userJson = obj.getJSONObject("time");
-                    finish();
-                } else {
-                    Toast.makeText(JuegoRelacionar.this, "Invalid data", Toast.LENGTH_SHORT).show();
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        protected String doInBackground(Void... voids) {
-            RequestHandler requestHandler = new RequestHandler();
-
-            HashMap<String, String> params = new HashMap<>();
-            params.put("fecha", fecha);
-            params.put("codigo_usuario", codigo_usuario);
-            params.put("grupo_usuario", grupo_usuario);
-            params.put("nombre_juego", nombre_juego);
-            params.put("puntaje", puntaje);
-            params.put("tiempo", tiempo);
-
-            return requestHandler.sendPostRequest(Api.URL_ADD_GAME_TIME, params);
-        }
-    }
-
 }

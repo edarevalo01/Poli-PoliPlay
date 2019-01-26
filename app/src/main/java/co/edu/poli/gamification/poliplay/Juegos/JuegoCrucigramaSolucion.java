@@ -9,6 +9,7 @@ import android.widget.TextView;
 import java.io.*;
 import java.util.*;
 
+import co.edu.poli.gamification.poliplay.Modelo.Utiles;
 import co.edu.poli.gamification.poliplay.Secuencia.Mapa;
 import co.edu.poli.gamification.poliplay.R;
 
@@ -45,6 +46,7 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
 
     public void continuarBtn(View view){
         Intent i = new Intent(this, Mapa.class);
+        Utiles.terminarConexion();
         startActivity(i);
     }
 
@@ -113,7 +115,6 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
         //Se deja vacío intencional para bloquear el retorno de actividad.
     }
 
-
     private void llenarScreenMat() {
         screenMatSol = new int[][]{{R.id.s, R.id.s2, R.id.s3, R.id.s4, R.id.s5, R.id.s6, R.id.s7, R.id.s8, R.id.s9, R.id.s10, R.id.s11, R.id.s12, R.id.s13, R.id.s14},
                 {R.id.s15, R.id.s16, R.id.s17, R.id.s18, R.id.s19, R.id.s20, R.id.s21, R.id.s22, R.id.s23, R.id.s24, R.id.s25, R.id.s26, R.id.s27, R.id.s28},
@@ -133,5 +134,4 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
                 {R.id.s211, R.id.s212, R.id.s213, R.id.s214, R.id.s215, R.id.s216, R.id.s217, R.id.s218, R.id.s219, R.id.s220, R.id.s221, R.id.s222, R.id.s223, R.id.s224},
                 {R.id.s225, R.id.s226, R.id.s227, R.id.s228, R.id.s229, R.id.s230, R.id.s231, R.id.s232, R.id.s233, R.id.s234, R.id.s235, R.id.s236, R.id.s237, R.id.s238}};
     }
-
 }

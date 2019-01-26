@@ -18,6 +18,11 @@ public class JuegoCalculadora extends AppCompatActivity {
     int estadoCalculadora = 0;
     int transporteIngresador = 0;
 
+    //---------------------------------------------------------------------------
+    //
+    // Falta poner los contadores de tiempo de juego y conexion
+    //
+    //---------------------------------------------------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

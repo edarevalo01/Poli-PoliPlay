@@ -2,17 +2,27 @@ package co.edu.poli.gamification.poliplay.Juegos;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.*;
 import java.util.*;
 
+import co.edu.poli.gamification.poliplay.Modelo.TiempoConexionJuego;
+import co.edu.poli.gamification.poliplay.Modelo.Utiles;
 import co.edu.poli.gamification.poliplay.R;
+import co.edu.poli.gamification.poliplay.Secuencia.Login;
+import co.edu.poli.gamification.poliplay.Servicios.Api;
+import co.edu.poli.gamification.poliplay.Servicios.RequestHandler;
 
 public class JuegoCrucigrama extends AppCompatActivity {
 
@@ -26,11 +36,14 @@ public class JuegoCrucigrama extends AppCompatActivity {
 
     private TextView enun;
     private EditText resp;
+    private long start, end;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juego_crucigrama2);
+        start = System.currentTimeMillis();
+        Utiles.startCon = start;
         llenarScreenMat();
         try {
             lecturaResuelto();
@@ -48,6 +61,16 @@ public class JuegoCrucigrama extends AppCompatActivity {
         for(int j = 0; j< solved.length; j++){
             i.putExtra(String.valueOf(j), solved[j]);
         }
+        end = System.currentTimeMillis();
+        long totaltime = (end-start)/1000;
+        TiempoConexionJuego atr = new TiempoConexionJuego(
+                Utiles.getFecha(),
+                Login.user.getCode(),
+                Login.user.getGroup(),
+                "Crucigrama",
+                String.valueOf("Solucionado"),
+                String.valueOf(totaltime));
+        atr.execute();
         startActivity(i);
     }
 
@@ -115,11 +138,10 @@ public class JuegoCrucigrama extends AppCompatActivity {
         int x = pos[0];
         int y = pos[1];
         if (x > -1 && y > -1 && x < 14 && y < 17) {
-            if (posValidas[x + 1][y] == 0 || (x - 1 >= 0 ? posValidas[x - 1][y] == 0 : posValidas[x][y] == 0)) {
+            if (posValidas[x + 1][y] == 0 || (x - 1 >= 0 ? posValidas[x - 1][y] == 0 : posValidas[x][y] == 0))
                 vertical = false;
-            } else if (posValidas[x][y + 1] == 0 || (y - 1 >= 0 ? posValidas[x][y - 1] == 0 : posValidas[x][y] == 0)) {
+            else if (posValidas[x][y + 1] == 0 || (y - 1 >= 0 ? posValidas[x][y - 1] == 0 : posValidas[x][y] == 0))
                 horizontal = false;
-            }
         }
         String palabra = "";
         if (horizontal) {
@@ -204,7 +226,6 @@ public class JuegoCrucigrama extends AppCompatActivity {
             }
         }
     }
-
 
     private void llenarScreenMat() {
         screenMat = new int[][]{{R.id.l, R.id.l2, R.id.l3, R.id.l4, R.id.l5, R.id.l6, R.id.l7, R.id.l8, R.id.l9, R.id.l10, R.id.l11, R.id.l12, R.id.l13, R.id.l14},

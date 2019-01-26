@@ -11,6 +11,7 @@ import co.edu.poli.gamification.poliplay.Juegos.JuegoCalculadora;
 import co.edu.poli.gamification.poliplay.Juegos.JuegoCrucigrama;
 import co.edu.poli.gamification.poliplay.Juegos.JuegoRelacionar;
 import co.edu.poli.gamification.poliplay.Juegos.JuegoTrivia;
+import co.edu.poli.gamification.poliplay.Modelo.Utiles;
 import co.edu.poli.gamification.poliplay.R;
 
 public class Mapa extends AppCompatActivity {
@@ -21,6 +22,7 @@ public class Mapa extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa);
+        Utiles.startCon = System.currentTimeMillis();
         nombre = (TextView)findViewById(R.id.nombre);
         materia = (TextView)findViewById(R.id.materia);
         rol = (TextView)findViewById(R.id.roll);
@@ -34,22 +36,27 @@ public class Mapa extends AppCompatActivity {
 
     public void relacionarBtn(View view){
         Intent i = new Intent(this, JuegoRelacionar.class);
+        Utiles.terminarConexion();
         startActivity(i);
     }
     public void ahorcadoBtn(View view){
         Intent i = new Intent(this, JuegoAhorcado.class);
+        Utiles.terminarConexion();
         startActivity(i);
     }
     public void triviaBtn(View view){
         Intent i = new Intent(this, JuegoTrivia.class);
+        Utiles.terminarConexion();
         startActivity(i);
     }
     public void cruciBtn(View view){
         Intent i = new Intent(this, JuegoCrucigrama.class);
+        Utiles.terminarConexion();
         startActivity(i);
     }
     public void calculadoraBtn(View view){
         Intent i = new Intent(this, JuegoCalculadora.class);
+        Utiles.terminarConexion();
         startActivity(i);
     }
 }
