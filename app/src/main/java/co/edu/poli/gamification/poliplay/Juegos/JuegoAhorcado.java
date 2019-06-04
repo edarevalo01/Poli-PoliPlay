@@ -142,27 +142,60 @@ public class JuegoAhorcado extends AppCompatActivity {
                 }
             };
             hideWord.setText("Solucionado");
-            String res = hideWord.getText().toString();
-            guardarRes(res);
+            if(Login.user.getLevel().equals("3")) {
+                guardarRes(3, "4");
+            }
+            else if(Login.user.getLevel().equals("4")){
+                guardarRes(4, "5");
+            }
+            else if(Login.user.getLevel().equals("5")){
+                guardarRes(5, "FIN");
+            }
+            else if(Login.user.getLevel().equals("FIN")){
+                guardarRes(0, "FIN");
+            }
             waiter.postDelayed(runner, 2500);
         }
         if (intentos == 0) {
+            runner = new Runnable() {
+                @Override
+                public void run() {
+                    alMapa();
+                }
+            };
             hideWord.setText("No solucionado");
             String res = hideWord.getText().toString();
-            guardarRes(res);
+            if(Login.user.getLevel().equals("3")) {
+                guardarRes(0, "4");
+            }
+            else if(Login.user.getLevel().equals("4")){
+                guardarRes(0, "5");
+            }
+            else if(Login.user.getLevel().equals("5")){
+                guardarRes(0, "FIN");
+            }
+            else if(Login.user.getLevel().equals("FIN")){
+                guardarRes(0, "FIN");
+            }
+            waiter.postDelayed(runner, 2500);
         }
     }
 
-    public void guardarRes(String res){
+    public void guardarRes(int res, String level){
         end = System.currentTimeMillis();
         long totaltime = (end-start)/1000;
+        int puntajes = Integer.parseInt(Login.user.getCoins());
+        puntajes += res;
+        Login.user.setLevel(level);
+        Login.user.setCoins(String.valueOf(puntajes));
         TiempoConexionJuego atr = new TiempoConexionJuego(
                 Utiles.getFecha(),
                 Login.user.getCode(),
                 Login.user.getGroup(),
                 "Ahorcado",
-                String.valueOf(res),
-                String.valueOf(totaltime));
+                String.valueOf(puntajes),
+                String.valueOf(totaltime),
+                level);
         atr.execute();
     }
 

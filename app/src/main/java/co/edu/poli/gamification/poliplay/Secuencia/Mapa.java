@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import co.edu.poli.gamification.poliplay.Juegos.JuegoAhorcado;
@@ -11,12 +12,14 @@ import co.edu.poli.gamification.poliplay.Juegos.JuegoCalculadora;
 import co.edu.poli.gamification.poliplay.Juegos.JuegoCrucigrama;
 import co.edu.poli.gamification.poliplay.Juegos.JuegoRelacionar;
 import co.edu.poli.gamification.poliplay.Juegos.JuegoTrivia;
+import co.edu.poli.gamification.poliplay.Modelo.TiempoConexionJuego;
 import co.edu.poli.gamification.poliplay.Modelo.Utiles;
 import co.edu.poli.gamification.poliplay.R;
 
 public class Mapa extends AppCompatActivity {
 
-    private TextView nombre, materia, rol, transporte;
+    private TextView nombre, materia, rol, monedas;
+    private Button btnNivel1, btnNivel2, btnNivel3, btnNivel4, btnNivel5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,37 +29,179 @@ public class Mapa extends AppCompatActivity {
         nombre = (TextView)findViewById(R.id.nombre);
         materia = (TextView)findViewById(R.id.materia);
         rol = (TextView)findViewById(R.id.roll);
-        transporte = (TextView)findViewById(R.id.transporte);
+        monedas = (TextView)findViewById(R.id.monedas);
+        if(Login.user.getLevel().equals("0")){
+            guardarRes("1");
+            Login.user.setLevel("1");
+        }
 
-        nombre.setText(Login.user.getUsername());
-        materia.setText(Login.user.getSignature());
-        rol.setText(Login.user.getRole());
-        transporte.setText(Login.user.getTransport());
+        btnNivel1 = (Button)findViewById(R.id.btnNivel1);
+        btnNivel2 = (Button)findViewById(R.id.btnNivel2);
+        btnNivel3 = (Button)findViewById(R.id.btnNivel3);
+        btnNivel4 = (Button)findViewById(R.id.btnNivel4);
+        btnNivel5 = (Button)findViewById(R.id.btnNivel5);
+
+        nombre.setText("Nombre: " + Login.user.getUsername());
+        materia.setText("Materia: " + Login.user.getSignature());
+        rol.setText("Rol: " + Login.user.getRole());
+        monedas.setText("Monedas: " + Login.user.getCoins());
+
+        enableButton(Login.user.getLevel());
     }
 
-    public void relacionarBtn(View view){
-        Intent i = new Intent(this, JuegoRelacionar.class);
-        Utiles.terminarConexion();
-        startActivity(i);
+    ////
+    public void nivel1(View view){
+        if(Login.user.getSignature().equals("Proceso Administrativo")){
+            int aleatorio = (int)(Math.random()*2);
+            if(aleatorio == 0){
+                Intent i = new Intent(this, JuegoTrivia.class);
+                Utiles.terminarConexion();
+                startActivity(i);
+            }
+            else if(aleatorio == 1){
+                Intent i = new Intent(this, JuegoRelacionar.class);
+                Utiles.terminarConexion();
+                startActivity(i);
+            }
+        }
+        else if(Login.user.getSignature().equals("Pensamiento Algoritmico")){
+            Intent i = new Intent(this, JuegoTrivia.class);
+            Utiles.terminarConexion();
+            startActivity(i);
+        }
     }
-    public void ahorcadoBtn(View view){
+
+    public void nivel2(View view){
+        if(Login.user.getSignature().equals("Proceso Administrativo")){
+            int aleatorio = (int)(Math.random()*2);
+            if(aleatorio == 0){
+                Intent i = new Intent(this, JuegoTrivia.class);
+                Utiles.terminarConexion();
+                startActivity(i);
+            }
+            else if(aleatorio == 1){
+                Intent i = new Intent(this, JuegoCrucigrama.class);
+                Utiles.terminarConexion();
+                startActivity(i);
+            }
+        }
+        else if(Login.user.getSignature().equals("Pensamiento Algoritmico")){
+            Intent i = new Intent(this, JuegoRelacionar.class);
+            Utiles.terminarConexion();
+            startActivity(i);
+        }
+    }
+
+    public void nivel3(View view){
+        if(Login.user.getSignature().equals("Proceso Administrativo")){
+            Intent i = new Intent(this, JuegoAhorcado.class);
+            Utiles.terminarConexion();
+            startActivity(i);
+        }
+        else if(Login.user.getSignature().equals("Pensamiento Algoritmico")){
+            Intent i = new Intent(this, JuegoRelacionar.class);
+            Utiles.terminarConexion();
+            startActivity(i);
+        }
+    }
+
+    public void nivel4(View view){
         Intent i = new Intent(this, JuegoAhorcado.class);
         Utiles.terminarConexion();
         startActivity(i);
     }
-    public void triviaBtn(View view){
-        Intent i = new Intent(this, JuegoTrivia.class);
-        Utiles.terminarConexion();
-        startActivity(i);
+
+    public void nivel5(View view){
+        if(Login.user.getSignature().equals("Proceso Administrativo")){
+            Intent i = new Intent(this, JuegoAhorcado.class);
+            Utiles.terminarConexion();
+            startActivity(i);
+        }
+        else if(Login.user.getSignature().equals("Pensamiento Algoritmico")){
+            Intent i = new Intent(this, JuegoCrucigrama.class);
+            Utiles.terminarConexion();
+            startActivity(i);
+        }
     }
-    public void cruciBtn(View view){
-        Intent i = new Intent(this, JuegoCrucigrama.class);
-        Utiles.terminarConexion();
-        startActivity(i);
+
+    public void enableButton(String nivel){
+        if(nivel.equals("1")){
+            btnNivel1.setEnabled(true);
+            btnNivel2.setEnabled(false);
+            btnNivel3.setEnabled(false);
+            btnNivel4.setEnabled(false);
+            btnNivel5.setEnabled(false);
+            btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+            btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+        }
+        else if(nivel.equals("2")){
+            btnNivel1.setEnabled(false);
+            btnNivel2.setEnabled(true);
+            btnNivel3.setEnabled(false);
+            btnNivel4.setEnabled(false);
+            btnNivel5.setEnabled(false);
+            btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+        }
+        else if(nivel.equals("3")){
+            btnNivel1.setEnabled(false);
+            btnNivel2.setEnabled(false);
+            btnNivel3.setEnabled(true);
+            btnNivel4.setEnabled(false);
+            btnNivel5.setEnabled(false);
+            btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+            btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+        }
+        else if(nivel.equals("4")){
+            btnNivel1.setEnabled(false);
+            btnNivel2.setEnabled(false);
+            btnNivel3.setEnabled(false);
+            btnNivel4.setEnabled(true);
+            btnNivel5.setEnabled(false);
+            btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+        }
+        else if(nivel.equals("5")){
+            btnNivel1.setEnabled(false);
+            btnNivel2.setEnabled(false);
+            btnNivel3.setEnabled(false);
+            btnNivel4.setEnabled(false);
+            btnNivel5.setEnabled(true);
+            btnNivel1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro_disable));
+            btnNivel5.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
+        }
     }
-    public void calculadoraBtn(View view){
-        Intent i = new Intent(this, JuegoCalculadora.class);
-        Utiles.terminarConexion();
-        startActivity(i);
+
+    @Override
+    public void onBackPressed(){
+        //Se deja vacío intencional para bloquear el retorno de actividad.
+    }
+
+    public void guardarRes(String level){
+        Login.user.setLevel(level);
+        TiempoConexionJuego atr = new TiempoConexionJuego(
+                Utiles.getFecha(),
+                Login.user.getCode(),
+                Login.user.getGroup(),
+                "Mapa",
+                String.valueOf(0),
+                String.valueOf(0),
+                level);
+        atr.execute();
     }
 }

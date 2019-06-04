@@ -12,9 +12,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.xml.sax.helpers.LocatorImpl;
+
 import java.util.Random;
 
+import co.edu.poli.gamification.poliplay.Modelo.TiempoConexionJuego;
+import co.edu.poli.gamification.poliplay.Modelo.Utiles;
 import co.edu.poli.gamification.poliplay.R;
+import co.edu.poli.gamification.poliplay.Secuencia.Login;
+import co.edu.poli.gamification.poliplay.Secuencia.Mapa;
 
 public class JuegoTrivia extends AppCompatActivity{
 
@@ -103,6 +109,8 @@ public class JuegoTrivia extends AppCompatActivity{
     private Button respues4;
     private TextView score;
 
+    private long start, end;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +123,9 @@ public class JuegoTrivia extends AppCompatActivity{
         respues2 = (Button) findViewById(R.id.opcionRes2);
         respues3 = (Button) findViewById(R.id.opcionRes3);
         respues4 = (Button) findViewById(R.id.opcionRes4);
+
+        Utiles.startCon = System.currentTimeMillis();
+        start = System.currentTimeMillis();
 
         pantallaRandom();
     }
@@ -135,6 +146,44 @@ public class JuegoTrivia extends AppCompatActivity{
             puntaje++;
         }
         screens++;
+        if(screens == 3){
+            if(puntaje >= 2 && Login.user.getLevel().equals("1")){
+                guardarRes(1, "2");
+            }
+            else if(puntaje >= 2 && Login.user.getLevel().equals("2")){
+                guardarRes(2, "3");
+            }
+            else if(puntaje < 2 && Login.user.getLevel().equals("1")){
+                guardarRes(0, "2");
+            }
+            else if(puntaje < 2 && Login.user.getLevel().equals("1")){
+                guardarRes(0, "3");
+            }
+            else if(Login.user.getLevel().equals("FIN")){
+                guardarRes(0, "FIN");
+            }
+            Intent i = new Intent(this, Mapa.class);
+            Utiles.terminarConexion();
+            startActivity(i);
+        }
         pantallaRandom();
+    }
+
+    public void guardarRes(int res, String level){
+        end = System.currentTimeMillis();
+        long totaltime = (end-start)/1000;
+        int puntajes = Integer.parseInt(Login.user.getCoins());
+        puntajes += res;
+        Login.user.setLevel(level);
+        Login.user.setCoins(String.valueOf(puntajes));
+        TiempoConexionJuego atr = new TiempoConexionJuego(
+                Utiles.getFecha(),
+                Login.user.getCode(),
+                Login.user.getGroup(),
+                "Trivia",
+                String.valueOf(puntajes),
+                String.valueOf(totaltime),
+                level);
+        atr.execute();
     }
 }

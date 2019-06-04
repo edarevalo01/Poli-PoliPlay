@@ -204,17 +204,46 @@ public class JuegoRelacionar extends AppCompatActivity {
         intent.putExtra("sal4", target4.getText());
         intent.putExtra("sal5", target5.getText());
         intent.putExtra("sal6", target6.getText());
+        if(points >= 4 && Login.user.getLevel().equals("1")){
+            guardarRes(1, "2");
+        }
+        else if(points >= 4 && Login.user.getLevel().equals("2")){
+            guardarRes(2, "3");
+        }
+        else if(points >= 4 && Login.user.getLevel().equals("3")){
+            guardarRes(3, "4");
+        }
+        else if(points < 4 && Login.user.getLevel().equals("1")){
+            guardarRes(0, "2");
+        }
+        else if(points < 4 && Login.user.getLevel().equals("2")){
+            guardarRes(0, "3");
+        }
+        else if(points < 4 && Login.user.getLevel().equals("3")){
+            guardarRes(0, "4");
+        }
+        else if(Login.user.getLevel().equals("FIN")){
+            guardarRes(0, "FIN");
+        }
+        startActivity(intent);
+    }
+
+    public void guardarRes(int res, String level){
         end = System.currentTimeMillis();
         long totaltime = (end-start)/1000;
+        int puntajes = Integer.parseInt(Login.user.getCoins());
+        puntajes += res;
+        Login.user.setLevel(level);
+        Login.user.setCoins(String.valueOf(puntajes));
         TiempoConexionJuego atr = new TiempoConexionJuego(
                 Utiles.getFecha(),
                 Login.user.getCode(),
                 Login.user.getGroup(),
                 "Relacionar",
-                String.valueOf(getPoints()),
-                String.valueOf(totaltime));
+                String.valueOf(puntajes),
+                String.valueOf(totaltime),
+                level);
         atr.execute();
-        startActivity(intent);
     }
 
     public int getPoints(){

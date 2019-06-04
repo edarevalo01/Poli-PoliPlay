@@ -123,8 +123,11 @@ public class Login extends AppCompatActivity {
                                 userJson.getString("contrasena"),
                                 userJson.getString("materia"),
                                 userJson.getString("rol"),
-                                userJson.getString("transporte"),
-                                userJson.getString("grupo"));
+                                userJson.getString("grupo"),
+                                userJson.getString("monedas"),
+                                userJson.getString("nivel"),
+                                userJson.getString("insignias")
+                        );
 
                         finish();
                         startActivity(new Intent(getApplicationContext(), SeleccionarCurso.class));

@@ -23,7 +23,7 @@ public class IntroduccionCurso extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_introduccion_curso);
         if(!Login.user.getRole().equals("vacio")){
-            Intent i = new Intent(this, InicioViaje.class);
+            Intent i = new Intent(this, SeleccionarRol.class);
             startActivity(i);
         }
         Utiles.startCon = System.currentTimeMillis();
@@ -55,11 +55,11 @@ public class IntroduccionCurso extends AppCompatActivity {
     }
 
     private void setImages(){
-        if(Login.user.getSignature().equals("Cultura Ambiental")){
-            layout_intro_curso.setBackground(getResources().getDrawable(R.drawable.fondo_ambiental));
-            curso = false;
+        if(Login.user.getSignature().equals("Proceso Administrativo")){
+            layout_intro_curso.setBackground(getResources().getDrawable(R.drawable.descripcion_intro_proceso_uno));
+            curso = true;
         }
-        else if(Login.user.getSignature().equals("Proceso Administrativo")){
+        else if(Login.user.getSignature().equals("Pensamiento Algoritmico")){
             layout_intro_curso.setBackground(getResources().getDrawable(R.drawable.descripcion_intro_proceso_uno));
             curso = true;
         }

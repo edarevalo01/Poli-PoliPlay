@@ -39,18 +39,18 @@
     <string name="rolFauna">Flora y Fauna</string>
     <string name="rolReciclaje">Reciclaje</string>
 
-    <string name="rol1">Rol 1</string>
-    <string name="rol2">Rol 2</string>
-    <string name="rol3">Rol 3</string>
-    <string name="rol4">Rol 4</string>
-    <string name="rol5">Rol 5</string>
-    <string name="rol6">Rol 6</string>
-    <string name="rol1f">Rol 1f</string>
-    <string name="rol2f">Rol 2f</string>
-    <string name="rol3f">Rol 3f</string>
-    <string name="rol4f">Rol 4f</string>
-    <string name="rol5f">Rol 5f</string>
-    <string name="rol6f">Rol 6f</string>
+    <string name="rol1">Explorador</string>
+    <string name="rol2">Filantropo</string>
+    <string name="rol3">Triunfador</string>
+    <string name="rol4">Pensador</string>
+    <string name="rol5">Revolucionario</string>
+    <string name="rol6">Comunicador</string>
+    <string name="rol1f">Explorador</string>
+    <string name="rol2f">Filantropo</string>
+    <string name="rol3f">Triunfador</string>
+    <string name="rol4f">Pensador</string>
+    <string name="rol5f">Revolucionario</string>
+    <string name="rol6f">Comunicador</string>
 
 
     <!-- PANTALLA DE TRANSPORTE -->
@@ -73,6 +73,7 @@
     <string name="juego4">Crucigrama</string>
     <string name="juego5">Calculadora</string>
     <string name="title_activity_juego_relacionar2">JuegoRelacionar2</string>
+    <string name="seleccionar_silla">Ahora selecciona tu silla en el avión. Cada fila será un equipo de trabajo. (Ten en cuenta que las posibilidades del triunfo, depende de la cantidad de gente y el trabajo en equipo.)</string>
 
     <!-- Juego Relacionar -->
     <string name="blankSpace">                           </string>

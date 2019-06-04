@@ -63,14 +63,16 @@ public class JuegoCrucigrama extends AppCompatActivity {
         }
         end = System.currentTimeMillis();
         long totaltime = (end-start)/1000;
-        TiempoConexionJuego atr = new TiempoConexionJuego(
+        i.putExtra("time", totaltime);
+        /*TiempoConexionJuego atr = new TiempoConexionJuego(
                 Utiles.getFecha(),
                 Login.user.getCode(),
                 Login.user.getGroup(),
                 "Crucigrama",
                 String.valueOf("Solucionado"),
-                String.valueOf(totaltime));
-        atr.execute();
+                String.valueOf(totaltime),
+                "tmp");
+        atr.execute();*/
         startActivity(i);
     }
 

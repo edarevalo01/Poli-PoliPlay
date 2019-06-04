@@ -9,7 +9,9 @@ import android.widget.TextView;
 import java.io.*;
 import java.util.*;
 
+import co.edu.poli.gamification.poliplay.Modelo.TiempoConexionJuego;
 import co.edu.poli.gamification.poliplay.Modelo.Utiles;
+import co.edu.poli.gamification.poliplay.Secuencia.Login;
 import co.edu.poli.gamification.poliplay.Secuencia.Mapa;
 import co.edu.poli.gamification.poliplay.R;
 
@@ -59,9 +61,12 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
     }
 
     private void pintarCuadricula() {
+        int correct = 0;
+        int total = 0;
         for (int i = 0; i < posValidasSol.length; i++) {
             for (int j = 0; j < posValidasSol[0].length; j++) {
                 if (posValidasSol[i][j] == 1) {
+                    total ++;
                     TextView pos = (TextView) findViewById(screenMatSol[i][j]);
                     pos.setBackground(getResources().getDrawable(R.drawable.rectangulo_letra));
                     pos.setText(String.valueOf(resueltoSol[i][j]));
@@ -70,6 +75,7 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
                     char letraSol = screenMatRes[i][j];
                     if(resueltoSol[i][j] == letraSol){
                         pos.setTextColor(getResources().getColor(R.color.colorWhite));
+                        correct ++;
                     }
                     else{
                         pos.setTextColor(getResources().getColor(R.color.colorAccent));
@@ -80,6 +86,39 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
                 }
             }
         }
+        int prom = (total * 60) / 100;
+        String time = String.valueOf(getIntent().getExtras().getLong("time"));
+        if(correct >= prom && Login.user.getLevel().equals("2")){
+            guardarRes(2, "3", time);
+        }
+        else if(correct >= prom && Login.user.getLevel().equals("5")){
+            guardarRes(5, "FIN", time);
+        }
+        else if(correct < prom && Login.user.getLevel().equals("2")){
+            guardarRes(0, "3", time);
+        }
+        else if(correct < prom && Login.user.getLevel().equals("5")){
+            guardarRes(0, "FIN", time);
+        }
+        else if(Login.user.getLevel().equals("FIN")){
+            guardarRes(0, "FIN", time);
+        }
+    }
+
+    public void guardarRes(int res, String level, String time){
+        int puntajes = Integer.parseInt(Login.user.getCoins());
+        puntajes += res;
+        Login.user.setLevel(level);
+        Login.user.setCoins(String.valueOf(puntajes));
+        TiempoConexionJuego atr = new TiempoConexionJuego(
+                Utiles.getFecha(),
+                Login.user.getCode(),
+                Login.user.getGroup(),
+                "Crucigrama",
+                String.valueOf(puntajes),
+                String.valueOf(time),
+                level);
+        atr.execute();
     }
 
     private void lecturaResuelto() throws Exception {

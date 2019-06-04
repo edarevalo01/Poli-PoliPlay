@@ -13,9 +13,9 @@ public class PreguntasInicio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preguntas_inicio);
-        if(!Login.user.getTransport().equals("vacio")){
+        /*if(!Login.user.getTransport().equals("vacio")){
             Intent i = new Intent(this, Mapa.class);
-        }
+        }*/
     }
 
     public void btnAlgo(View view){

@@ -37,10 +37,10 @@ public class SeleccionarCurso extends AppCompatActivity {
         }
     }
 
-    public void selAmbiental(View view) {
+    public void selPensamiento(View view) {
         String signature = Login.user.getSignature();
         if(signature.equals("vacio")){
-            AddSignature as = new AddSignature("Cultura Ambiental");
+            AddSignature as = new AddSignature("Pensamiento Algoritmico");
             as.execute();
         } else{
             startActivity(new Intent(this, IntroduccionCurso.class));

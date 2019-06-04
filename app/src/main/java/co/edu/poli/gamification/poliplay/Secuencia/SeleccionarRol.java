@@ -40,7 +40,7 @@ public class SeleccionarRol extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_rol);
         if(!Login.user.getRole().equals("vacio")){
-            Intent i = new Intent(this, InicioViaje.class);
+            Intent i = new Intent(this, SeleccionarPuesto.class);
             startActivity(i);
         }
 
@@ -62,7 +62,7 @@ public class SeleccionarRol extends AppCompatActivity {
 
     }
     public void asignarMiniRoles(){
-        if(Login.user.getSignature().equals("Proceso Administrativo")){
+        if(Login.user.getSignature().equals("Proceso Administrativo") || Login.user.getSignature().equals("Pensamiento Algoritmico")){
             rolM1.setImageDrawable(getDrawable(R.drawable.sel_izq_explorador));
             rolF1.setImageDrawable(getDrawable(R.drawable.sel_der_explorador));
             rolM2.setImageDrawable(getDrawable(R.drawable.sel_izq_filantropo));
@@ -76,7 +76,7 @@ public class SeleccionarRol extends AppCompatActivity {
             rolM6.setImageDrawable(getDrawable(R.drawable.sel_izq_comunicador));
             rolF6.setImageDrawable(getDrawable(R.drawable.sel_der_comunicadora));
         }
-        else if(Login.user.getSignature().equals("Cultura Ambiental")){
+        /*else if(Login.user.getSignature().equals("Pensamiento Algoritmico")){
             rolF1.setEnabled(false);
             rolF2.setEnabled(false);
             rolF3.setEnabled(false);
@@ -89,7 +89,7 @@ public class SeleccionarRol extends AppCompatActivity {
             rolM4.setImageDrawable(getDrawable(R.drawable.sel_completo_carpintero));
             rolM5.setImageDrawable(getDrawable(R.drawable.sel_completo_tingua));
             rolM6.setImageDrawable(getDrawable(R.drawable.sel_completo_rana));
-        }
+        }*/
     }
     public void btnSelRol(View view){
         String role = Login.user.getRole();

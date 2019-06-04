@@ -8,8 +8,10 @@ public class Usuario {
     private String password;
     private String signature;
     private String role;
-    private String transport;
     private String group;
+    private String coins;
+    private String level;
+    private String badges;
 
     private String tempRole;
     private String tempTransport;
@@ -21,31 +23,34 @@ public class Usuario {
         this.password = "";
         this.signature = "";
         this.role = "";
-        this.transport = "";
         this.group = "";
+        this.coins = "";
+        this.level = "";
+        this.badges = "";
     }
 
     /** LOGIN User create complete */
-    public Usuario(String code, String email, String username, String password, String signature, String role, String transport, String group){
+    public Usuario(
+            String code,
+            String email,
+            String username,
+            String password,
+            String signature,
+            String role,
+            String group,
+            String coins,
+            String level,
+            String badges){
         this.code = code;
         this.email = email;
         this.username = username;
         this.password = password;
         this.signature = signature;
         this.role = role;
-        this.transport = transport;
         this.group = group;
-    }
-
-    /** Login user create */
-    public Usuario(String code, String email, String username, String password){
-        this.code = code;
-        this.email = email;
-        this.username = username;
-        this.password = password;
-        this.signature = "";
-        this.role = "";
-        this.transport = "";
+        this.coins = coins;
+        this.level = level;
+        this.badges = badges;
     }
 
     public String getCode() { return code; }
@@ -72,10 +77,6 @@ public class Usuario {
 
     public void setRole(String role) { this.role = role; }
 
-    public String getTransport() { return transport; }
-
-    public void setTransport(String transport) { this.transport = transport; }
-
     public String getGroup() { return group; }
 
     public void setGroup(String group) { this.group = group; }
@@ -88,4 +89,27 @@ public class Usuario {
 
     public void setTempTransport(String tempTransport) { this.tempTransport = tempTransport; }
 
+    public String getCoins() {
+        return coins;
+    }
+
+    public void setCoins(String coins) {
+        this.coins = coins;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public String getBadges() {
+        return badges;
+    }
+
+    public void setBadges(String badges) {
+        this.badges = badges;
+    }
 }

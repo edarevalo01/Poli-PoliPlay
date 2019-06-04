@@ -44,7 +44,7 @@ public class SeleccionarRolPopUp extends Activity {
     }
 
     public void escogerRolPop() {
-        if (Login.user.getSignature().equals("Proceso Administrativo")) {
+        if (Login.user.getSignature().equals("Proceso Administrativo") || Login.user.getSignature().equals("Pensamiento Algoritmico")) { //Pensamiento Algoritmico
             if (rolSelected.equals("Rol 1"))    {
                 rol.setImageDrawable(getDrawable(R.drawable.personaje_h_explorador));
             }
@@ -82,7 +82,7 @@ public class SeleccionarRolPopUp extends Activity {
                 rol.setImageDrawable(getDrawable(R.drawable.personaje_m_socializador));
             }
         }
-        else if (Login.user.getSignature().equals("Cultura Ambiental")) {
+        /*else if (Login.user.getSignature().equals("Cultura Ambiental")) {
             if (rolSelected.equals("Rol 1")) {
                 rol.setImageDrawable(getDrawable(R.drawable.personaje_ambiental_coati_completo));
             }
@@ -101,7 +101,7 @@ public class SeleccionarRolPopUp extends Activity {
             else{
                 rol.setImageDrawable(getDrawable(R.drawable.personaje_ambiental_rana_completo));
             }
-        }
+        }*/
     }
 
     public void btnSelRol(View view) {
@@ -136,7 +136,7 @@ public class SeleccionarRolPopUp extends Activity {
 
                     finish();
                     Utiles.terminarConexion();
-                    startActivity(new Intent(getApplicationContext(), InicioViaje.class));
+                    startActivity(new Intent(getApplicationContext(), SeleccionarPuesto.class));
                 } else {
                     Toast.makeText(SeleccionarRolPopUp.this, "Invalid data", Toast.LENGTH_SHORT).show();
                 }

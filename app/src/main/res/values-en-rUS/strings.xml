@@ -73,6 +73,7 @@
     <string name="juego4">Crucigrama</string>
     <string name="juego5">Calculadora</string>
     <string name="title_activity_juego_relacionar2">JuegoRelacionar2</string>
+    <string name="seleccionar_silla">Ahora selecciona tu silla en el avión. Cada fila será un equipo de trabajo. (Ten en cuenta que las posibilidades del triunfo, depende de la cantidad de gente y el trabajo en equipo.)</string>
 
     <!-- Juego Relacionar -->
     <string name="blankSpace">                           </string>

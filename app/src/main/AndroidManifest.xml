@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Secuencia.SeleccionarPuesto"></activity>
         <activity
             android:name=".Secuencia.Login"
             android:screenOrientation="portrait">
@@ -64,7 +65,7 @@
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".Secuencia.Registro" />
         <activity android:name=".Narrativa.InicioViaje" />
-        <activity android:name=".Secuencia.PreguntasInicio"></activity>
+        <activity android:name=".Secuencia.PreguntasInicio" />
     </application>
 
 </manifest>

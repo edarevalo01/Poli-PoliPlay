@@ -17,7 +17,7 @@ public class SeleccionarTransporte extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_transporte);
-        if(!Login.user.getTransport().equals("vacio")){
+        if(!Login.user.getLevel().equals("0")){
             Intent i = new Intent(this, Mapa.class);
             startActivity(i);
         }
@@ -41,7 +41,7 @@ public class SeleccionarTransporte extends AppCompatActivity {
             transp6.setImageDrawable(getDrawable(R.drawable.sel_transporte_tronco));
 
         }
-        else if(Login.user.getSignature().equals("Cultura Ambiental")){
+        else if(Login.user.getSignature().equals("Pensamiento Algoritmico")){
             transp1.setImageDrawable(getDrawable(R.drawable.sel_transporte_alas));
             transp2.setImageDrawable(getDrawable(R.drawable.sel_transporte_barco));
             transp3.setImageDrawable(getDrawable(R.drawable.sel_transporte_globo));
@@ -55,16 +55,15 @@ public class SeleccionarTransporte extends AppCompatActivity {
         startActivity(i);
     }
     public void btnSelTrans(View view){
-        String transport = Login.user.getTransport();
-        if(transport.equals("vacio")){
-            String r = view.getContentDescription().toString();
-            Login.user.setTempTransport(r);
-            Intent i = new Intent(this, SeleccionarTransportePopUp.class);
-            i.putExtra("transport", r);
-            startActivity(i);
-        }else{
-            Intent i = new Intent(this, Mapa.class);
-            startActivity(i);
-        }
+        String r = view.getContentDescription().toString();
+        Login.user.setTempTransport(r);
+        Intent i = new Intent(this, SeleccionarTransportePopUp.class);
+        i.putExtra("transport", r);
+        startActivity(i);
+    }
+
+    public void continuar(View view) {
+        Intent i = new Intent(this, Mapa.class);
+        startActivity(i);
     }
 }
