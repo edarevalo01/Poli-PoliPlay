@@ -13,9 +13,9 @@ public class Api {
 
     public static final String URL_ADD_SIGNATURE = ROOT_URL + "agregarmateria";
     public static final String URL_ADD_ROLE = ROOT_URL + "agregarrol";
-    public static final String URL_ADD_TRANSPORT = ROOT_URL + "agregartransporte";
     public static final String URL_ADD_COINS = ROOT_URL + "agregarmonedas";
     public static final String URL_ADD_LEVEL = ROOT_URL + "agregarnivel";
+    public static final String URL_ADD_BADGES = ROOT_URL + "agregarinsignias";
 
     public static final String URL_ADD_GAME_TIME = ROOT_URL + "agregartiempojuego";
     public static final String URL_ADD_CONN_TIME = ROOT_URL + "agregartiempoconexion";

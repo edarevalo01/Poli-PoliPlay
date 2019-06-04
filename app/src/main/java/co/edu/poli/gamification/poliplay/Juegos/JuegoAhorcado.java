@@ -43,6 +43,7 @@ public class JuegoAhorcado extends AppCompatActivity {
     private Runnable runner;
 
     private long start, end;
+    private long timestart, timend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class JuegoAhorcado extends AppCompatActivity {
         setContentView(R.layout.activity_juego_ahorcado);
         Utiles.startCon = System.currentTimeMillis();
         start = System.currentTimeMillis();
+        timestart = System.currentTimeMillis();
         intentosRes = (TextView) findViewById(R.id.intenRes);
         intentosRestantes = (TextView) findViewById(R.id.intentosRest);
         hideWord = (TextView) findViewById(R.id.hideWord);
@@ -86,7 +88,6 @@ public class JuegoAhorcado extends AppCompatActivity {
 
     public void comprobar(View vista) throws Exception {
         TextView t = (TextView) vista;
-
         String partsWord = palabras[index];
         String unlockWords = hideWord.getText().toString();
         String[] c = unlockWords.split(" +");
@@ -117,8 +118,6 @@ public class JuegoAhorcado extends AppCompatActivity {
         cambio = false;
         //Método que no deja jugar más si pierde
         gameOver();
-
-
     }
 
     public void gameOver() throws Exception {
@@ -142,17 +141,34 @@ public class JuegoAhorcado extends AppCompatActivity {
                 }
             };
             hideWord.setText("Solucionado");
+            timend = System.currentTimeMillis();
+            long totaltimes = (timend - timestart) / 1000;
             if(Login.user.getLevel().equals("3")) {
-                guardarRes(3, "4");
+                if(totaltimes <= 30){
+                    guardarRes(3, "4", 1);
+                }
+                else{
+                    guardarRes(3, "4", 0);
+                }
             }
             else if(Login.user.getLevel().equals("4")){
-                guardarRes(4, "5");
+                if(totaltimes <= 30) {
+                    guardarRes(4, "5", 1);
+                }
+                else{
+                    guardarRes(4, "5", 0);
+                }
             }
             else if(Login.user.getLevel().equals("5")){
-                guardarRes(5, "FIN");
+                if(totaltimes <= 30) {
+                    guardarRes(5, "FIN", 1);
+                }
+                else{
+                    guardarRes(5, "FIN", 0);
+                }
             }
             else if(Login.user.getLevel().equals("FIN")){
-                guardarRes(0, "FIN");
+                guardarRes(0, "FIN", 0);
             }
             waiter.postDelayed(runner, 2500);
         }
@@ -166,28 +182,31 @@ public class JuegoAhorcado extends AppCompatActivity {
             hideWord.setText("No solucionado");
             String res = hideWord.getText().toString();
             if(Login.user.getLevel().equals("3")) {
-                guardarRes(0, "4");
+                guardarRes(0, "4", 0);
             }
             else if(Login.user.getLevel().equals("4")){
-                guardarRes(0, "5");
+                guardarRes(0, "5", 0);
             }
             else if(Login.user.getLevel().equals("5")){
-                guardarRes(0, "FIN");
+                guardarRes(0, "FIN", 0);
             }
             else if(Login.user.getLevel().equals("FIN")){
-                guardarRes(0, "FIN");
+                guardarRes(0, "FIN", 0);
             }
             waiter.postDelayed(runner, 2500);
         }
     }
 
-    public void guardarRes(int res, String level){
+    public void guardarRes(int res, String level, int insignia){
         end = System.currentTimeMillis();
         long totaltime = (end-start)/1000;
         int puntajes = Integer.parseInt(Login.user.getCoins());
         puntajes += res;
+        int insignias = Integer.parseInt(Login.user.getBadges());
+        insignias += insignia;
         Login.user.setLevel(level);
         Login.user.setCoins(String.valueOf(puntajes));
+        Login.user.setBadges(String.valueOf(insignias));
         TiempoConexionJuego atr = new TiempoConexionJuego(
                 Utiles.getFecha(),
                 Login.user.getCode(),
@@ -195,7 +214,8 @@ public class JuegoAhorcado extends AppCompatActivity {
                 "Ahorcado",
                 String.valueOf(puntajes),
                 String.valueOf(totaltime),
-                level);
+                level,
+                String.valueOf(insignias));
         atr.execute();
     }
 

@@ -89,27 +89,40 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
         int prom = (total * 60) / 100;
         String time = String.valueOf(getIntent().getExtras().getLong("time"));
         if(correct >= prom && Login.user.getLevel().equals("2")){
-            guardarRes(2, "3", time);
+            if(total == correct) {
+                guardarRes(2, "3", time, 1);
+            }
+            else{
+                guardarRes(2, "3", time, 0);
+            }
         }
         else if(correct >= prom && Login.user.getLevel().equals("5")){
-            guardarRes(5, "FIN", time);
+            if(total == correct) {
+                guardarRes(5, "FIN", time, 1);
+            }
+            else{
+                guardarRes(5, "FIN", time, 0);
+            }
         }
         else if(correct < prom && Login.user.getLevel().equals("2")){
-            guardarRes(0, "3", time);
+            guardarRes(0, "3", time, 0);
         }
         else if(correct < prom && Login.user.getLevel().equals("5")){
-            guardarRes(0, "FIN", time);
+            guardarRes(0, "FIN", time, 0);
         }
         else if(Login.user.getLevel().equals("FIN")){
-            guardarRes(0, "FIN", time);
+            guardarRes(0, "FIN", time, 0);
         }
     }
 
-    public void guardarRes(int res, String level, String time){
+    public void guardarRes(int res, String level, String time, int insignia){
         int puntajes = Integer.parseInt(Login.user.getCoins());
         puntajes += res;
+        int insignias = Integer.parseInt(Login.user.getBadges());
+        insignias += insignia;
         Login.user.setLevel(level);
         Login.user.setCoins(String.valueOf(puntajes));
+        Login.user.setBadges(String.valueOf(insignias));
         TiempoConexionJuego atr = new TiempoConexionJuego(
                 Utiles.getFecha(),
                 Login.user.getCode(),
@@ -117,7 +130,8 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
                 "Crucigrama",
                 String.valueOf(puntajes),
                 String.valueOf(time),
-                level);
+                level,
+                String.valueOf(insignias));
         atr.execute();
     }
 

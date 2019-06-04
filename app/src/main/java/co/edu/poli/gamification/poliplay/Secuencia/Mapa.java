@@ -18,7 +18,7 @@ import co.edu.poli.gamification.poliplay.R;
 
 public class Mapa extends AppCompatActivity {
 
-    private TextView nombre, materia, rol, monedas;
+    private TextView nombre, materia, rol, monedas, insignias;
     private Button btnNivel1, btnNivel2, btnNivel3, btnNivel4, btnNivel5;
 
     @Override
@@ -30,9 +30,13 @@ public class Mapa extends AppCompatActivity {
         materia = (TextView)findViewById(R.id.materia);
         rol = (TextView)findViewById(R.id.roll);
         monedas = (TextView)findViewById(R.id.monedas);
+        insignias = (TextView)findViewById(R.id.insignias);
         if(Login.user.getLevel().equals("0")){
             guardarRes("1");
             Login.user.setLevel("1");
+        }
+        if(Login.user.getLevel().equals("FIN")){ //--TMP
+            startActivity(new Intent(getApplicationContext(), JuegoCalculadora.class));
         }
 
         btnNivel1 = (Button)findViewById(R.id.btnNivel1);
@@ -41,10 +45,11 @@ public class Mapa extends AppCompatActivity {
         btnNivel4 = (Button)findViewById(R.id.btnNivel4);
         btnNivel5 = (Button)findViewById(R.id.btnNivel5);
 
-        nombre.setText("Nombre: " + Login.user.getUsername());
+        nombre.setText("Nombre: " + Login.user.getUsername().substring(0,1) + Login.user.getUsername().substring(1));
         materia.setText("Materia: " + Login.user.getSignature());
         rol.setText("Rol: " + Login.user.getRole());
         monedas.setText("Monedas: " + Login.user.getCoins());
+        insignias.setText("Insignias: " + Login.user.getBadges());
 
         enableButton(Login.user.getLevel());
     }
@@ -201,7 +206,8 @@ public class Mapa extends AppCompatActivity {
                 "Mapa",
                 String.valueOf(0),
                 String.valueOf(0),
-                level);
+                level,
+                String.valueOf(0));
         atr.execute();
     }
 }

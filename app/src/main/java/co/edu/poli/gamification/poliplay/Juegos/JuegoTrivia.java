@@ -148,19 +148,29 @@ public class JuegoTrivia extends AppCompatActivity{
         screens++;
         if(screens == 3){
             if(puntaje >= 2 && Login.user.getLevel().equals("1")){
-                guardarRes(1, "2");
+                if(puntaje == 3) {
+                    guardarRes(1, "2", 1);
+                }
+                else{
+                    guardarRes(1, "2", 0);
+                }
             }
             else if(puntaje >= 2 && Login.user.getLevel().equals("2")){
-                guardarRes(2, "3");
+                if(puntaje == 3) {
+                    guardarRes(2, "3", 1);
+                }
+                else{
+                    guardarRes(2, "3", 0);
+                }
             }
             else if(puntaje < 2 && Login.user.getLevel().equals("1")){
-                guardarRes(0, "2");
+                guardarRes(0, "2", 0);
             }
-            else if(puntaje < 2 && Login.user.getLevel().equals("1")){
-                guardarRes(0, "3");
+            else if(puntaje < 2 && Login.user.getLevel().equals("2")){
+                guardarRes(0, "3", 0);
             }
             else if(Login.user.getLevel().equals("FIN")){
-                guardarRes(0, "FIN");
+                guardarRes(0, "FIN", 0);
             }
             Intent i = new Intent(this, Mapa.class);
             Utiles.terminarConexion();
@@ -169,13 +179,16 @@ public class JuegoTrivia extends AppCompatActivity{
         pantallaRandom();
     }
 
-    public void guardarRes(int res, String level){
+    public void guardarRes(int res, String level, int insignia){
         end = System.currentTimeMillis();
         long totaltime = (end-start)/1000;
         int puntajes = Integer.parseInt(Login.user.getCoins());
         puntajes += res;
+        int insignias = Integer.parseInt(Login.user.getBadges());
+        insignias += insignia;
         Login.user.setLevel(level);
         Login.user.setCoins(String.valueOf(puntajes));
+        Login.user.setBadges(String.valueOf(insignias));
         TiempoConexionJuego atr = new TiempoConexionJuego(
                 Utiles.getFecha(),
                 Login.user.getCode(),
@@ -183,7 +196,8 @@ public class JuegoTrivia extends AppCompatActivity{
                 "Trivia",
                 String.valueOf(puntajes),
                 String.valueOf(totaltime),
-                level);
+                level,
+                String.valueOf(insignias));
         atr.execute();
     }
 }

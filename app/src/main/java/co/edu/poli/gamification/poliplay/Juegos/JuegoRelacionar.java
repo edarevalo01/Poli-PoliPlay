@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.DragEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -205,36 +206,54 @@ public class JuegoRelacionar extends AppCompatActivity {
         intent.putExtra("sal5", target5.getText());
         intent.putExtra("sal6", target6.getText());
         if(points >= 4 && Login.user.getLevel().equals("1")){
-            guardarRes(1, "2");
+            if(points == 6) {
+                guardarRes(1, "2", 1);
+            }
+            else{
+                guardarRes(1, "2", 0);
+            }
         }
         else if(points >= 4 && Login.user.getLevel().equals("2")){
-            guardarRes(2, "3");
+            if(points == 6) {
+                guardarRes(2, "3", 1);
+            }
+            else{
+                guardarRes(2, "3", 1);
+            }
         }
         else if(points >= 4 && Login.user.getLevel().equals("3")){
-            guardarRes(3, "4");
+            if(points == 6) {
+                guardarRes(3, "4", 1);
+            }
+            else{
+                guardarRes(3, "4", 0);
+            }
         }
         else if(points < 4 && Login.user.getLevel().equals("1")){
-            guardarRes(0, "2");
+            guardarRes(0, "2" ,0);
         }
         else if(points < 4 && Login.user.getLevel().equals("2")){
-            guardarRes(0, "3");
+            guardarRes(0, "3", 0);
         }
         else if(points < 4 && Login.user.getLevel().equals("3")){
-            guardarRes(0, "4");
+            guardarRes(0, "4", 0);
         }
         else if(Login.user.getLevel().equals("FIN")){
-            guardarRes(0, "FIN");
+            guardarRes(0, "FIN", 0);
         }
         startActivity(intent);
     }
 
-    public void guardarRes(int res, String level){
+    public void guardarRes(int res, String level, int insignia){
         end = System.currentTimeMillis();
         long totaltime = (end-start)/1000;
         int puntajes = Integer.parseInt(Login.user.getCoins());
         puntajes += res;
+        int insignias = Integer.parseInt(Login.user.getBadges());
+        insignias += insignia;
         Login.user.setLevel(level);
         Login.user.setCoins(String.valueOf(puntajes));
+        Login.user.setBadges(String.valueOf(insignias));
         TiempoConexionJuego atr = new TiempoConexionJuego(
                 Utiles.getFecha(),
                 Login.user.getCode(),
@@ -242,7 +261,8 @@ public class JuegoRelacionar extends AppCompatActivity {
                 "Relacionar",
                 String.valueOf(puntajes),
                 String.valueOf(totaltime),
-                level);
+                level,
+                String.valueOf(insignias));
         atr.execute();
     }
 

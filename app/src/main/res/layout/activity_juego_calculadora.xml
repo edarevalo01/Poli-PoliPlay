@@ -3,93 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/fondo_crucigrama"
+    android:background="@drawable/fondo_ambiental"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Juegos.JuegoCalculadora">
 
-    <Button
-        android:id="@+id/cal_opcion_1"
-        android:layout_width="300dp"
-        android:layout_height="85dp"
-        android:background="@android:color/transparent"
-        android:onClick="opcion1cal"
-        android:text="Button"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/cal_opcion_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ingreso_num_cal"
-        tools:text="@string/opcion_1_calculadora" />
-
-    <Button
-        android:id="@+id/cal_opcion_2"
-        android:layout_width="300dp"
-        android:layout_height="85dp"
-        android:background="@android:color/transparent"
-        android:onClick="opcion2cal"
-        android:text="Button"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/cal_opcion_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cal_opcion_1"
-        tools:text="@string/opcion_2_calculadora" />
-
-    <TextView
-        android:id="@+id/enunciado_calculadora"
-        android:layout_width="351dp"
-        android:layout_height="102dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="TextView"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="35sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/subtext_calc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/cal_opcion_3"
-        android:layout_width="300dp"
-        android:layout_height="85dp"
-        android:background="@android:color/transparent"
-        android:onClick="opcion3cal"
-        android:text="Button"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cal_opcion_2" />
-
-    <TextView
-        android:id="@+id/subtext_calc"
-        android:layout_width="329dp"
-        android:layout_height="121dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="SubText"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/ingreso_num_cal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enunciado_calculadora" />
-
-    <EditText
-        android:id="@+id/ingreso_num_cal"
-        android:layout_width="43dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/cal_opcion_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subtext_calc" />
 </android.support.constraint.ConstraintLayout>

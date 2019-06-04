@@ -20,8 +20,17 @@ public class TiempoConexionJuego extends AsyncTask<Void, Void, String> {
     private String puntaje;
     private String tiempo;
     private String nivel;
+    private String insignias;
 
-    public TiempoConexionJuego(String fecha, String codigo_usuario, String grupo_usuario, String nombre_juego, String puntaje, String tiempo, String nivel){
+    public TiempoConexionJuego(
+            String fecha,
+            String codigo_usuario,
+            String grupo_usuario,
+            String nombre_juego,
+            String puntaje,
+            String tiempo,
+            String nivel,
+            String insignias){
         this.fecha = fecha;
         this.codigo_usuario = codigo_usuario;
         this.grupo_usuario = grupo_usuario;
@@ -29,6 +38,7 @@ public class TiempoConexionJuego extends AsyncTask<Void, Void, String> {
         this.puntaje = puntaje;
         this.tiempo = tiempo;
         this.nivel = nivel;
+        this.insignias = insignias;
     }
 
     @Override
@@ -72,6 +82,11 @@ public class TiempoConexionJuego extends AsyncTask<Void, Void, String> {
         params3.put("codigo", codigo_usuario);
         params3.put("nivel", nivel);
         requestHandler.sendPostRequest(Api.URL_ADD_LEVEL, params3);
+
+        HashMap<String, String> params4 = new HashMap<>();
+        params4.put("codigo", codigo_usuario);
+        params4.put("insignias", insignias);
+        requestHandler.sendPostRequest(Api.URL_ADD_BADGES, params4);
 
         return "Cargado a DB";
     }
