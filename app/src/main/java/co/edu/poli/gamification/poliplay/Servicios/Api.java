@@ -21,6 +21,8 @@ public class Api {
     public static final String URL_ADD_CONN_TIME = ROOT_URL + "agregartiempoconexion";
 
     public static final String URL_ADD_GROUP = ROOT_URL + "agregargrupo";
-    public static final String URL_GET_CHECKIN = ROOT_URL + "traerpuestos";
+    public static final String URL_GET_CHECKIN_PRAD = ROOT_URL + "traerpuestosprad";
+    public static final String URL_GET_CHECKIN_PEAL = ROOT_URL + "traerpuestospeal";
+
 
 }

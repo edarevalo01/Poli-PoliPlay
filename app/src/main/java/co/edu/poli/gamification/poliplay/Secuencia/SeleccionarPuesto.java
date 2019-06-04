@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -38,7 +39,8 @@ public class SeleccionarPuesto extends AppCompatActivity {
         setContentView(R.layout.activity_seleccionar_puesto);
         String algo = null;
         try {
-            algo = new CheckinSeleccionar().execute().get();
+            if(Login.user.getSignature().equals("Proceso Administrativo")) algo = new CheckinSeleccionarPRAD().execute().get();
+            else if(Login.user.getSignature().equals("Pensamiento Algoritmico")) algo = new CheckinSeleccionarPEAL().execute().get();
         }
         catch (ExecutionException e) {
             e.printStackTrace();
@@ -60,6 +62,8 @@ public class SeleccionarPuesto extends AppCompatActivity {
                 continue;
             }
         }
+
+
 
         verticalLay = (LinearLayout) findViewById(R.id.verticalLayOut);
         for (int i = 1; i < 51; i++) {
@@ -142,11 +146,18 @@ public class SeleccionarPuesto extends AppCompatActivity {
         }
     }
 
-    class CheckinSeleccionar extends AsyncTask<Void, Void, String>{
+    class CheckinSeleccionarPRAD extends AsyncTask<Void, Void, String>{
         @Override
         protected String doInBackground(Void... voids) {
             RequestHandler requestHandler = new RequestHandler();
-            return requestHandler.sendGetRequest(Api.URL_GET_CHECKIN);
+            return requestHandler.sendGetRequest(Api.URL_GET_CHECKIN_PRAD);
+        }
+    }
+    class CheckinSeleccionarPEAL extends AsyncTask<Void, Void, String>{
+        @Override
+        protected String doInBackground(Void... voids) {
+            RequestHandler requestHandler = new RequestHandler();
+            return requestHandler.sendGetRequest(Api.URL_GET_CHECKIN_PEAL);
         }
     }
 

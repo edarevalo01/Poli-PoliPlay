@@ -1,6 +1,7 @@
 package co.edu.poli.gamification.poliplay.Juegos;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -228,7 +229,8 @@ public class JuegoTrivia extends AppCompatActivity{
     private Button respues3;
     private Button respues4;
     private TextView score;
-
+    private Runnable runner;
+    private Handler waiter = new Handler();
     private long start, end;
 
 
@@ -240,9 +242,13 @@ public class JuegoTrivia extends AppCompatActivity{
         enunciadoPregunta = (TextView) findViewById(R.id.enunPreg);
         enunciadoPregunta.setMovementMethod(new ScrollingMovementMethod());
         respues1 = (Button) findViewById(R.id.opcionRes1);
+        respues1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
         respues2 = (Button) findViewById(R.id.opcionRes2);
+        respues2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
         respues3 = (Button) findViewById(R.id.opcionRes3);
+        respues3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
         respues4 = (Button) findViewById(R.id.opcionRes4);
+        respues4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
 
         Utiles.startCon = System.currentTimeMillis();
         start = System.currentTimeMillis();
@@ -263,8 +269,26 @@ public class JuegoTrivia extends AppCompatActivity{
     public void nextScreen (View vista){
         TextView opcionPulsada = (TextView) vista;
         if (opcionPulsada.getText().toString() == respuestas[randy]) {
+            vista.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
             puntaje++;
+            waiter.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    for (int i = 0; i < 10; i++) {
+                        i++;
+                    }
+                }
+            },5000);
         }
+        else if(opcionPulsada.getText().toString() != respuestas[randy]){
+            vista.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            waiter.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                }
+            },5000);
+        }
+        vista.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
         screens++;
         if(screens == 3){
             if(puntaje >= 2 && Login.user.getLevel().equals("1")){
