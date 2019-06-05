@@ -228,8 +228,6 @@ public class JuegoTrivia extends AppCompatActivity{
     private Button respues2;
     private Button respues3;
     private Button respues4;
-    private TextView score;
-    private Runnable runner;
     private Handler waiter = new Handler();
     private long start, end;
 
@@ -266,61 +264,122 @@ public class JuegoTrivia extends AppCompatActivity{
         randy = randomEnunciados;
     }
 
-    public void nextScreen (View vista){
+    public void nextScreen (final View vista){
+        vista.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+        waiter.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //elHaceNada(vista);
+            }
+        }, 5000);
         TextView opcionPulsada = (TextView) vista;
         if (opcionPulsada.getText().toString() == respuestas[randy]) {
-            vista.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
             puntaje++;
-            waiter.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    for (int i = 0; i < 10; i++) {
-                        i++;
-                    }
-                }
-            },5000);
         }
         else if(opcionPulsada.getText().toString() != respuestas[randy]){
-            vista.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
-            waiter.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                }
-            },5000);
         }
         vista.setBackground(getResources().getDrawable(R.drawable.circulo_boton_claro));
         screens++;
         if(screens == 3){
+            respues1.setEnabled(false);
+            respues1.setText("");
+            respues1.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            respues2.setEnabled(false);
+            respues2.setText("");
+            respues2.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            respues3.setEnabled(false);
+            respues3.setText("");
+            respues3.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
+            respues4.setEnabled(false);
+            respues4.setText("");
+            respues4.setBackground(getResources().getDrawable(R.drawable.circulo_boton_oscuro));
             if(puntaje >= 2 && Login.user.getLevel().equals("1")){
                 if(puntaje == 3) {
                     guardarRes(1, "2", 1);
+                    enunciadoPregunta.setText("Tuvite bien "+puntaje+" pregunta(s)."+
+                            "\n" +
+                            "\n" +
+                            "\n" +
+                            "\n" + "Obtuviste 1 moneda"+
+                            "\n" +
+                            "\n" + "Obtuviste 1 insignia");
                 }
                 else{
                     guardarRes(1, "2", 0);
+                    enunciadoPregunta.setText("Tuvite bien "+puntaje+" pregunta(s)."+
+                            "\n" +
+                            "\n" +
+                            "\n" +
+                            "\n" + "Obtuviste 1 moneda"+
+                            "\n" +
+                            "\n" + "No obtuviste insignias");
                 }
             }
             else if(puntaje >= 2 && Login.user.getLevel().equals("2")){
                 if(puntaje == 3) {
                     guardarRes(2, "3", 1);
+                    enunciadoPregunta.setText("Tuvite bien "+puntaje+" pregunta(s)."+
+                            "\n" +
+                            "\n" +
+                            "\n" +
+                            "\n" + "Obtuviste 2 moneda"+
+                            "\n" +
+                            "\n" + "Obtuviste 1 insignia");
                 }
                 else{
                     guardarRes(2, "3", 0);
+                    enunciadoPregunta.setText("Tuvite bien "+puntaje+" pregunta(s)."+
+                            "\n" +
+                            "\n" +
+                            "\n" +
+                            "\n" + "Obtuviste 2 moneda"+
+                            "\n" +
+                            "\n" + "No obtuviste insignias");
                 }
             }
             else if(puntaje < 2 && Login.user.getLevel().equals("1")){
                 guardarRes(0, "2", 0);
+                enunciadoPregunta.setText("Tuvite bien "+puntaje+" pregunta(s)."+
+                        "\n" +
+                        "\n" +
+                        "\n" +
+                        "\n" + "No obtuviste monedas"+
+                        "\n" +
+                        "\n" + "No obtuviste insignias");
             }
             else if(puntaje < 2 && Login.user.getLevel().equals("2")){
                 guardarRes(0, "3", 0);
+                enunciadoPregunta.setText("Tuvite bien "+puntaje+" pregunta(s)."+
+                        "\n" +
+                        "\n" +
+                        "\n" +
+                        "\n" + "No obtuviste monedas"+
+                        "\n" +
+                        "\n" + "No obtuviste insignias");
             }
             else if(Login.user.getLevel().equals("FIN")){
                 guardarRes(0, "FIN", 0);
+                enunciadoPregunta.setText("Tuvite bien "+puntaje+" pregunta(s)."+
+                        "\n" +
+                        "\n" +
+                        "\n" +
+                        "\n" + "No obtuviste monedas"+
+                        "\n" +
+                        "\n" + "No obtuviste insignias");
             }
-            Intent i = new Intent(this, Mapa.class);
-            Utiles.terminarConexion();
-            startActivity(i);
+            waiter.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent i = new Intent(getApplicationContext(), Mapa.class);
+                    Utiles.terminarConexion();
+                    startActivity(i);
+                }
+            }, 3000);
+            enunciadoPregunta.setGravity(View.TEXT_ALIGNMENT_CENTER);
         }
-        pantallaRandom();
+        else {
+            pantallaRandom();
+        }
     }
 
     public void guardarRes(int res, String level, int insignia){

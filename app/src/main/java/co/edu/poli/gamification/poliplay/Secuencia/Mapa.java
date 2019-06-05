@@ -35,9 +35,11 @@ public class Mapa extends AppCompatActivity {
             guardarRes("1");
             Login.user.setLevel("1");
         }
+        /*
         if(Login.user.getLevel().equals("FIN")){ //--TMP
             startActivity(new Intent(getApplicationContext(), JuegoCalculadora.class));
         }
+        */
 
         btnNivel1 = (Button)findViewById(R.id.btnNivel1);
         btnNivel2 = (Button)findViewById(R.id.btnNivel2);
