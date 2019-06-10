@@ -6,7 +6,7 @@ public class Api {
 
     //private static final String SERVER_URL = "192.168.0.9";
     private static final String SERVER_URL = "poliplay.gq";
-    public static final String ROOT_URL = "http://"+SERVER_URL+"/PoliPlayApi/Api.php?apicall=";
+    public static final String ROOT_URL = "https://"+SERVER_URL+"/PoliPlayApi/Api.php?apicall=";
 
     public static final String URL_REGISTER_USER = ROOT_URL + "registrousuario";
     public static final String URL_LOGIN_USER = ROOT_URL + "loginusuario";
@@ -23,6 +23,8 @@ public class Api {
     public static final String URL_ADD_GROUP = ROOT_URL + "agregargrupo";
     public static final String URL_GET_CHECKIN_PRAD = ROOT_URL + "traerpuestosprad";
     public static final String URL_GET_CHECKIN_PEAL = ROOT_URL + "traerpuestospeal";
+    public static final String URL_GET_CHECKIN = ROOT_URL + "traerpuestos";
+    public static final String URL_GET_COINS_GROUP = ROOT_URL + "obtenerlistagrupos";
 
 
 }

@@ -79,6 +79,7 @@ public class Login extends AppCompatActivity {
         if(username.equals("j")){//Ingreso genérico a usuario de pruebas de juegos.
             loadingBar.cancel();
             Intent i = new Intent(Login.this, Mapa.class);
+            i.putExtra("back", "no");
             startActivity(i);
             finish();
             return;

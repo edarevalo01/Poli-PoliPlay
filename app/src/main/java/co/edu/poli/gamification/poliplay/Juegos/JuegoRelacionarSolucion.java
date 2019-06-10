@@ -35,13 +35,13 @@ public class JuegoRelacionarSolucion extends AppCompatActivity {
         colorAnswer();
 
         switch (points){
-            case 0: bH.setText("Que mal :("); break;
-            case 1: bH.setText("Practica un poco más"); break;
+            case 0: bH.setText("No obtuviste ningún punto."); break;
+            case 1: bH.setText("Practica un poco más."); break;
             case 2: bH.setText("¡Buen intento!"); break;
             case 3: bH.setText("¡No está mal!"); break;
-            case 4: bH.setText("¡Bien!"); break;
-            case 5: bH.setText("¡Bien hecho!"); break;
-            case 6: bH.setText("¡Excelente!"); break;
+            case 4: bH.setText("¡Bien! ¡Obtuviste una moneda!"); break;
+            case 5: bH.setText("¡Bien hecho! ¡Obtuviste una moneda!"); break;
+            case 6: bH.setText("¡Excelente! ¡¡Obtuviste una moneda y una insignia!!"); break;
         }
         resultado.setText("Tuviste bien " + points + " de 6");
     }
@@ -92,6 +92,7 @@ public class JuegoRelacionarSolucion extends AppCompatActivity {
 
     public void contBtn(View view){
         Intent i = new Intent(this, Mapa.class);
+        i.putExtra("back", "no");
         Utiles.terminarConexion();
         startActivity(i);
     }

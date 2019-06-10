@@ -35,11 +35,13 @@ public class Mapa extends AppCompatActivity {
             guardarRes("1");
             Login.user.setLevel("1");
         }
-        /*
         if(Login.user.getLevel().equals("FIN")){ //--TMP
-            startActivity(new Intent(getApplicationContext(), JuegoCalculadora.class));
+            Bundle ext = getIntent().getExtras();
+            String yes = ext.getString("back");
+            if(!yes.equals("yes")) {
+                startActivity(new Intent(getApplicationContext(), JuegoCalculadora.class));
+            }
         }
-        */
 
         btnNivel1 = (Button)findViewById(R.id.btnNivel1);
         btnNivel2 = (Button)findViewById(R.id.btnNivel2);
@@ -211,5 +213,10 @@ public class Mapa extends AppCompatActivity {
                 level,
                 String.valueOf(0));
         atr.execute();
+    }
+
+    public void goRanking(View view){
+        Intent i = new Intent(getApplicationContext(), Ranking.class);
+        startActivity(i);
     }
 }

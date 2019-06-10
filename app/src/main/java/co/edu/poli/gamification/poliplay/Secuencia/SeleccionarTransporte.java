@@ -19,6 +19,7 @@ public class SeleccionarTransporte extends AppCompatActivity {
         setContentView(R.layout.activity_seleccionar_transporte);
         if(!Login.user.getLevel().equals("0")){
             Intent i = new Intent(this, Mapa.class);
+            i.putExtra("back", "no");
             startActivity(i);
         }
         Utiles.startCon = System.currentTimeMillis();
@@ -64,6 +65,7 @@ public class SeleccionarTransporte extends AppCompatActivity {
 
     public void continuar(View view) {
         Intent i = new Intent(this, Mapa.class);
+        i.putExtra("back", "no");
         startActivity(i);
     }
 }

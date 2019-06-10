@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -29,14 +28,57 @@ public class SeleccionarPuesto extends AppCompatActivity {
 
     private LinearLayout verticalLay;
     private Button buttons[] = new Button[506];
+    String numToList="";
+    ArrayList <Integer> toDisable = new ArrayList<Integer>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_seleccionar_puesto);
         if(!Login.user.getGroup().equals("vacio")){
             startActivity(new Intent(getApplicationContext(), SeleccionarTransporte.class));
         }
-        setContentView(R.layout.activity_seleccionar_puesto);
+        verticalLay = (LinearLayout) findViewById(R.id.verticalLayOut);
+        for (int i = 1; i < 51; i++) {
+            LinearLayout hl = new LinearLayout(this);
+            hl.setOrientation(LinearLayout.HORIZONTAL);
+            agregarBotones(hl, i);
+            verticalLay.addView(hl);
+        }
+        checkAndFillPuestos();
+    }
+
+    public void agregarBotones(LinearLayout hl, int l){
+        for (int i = 1; i < 6; i++) {
+            Button tv = new Button(this);
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 1.0f);
+            tv.setBackground(getResources().getDrawable(R.drawable.boton_sillas_en));
+            tv.setLayoutParams(lp);
+            tv.setId((l*10)+i);
+            tv.setText(l+"-"+String.valueOf((char)(i+64)));
+            tv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    checkAndFillPuestos();
+                    if(!toDisable.contains(v.getId())){
+                        String r = String.valueOf(v.getId());
+                        AddGroup ar = new AddGroup(r);
+                        ar.execute();
+                        v.setEnabled(false);
+                        v.setBackground(getResources().getDrawable(R.drawable.boton_sillas_dis));
+                        startActivity(new Intent(getApplicationContext(), InicioViaje.class));
+                    }
+                    else{
+                        Toast.makeText(SeleccionarPuesto.this, "¡Te ganaron esta silla, intenta con otra!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+            hl.addView(tv);
+            buttons[(l*10)+i] = tv;
+        }
+    }
+    public void checkAndFillPuestos(){
+        toDisable.clear();
         String algo = null;
         try {
             if(Login.user.getSignature().equals("Proceso Administrativo")) algo = new CheckinSeleccionarPRAD().execute().get();
@@ -48,60 +90,19 @@ public class SeleccionarPuesto extends AppCompatActivity {
         catch (InterruptedException e) {
             e.printStackTrace();
         }
-        String numToList="";
-        ArrayList <Integer> toUnable = new ArrayList<Integer>();
         for (int i = 1; i < algo.length(); i++) {
             if(Character.isDigit(algo.charAt(i))){
                 numToList += algo.charAt(i);
             }
             else if(numToList != ""){
-                toUnable.add(Integer.parseInt(numToList));
+                toDisable.add(Integer.parseInt(numToList));
                 numToList="";
             }
-            else{
-                continue;
-            }
+            else continue;
         }
-
-
-
-        verticalLay = (LinearLayout) findViewById(R.id.verticalLayOut);
-        for (int i = 1; i < 51; i++) {
-            LinearLayout hl = new LinearLayout(this);
-            hl.setOrientation(LinearLayout.HORIZONTAL);
-            agregarBotones(hl, i);
-            verticalLay.addView(hl);
-        }
-
-        for (int i = 0; i < toUnable.size(); i++) {
-            buttons[toUnable.get(i)].setEnabled(false);
-            buttons[toUnable.get(i)].setBackground(getResources().getDrawable(R.drawable.boton_sillas_dis));
-        }
-
-    }
-
-    public void agregarBotones(LinearLayout hl, int l){
-        for (int i = 1; i < 6; i++) {
-            Button tv = new Button(this);
-            LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-            tv.setBackground(getResources().getDrawable(R.drawable.boton_sillas_en));
-            tv.setLayoutParams(lp);
-            tv.setId((l*10)+i);
-            tv.setText(l+"-"+String.valueOf((char)(i+64)));
-            tv.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Bundle ext = getIntent().getExtras();
-                    String r = String.valueOf(v.getId());
-                    AddGroup ar = new AddGroup(r);
-                    ar.execute();
-                    v.setEnabled(false);
-                    v.setBackground(getResources().getDrawable(R.drawable.boton_sillas_dis));
-                    startActivity(new Intent(getApplicationContext(), InicioViaje.class));
-                }
-            });
-            hl.addView(tv);
-            buttons[(l*10)+i] = tv;
+        for (int i = 0; i < toDisable.size(); i++) {
+            buttons[toDisable.get(i)].setEnabled(false);
+            buttons[toDisable.get(i)].setBackground(getResources().getDrawable(R.drawable.boton_sillas_dis));
         }
     }
 
@@ -133,15 +134,12 @@ public class SeleccionarPuesto extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-
         @Override
         protected String doInBackground(Void... voids) {
             RequestHandler requestHandler = new RequestHandler();
-
             HashMap<String, String> params = new HashMap<>();
             params.put("codigo", Login.user.getCode());
             params.put("grupo", groupAdd);
-
             return requestHandler.sendPostRequest(Api.URL_ADD_GROUP, params);
         }
     }

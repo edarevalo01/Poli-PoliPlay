@@ -48,6 +48,7 @@ public class JuegoCrucigramaSolucion extends AppCompatActivity {
 
     public void continuarBtn(View view){
         Intent i = new Intent(this, Mapa.class);
+        i.putExtra("back", "no");
         Utiles.terminarConexion();
         startActivity(i);
     }

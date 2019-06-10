@@ -301,6 +301,7 @@ public class JuegoAhorcado extends AppCompatActivity {
 
     public void alMapa() {
         Intent i = new Intent(this, Mapa.class);
+        i.putExtra("back", "no");
         Utiles.terminarConexion();
         startActivity(i);
     }

@@ -371,6 +371,7 @@ public class JuegoTrivia extends AppCompatActivity{
                 @Override
                 public void run() {
                     Intent i = new Intent(getApplicationContext(), Mapa.class);
+                    i.putExtra("back", "no");
                     Utiles.terminarConexion();
                     startActivity(i);
                 }
