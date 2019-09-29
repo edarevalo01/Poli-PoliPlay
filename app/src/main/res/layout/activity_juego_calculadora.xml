@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_ambiental"
+    android:background="@drawable/fondo_escape"
     tools:context=".Juegos.JuegoCalculadora">
 
     <TextView
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
         android:text="TextView"
+        android:textColor="#FFFFFF"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/monedasPersonal"
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
         android:text="TextView"
+        android:textColor="#FFFFFF"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -37,7 +39,7 @@
         android:id="@+id/volverMapa"
         android:layout_width="152dp"
         android:layout_height="46dp"
-        android:background="@drawable/rectangulo_letra_sel"
+        android:background="@color/colorWhite"
         android:onClick="volverMapa"
         android:text="Volver a jugar"
         app:layout_constraintBottom_toBottomOf="parent"

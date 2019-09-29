@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/fondo_principal"
+    android:background="@drawable/fondo2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -15,17 +15,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
-
-    <ImageView
-        android:id="@+id/tituloLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        app:layout_constraintBottom_toTopOf="@+id/headerLogin2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/headerLogin1"
-        app:srcCompat="@drawable/logo_poli_grande" />
 
     <android.support.constraint.Guideline
         android:id="@+id/headerLogin2"

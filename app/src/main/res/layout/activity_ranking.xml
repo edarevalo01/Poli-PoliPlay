@@ -3,17 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/fondo_proceso"
+    android:background="@drawable/fondo_ranking2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.edu.poli.gamification.poliplay.Secuencia.Ranking">
+    tools:context="co.edu.poli.gamification.poliplaygami.Secuencia.Ranking">
 
     <TextView
         android:id="@+id/monedasGrupo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="monospace"
         android:text="TextView"

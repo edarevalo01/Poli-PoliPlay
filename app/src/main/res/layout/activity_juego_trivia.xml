@@ -15,7 +15,7 @@
 
         <TextView
             android:id="@+id/trivia_tittle"
-            android:layout_width="405dp"
+            android:layout_width="match_parent"
             android:layout_height="63dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="5dp"
@@ -64,7 +64,7 @@
 
         <Button
             android:id="@+id/opcionRes1"
-            android:layout_width="380dp"
+            android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
@@ -83,7 +83,7 @@
 
         <Button
             android:id="@+id/opcionRes3"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="16dp"
@@ -101,7 +101,7 @@
 
         <Button
             android:id="@+id/opcionRes4"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="16dp"
@@ -120,7 +120,7 @@
 
         <Button
             android:id="@+id/opcionRes2"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="16dp"
